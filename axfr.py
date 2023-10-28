@@ -54,13 +54,13 @@ if __name__ == '__main__':
 
     for root in get_root_nameservers():
         try:
-            xfr = tld_axfr('', root+'.root-servers.net')
+            xfr = tld_axfr('', root+'.root-servers.net') # Need to store to file in chunks
         except Exception as e:
             print(f"Failed to perform zone transfer from the {root} root server: {e}")
 
     for tld in get_root_tlds():
         try:
             for ns in get_tld_nameservers(tld):
-                xfr = tld_axfr(tld, resolve_nameserver(str(ns)))
+                xfr = tld_axfr(tld, resolve_nameserver(str(ns))) # Need to store to file in chunks
         except Exception as e:
             print(f"Failed to resolve {tld}: {e}")
