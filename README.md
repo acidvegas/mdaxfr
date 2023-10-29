@@ -9,12 +9,11 @@ Please set realistic expectations when using this tool. In contemporary network 
 - [dnspython](https://pypi.org/project/dnspython/) *(`pip install dnspython`)*
 
 ## Usage
-| Argument         | Description                                          |
-| ---------------- | ---------------------------------------------------- |
-| `-r`, `--root`   | Perform zone transfer on root nameservers.           |
-| `-t`, `--tld`    | Perform zone transfer on a specific TLD.             |
-| `-ts`, `--tlds`  | Perform zone transfer on all TLDs.                   |
-| `-o`, `--output` | Specify the output directory *(default is axfrout)*. |
+| Argument              | Description                                          |
+| --------------------- | ---------------------------------------------------- |
+| `-c`, `--concurrency` | Maximum concurrent tasks.                            |
+| `-o`, `--output`      | Specify the output directory *(default is axfrout)*. |
+| `-t`, `--timeout`     | DNS timeout *(default: 30)*                          |
 
 ## Information
 I only wrote this to shit on **[this bozo](https://github.com/flotwig/TLDR-2/tree/main)** who took a dead project & brought it back to life by making it even worse. Rather than making a pull request to give this bloke more credit in his "tenure" as a developer, I decided to just rewrite it all from scratch so people can fork off of *clean* code instead.
