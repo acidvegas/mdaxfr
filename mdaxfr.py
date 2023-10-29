@@ -52,7 +52,7 @@ def get_root_tlds() -> list:
 
 def get_tld_nameservers(tld: str) -> list:
     '''Get the nameservers for a TLD.'''    
-    return [nameserver for nameserver in dns.resolver.query(tld+'.', 'NS' )]
+    return [rdata.target for rdata in dns.resolver.resolve(tld+'.', 'NS')]
 
 def resolve_nameserver(nameserver: str) -> str:
     '''
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Mass DNS AXFR')
     parser.add_argument('-r', '--root', action='store_true', help='perform zone transfer on root nameservers')
     parser.add_argument('-t', '--tld', help='perform zone transfer on a specific TLD')
-    parser.add_argument('-ts', '--tlds', help='perform zone transfer on all TLDs')
+    parser.add_argument('-ts', '--tlds', action='store_true', help='perform zone transfer on all TLDs')
     parser.add_argument('-o', '--output', default='axfrout', help='output directory')
     args = parser.parse_args()
 
