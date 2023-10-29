@@ -89,7 +89,7 @@ if __name__ == '__main__':
     dns.resolver._DEFAULT_TIMEOUT = args.timeout
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-        futures = [executor.submit(attempt_axfr, '', root + '.root-servers.net', os.path.join(args.output, root + '-root.txt')) for root in get_root_nameservers()]
+        futures = [executor.submit(attempt_axfr, '', root, os.path.join(args.output, root + '.txt')) for root in get_root_nameservers()]
         for future in concurrent.futures.as_completed(futures):
             try:
                 future.result()
