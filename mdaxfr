@@ -1,0 +1,48 @@
+#!/bin/sh
+# Mass DNS AXFR - developed by acidvegas in posix shell script (https://git.acid.vegas/mdaxfr)
+
+OUTPUT_DIR="axfrout"
+mkdir -p "$OUTPUT_DIR"
+
+attempt_axfr() {
+	tld="$1"
+	nameserver="$2"
+	filename="$3"
+
+	ns_ip=$(dig +short $nameserver)
+	if [ -z "$ns_ip" ]; then
+		echo "Failed to resolve nameserver $nameserver"
+		return
+	fi
+
+	dig axfr @$ns_ip $tld > "$filename.temp"
+
+	if [ $? -eq 0 ]; then
+		mv "$filename.temp" "$filename"
+	else
+		echo "Failed to perform zone transfer from $nameserver for $tld"
+		rm -f "$filename.temp"
+	fi
+}
+
+if [ "$1" = "--root" ]; then
+	for root in $(dig +short . NS); do
+		attempt_axfr "." $root "$OUTPUT_DIR/$root-root.txt"
+	done
+fi
+
+if [ "$1" = "--tld" ]; then
+	tld="$2"
+	for ns in $(dig +short $tld NS); do
+		attempt_axfr "$tld" $ns "$OUTPUT_DIR/$tld.txt"
+	done
+fi
+
+if [ "$1" = "--tlds" ]; then
+	for tld in $(curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | tail -n +2); do
+		for ns in $(dig +short $tld NS); do
+			attempt_axfr "$tld" $ns "$OUTPUT_DIR/$tld.txt"
+		done
+	done
+fi
+
