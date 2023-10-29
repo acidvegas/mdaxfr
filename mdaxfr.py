@@ -14,6 +14,7 @@ try:
 except ImportError:
     raise SystemExit('missing required \'dnspython\' module (pip install dnspython)')
 
+
 def attempt_axfr(tld: str, nameserver: str, filename: str):
     '''
     Perform a DNS zone transfer on a target domain.
@@ -23,23 +24,23 @@ def attempt_axfr(tld: str, nameserver: str, filename: str):
     :param filename: The filename to store the zone transfer results in.
     '''
     temp_file = filename + '.temp'
-    try:
-        nameserver = resolve_nameserver(nameserver)[0].address # Not sure why, but we need to do this...
-    except Exception as ex:
+    if not (nameserver := resolve_nameserver(nameserver)):
         logging.error(f'Failed to resolve nameserver {nameserver}: {ex}')
     else:
-        try:
-            with open(temp_file, 'w') as file:
-                xfr = dns.query.xfr(nameserver, tld+'.', lifetime=300)
-                for msg in xfr:
-                    for rrset in msg.answer:
-                        for rdata in rrset:
-                            file.write(f'{rrset.name}.{tld} {rrset.ttl} {rdata}\n')
-            os.rename(temp_file, filename)
-        except Exception as ex:
-            if os.path.exists(temp_file):
-                os.remove(temp_file)
-            logging.error(f'Failed to perform zone transfer from {nameserver} for {tld}: {ex}')
+        for ns in nameserver: # Let's try all the IP addresses for the nameserver
+            try:
+                with open(temp_file, 'w') as file:
+                    xfr = dns.query.xfr(nameserver.address, tld+'.', lifetime=300)
+                    for msg in xfr:
+                        for rrset in msg.answer:
+                            for rdata in rrset:
+                                file.write(f'{rrset.name}.{tld} {rrset.ttl} {rdata}\n')
+                os.rename(temp_file, filename)
+            except Exception as ex:
+                if os.path.exists(temp_file):
+                    os.remove(temp_file)
+                logging.error(f'Failed to perform zone transfer from {nameserver.address} for {tld}: {ex}')
+
 
 def get_root_nameservers() -> list:
     '''Generate a list of the root nameservers.'''
@@ -47,21 +48,24 @@ def get_root_nameservers() -> list:
     root_servers = [str(rr.target)[:-1] for rr in root_ns_records]
     return root_servers
 
+
 def get_root_tlds() -> list:
     '''Get the root TLDs from IANA.'''
     tlds = urllib.request.urlopen('https://data.iana.org/TLD/tlds-alpha-by-domain.txt').read().decode('utf-8').lower().split('\n')[1:]
     random.shuffle(tlds)
     return tlds
 
+
 def get_tld_nameservers(tld: str) -> list:
     '''Get the nameservers for a TLD.'''    
     try:
-        return [str(nameserver) for nameserver in dns.resolver.resolve(tld+'.', 'NS', lifetime=60)]  # Increase lifetime
+        return [str(nameserver) for nameserver in dns.resolver.resolve(tld+'.', 'NS', lifetime=60)]
     except dns.exception.Timeout:
         logging.warning(f"Timeout fetching nameservers for TLD: {tld}")
     except dns.resolver.NoNameservers:
         logging.warning(f"No nameservers found for TLD: {tld}")
     return []
+
 
 def resolve_nameserver(nameserver: str) -> str:
     '''
@@ -69,10 +73,14 @@ def resolve_nameserver(nameserver: str) -> str:
     
     :param nameserver: The nameserver to resolve.
     '''
-    try:
-        return dns.resolver.resolve(nameserver, 'A', lifetime=60)
-    except:
-        return dns.resolver.resolve(nameserver, 'AAAA', lifetime=60)
+    data = []
+    for version in ('A', 'AAAA'):
+        try:
+            data += [ip.address for ip in dns.resolver.resolve(nameserver, version, lifetime=60)]
+        except:
+            pass
+    return data
+
 
 
 if __name__ == '__main__':
