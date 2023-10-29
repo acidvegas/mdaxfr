@@ -20,6 +20,11 @@ I only wrote this to shit on **[this bozo](https://github.com/flotwig/TLDR-2/tre
 
 As a little added bonus, I have began working on a pure POSIX version of this script for protability, which is included in this repository.
 
+## Todo
+- Add [Public Suffix List](https://publicsuffix.org/list/) support
+- Loop mode to run 24/7 for monitoring new TLD's
+- NSEC3 Walking features
+
 ___
 
 ###### Mirrors
