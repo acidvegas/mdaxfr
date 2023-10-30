@@ -18,7 +18,7 @@ Please set realistic expectations when using this tool. In contemporary network 
 ## Information
 I only wrote this to shit on **[this bozo](https://github.com/flotwig/TLDR-2/tree/main)** who took a dead project & brought it back to life by making it even worse. Rather than making a pull request to give this bloke more credit in his "tenure" as a developer, I decided to just rewrite it all from scratch so people can fork off of *clean* code instead.
 
-As a little added bonus, I have began working on a pure POSIX version of this script for protability, which is included in this repository.
+This repostiory also contains a [pure POSIX version](./mdaxfr) for portability, aswell as a [script](./opennic) to do zone transfers on [OpenNIC TLDs](https://wiki.opennic.org/opennic/dot).
 
 ## Todo
 - Add [Public Suffix List](https://publicsuffix.org/list/) support
