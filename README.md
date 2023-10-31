@@ -20,11 +20,6 @@ I only wrote this to shit on **[this bozo](https://github.com/flotwig/TLDR-2/tre
 
 This repostiory also contains a [pure POSIX version](./mdaxfr) for portability, aswell as a [script](./opennic) to do zone transfers on [OpenNIC TLDs](https://wiki.opennic.org/opennic/dot).
 
-## Todo
-- Add [Public Suffix List](https://publicsuffix.org/list/) support
-- Loop mode to run 24/7 for monitoring new TLD's
-- NSEC3 Walking features
-
 ___
 
 ###### Mirrors

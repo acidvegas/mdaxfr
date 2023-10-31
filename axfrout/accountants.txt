@@ -1,0 +1,4 @@
+
+; <<>> DiG 9.16.22 <<>> AXFR accountants @65.22.32.31
+;; global options: +cmd
+; Transfer failed.

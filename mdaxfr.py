@@ -67,6 +67,21 @@ def get_tld_nameservers(tld: str) -> list:
     return []
 
 
+def get_psl_tlds() -> list:
+    '''Download the Public Suffix List and return its contents.'''
+    data = urllib.request.urlopen('https://publicsuffix.org/list/public_suffix_list.dat').read().decode()
+    domains = []
+    for line in data.split('\n'):
+        if line.startswith('//') or not line:
+            continue
+        if '*' in line or '!' in line:
+            continue
+        if '.' not in line:
+            continue
+        domains.append(line)
+    return domains
+
+
 def resolve_nameserver(nameserver: str) -> str:
     '''
     Resolve a nameserver to its IP address.
@@ -106,6 +121,14 @@ if __name__ == '__main__':
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
         futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, tld + '.txt')) for tld in get_root_tlds() for ns in get_tld_nameservers(tld) if ns]
+        for future in concurrent.futures.as_completed(futures):
+            try:
+                future.result()
+            except Exception as e:
+                logging.error(f'Error in TLD task: {e}')
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
+        futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, tld + '.txt')) for tld in get_psl_tlds() for ns in get_tld_nameservers(tld) if ns]
         for future in concurrent.futures.as_completed(futures):
             try:
                 future.result()

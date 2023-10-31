@@ -1,0 +1,4 @@
+
+; <<>> DiG 9.16.22 <<>> AXFR academy @161.232.12.37
+;; global options: +cmd
+; Transfer failed.

@@ -1,0 +1,4 @@
+
+; <<>> DiG 9.16.22 <<>> AXFR abogado @156.154.174.82
+;; global options: +cmd
+; Transfer failed.

@@ -1,0 +1,2 @@
+curl https://www.internic.net/domain/root.zone | awk '$4=="NS" {print $NF}'
+

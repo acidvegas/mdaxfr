@@ -1,0 +1,4 @@
+
+; <<>> DiG 9.16.22 <<>> AXFR aco @194.0.24.12
+;; global options: +cmd
+; Transfer failed.

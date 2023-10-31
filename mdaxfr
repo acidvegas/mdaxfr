@@ -40,3 +40,10 @@ for tld in $(curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | tail
 		attempt_axfr "$tld" "$ns" "$OUTPUT_DIR/$tld.txt"
 	done
 done
+
+# For Public Suffix List TLD nameservers
+for tld in $(curl -s https://publicsuffix.org/list/public_suffix_list.dat | grep -vE '^(//|.*[*!])' | grep '\.' | awk '{print $1}'); do
+	for ns in $(dig +short "$tld" NS); do
+		attempt_axfr "$tld" "$ns" "$OUTPUT_DIR/$tld.txt"
+	done
+done
