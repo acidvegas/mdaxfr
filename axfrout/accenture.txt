@@ -1,4 +1,0 @@
-
-; <<>> DiG 9.16.22 <<>> AXFR accenture @192.42.173.30
-;; global options: +cmd
-; Transfer failed.

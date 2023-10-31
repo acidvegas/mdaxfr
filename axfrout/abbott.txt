@@ -1,4 +1,0 @@
-
-; <<>> DiG 9.16.22 <<>> AXFR abbott @65.22.158.41
-;; global options: +cmd
-; Transfer failed.
