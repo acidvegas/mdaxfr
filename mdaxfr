@@ -1,5 +1,5 @@
 #!/bin/sh
-# Mass DNS AXFR - developed by acidvegas in posix shell script (https://git.acid.vegas/mdaxfr)
+# Mass DNS AXFR (POSIX version) - developed by acidvegas (https://git.acid.vegas/mdaxfr)
 
 OUTPUT_DIR="axfrout"
 mkdir -p "$OUTPUT_DIR"

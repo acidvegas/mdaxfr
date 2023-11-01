@@ -2,15 +2,12 @@
 # OpenNIC AXFR - devloped by acidvegas (https://git.acid.vegas/mdaxfr)
 
 servers=$(curl -s 'https://api.opennicproject.org/geoip/?list&ipv=all&res=100' | grep -oE '([0-9]{1,3}(\.[0-9]{1,3}){3}|[0-9a-fA-F:]+:[0-9a-fA-F:]+)')
-
 tlds=("bbs" "chan" "cyb" "dyn" "epic" "geek" "gopher" "indy" "libre" "neo" "null" "o" "oss" "oz" "parody" "pirate" "opennic.glue" "dns.opennic.glue")
 ptlds=("bazar" "bit" "coin" "emc" "lib" "fur" "ku" "te" "ti" "uu" "ko" "rm")
-
 all_tlds=("${tlds[@]}" "${ptlds[@]}")
 
 for tld in "${ptlds[@]}"; do
     echo "Attempting zone transfer for $tld..."
-
     success=0
     for server in $servers; do
         if ! output=$(dig AXFR "$tld." @"$server" 2>&1); then
@@ -27,7 +24,6 @@ for tld in "${ptlds[@]}"; do
             break
         fi
     done
-
     if [ $success -eq 0 ]; then
         echo "Zone transfer failed for $tld at all servers."
     fi
