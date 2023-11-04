@@ -31,7 +31,7 @@ attempt_axfr() {
 
 # For root nameservers
 for root in $(dig +short . NS); do
-	attempt_axfr "." "$root" "$OUTPUT_DIR/$root-root.txt"
+	attempt_axfr "." "$root" "$OUTPUT_DIR/$root.txt"
 done
 
 # For TLD nameservers

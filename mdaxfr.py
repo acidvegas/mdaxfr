@@ -42,11 +42,21 @@ def attempt_axfr(tld: str, nameserver: str, filename: str):
 				logging.error(f'Failed to perform zone transfer from {nameserver.address} for {tld}: {ex}')
 
 
-def get_root_nameservers() -> list:
-	'''Generate a list of the root nameservers.'''
-	root_ns_records = dns.resolver.resolve('.', 'NS', lifetime=15)
-	root_servers = [str(rr.target)[:-1] for rr in root_ns_records]
-	return root_servers
+def get_nameservers(target: str) -> list:
+	'''
+	Generate a list of the root nameservers.
+	
+	:param target: The target domain to get the nameservers for.
+	'''
+	try:
+		ns_records = dns.resolver.resolve(target+'.', 'NS', lifetime=60)
+		nameservers = [str(rr.target)[:-1] for rr in ns_records]
+		return nameservers
+	except dns.exception.Timeout:
+		logging.warning(f'Timeout fetching nameservers for {target}')
+	except dns.resolver.NoNameservers:
+		logging.warning(f'No nameservers found for {target}')
+	return []
 
 
 def get_root_tlds() -> list:
@@ -54,17 +64,6 @@ def get_root_tlds() -> list:
 	tlds = urllib.request.urlopen('https://data.iana.org/TLD/tlds-alpha-by-domain.txt').read().decode('utf-8').lower().split('\n')[1:]
 	random.shuffle(tlds)
 	return tlds
-
-
-def get_tld_nameservers(tld: str) -> list:
-	'''Get the nameservers for a TLD.'''
-	try:
-		return [str(nameserver) for nameserver in dns.resolver.resolve(tld+'.', 'NS', lifetime=60)]
-	except dns.exception.Timeout:
-		logging.warning(f'Timeout fetching nameservers for TLD: {tld}')
-	except dns.resolver.NoNameservers:
-		logging.warning(f'No nameservers found for TLD: {tld}')
-	return []
 
 
 def get_psl_tlds() -> list:
@@ -82,7 +81,7 @@ def get_psl_tlds() -> list:
 	return domains
 
 
-def resolve_nameserver(nameserver: str) -> str:
+def resolve_nameserver(nameserver: str) -> list:
 	'''
 	Resolve a nameserver to its IP address.
 
@@ -111,24 +110,29 @@ if __name__ == '__main__':
 	os.makedirs(args.output, exist_ok=True)
 	dns.resolver._DEFAULT_TIMEOUT = args.timeout
 
+	# Grab the root nameservers
+	os.makedirs(os.path.join(args.output, 'root'), exist_ok=True)
 	with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-		futures = [executor.submit(attempt_axfr, '', root, os.path.join(args.output, root + '.txt')) for root in get_root_nameservers()]
+		futures = [executor.submit(attempt_axfr, '', root, os.path.join(args.output, f'root/{root}.txt')) for root in get_nameservers('')]
 		for future in concurrent.futures.as_completed(futures):
 			try:
 				future.result()
 			except Exception as e:
 				logging.error(f'Error in root server task: {e}')
 
+	# Get the root TLDs
 	with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-		futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, tld + '.txt')) for tld in get_root_tlds() for ns in get_tld_nameservers(tld) if ns]
+		futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, tld + '.txt')) for tld in get_root_tlds() for ns in get_nameservers(tld) if ns]
 		for future in concurrent.futures.as_completed(futures):
 			try:
 				future.result()
 			except Exception as e:
 				logging.error(f'Error in TLD task: {e}')
 
+	# Get the Public Suffix List
+	os.makedirs(os.path.join(args.output, 'psl'), exist_ok=True)
 	with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-		futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, tld + '.txt')) for tld in get_psl_tlds() for ns in get_tld_nameservers(tld) if ns]
+		futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, f'psl/{tld}.txt')) for tld in get_psl_tlds() for ns in get_nameservers(tld) if ns]
 		for future in concurrent.futures.as_completed(futures):
 			try:
 				future.result()
