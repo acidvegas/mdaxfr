@@ -1,5 +1,5 @@
 #!/bin/sh
-# Mass DNS AXFR (POSIX version) - developed by acidvegas (https://git.acid.vegas/mdaxfr)
+# Mass DNS AXFR (other zones) - developed by acidvegas (https://git.acid.vegas/mdaxfr)
 
 ```bash
 curl -s https://www.internic.net/domain/root.zone | awk '$4=="NS" {gsub(/\.$/, "", $NF); print $NF}'
@@ -15,6 +15,7 @@ dig @zonedata.switch.ch li. AXFR -y hmac-sha512:tsig-zonedata-li-public-21-01:t8
 dig @zonedata.iis.se  se  AXFR > se.txt
 dig @zonedata.iis.se  nu  AXFR > nu.txt
 dig @zone.internet.ee ee. AXFR > ee.txt
+dig @ns1.gov.ps xn--ygbi2ammx. AXFR > xn--ygbi2ammx.txt
 
 wget -O sk.txt https://sk-nic.sk/subory/domains.txt
 
@@ -22,6 +23,9 @@ wget -O gov.txt https://raw.githubusercontent.com/cisagov/dotgov-data/main/gov.t
 wget -O nc.txt https://www.domaine.nc/whos?who=A*
 
 # https://www.afnic.fr/produits-services/services-associes/donnees-partagees/
+
+# not sure about this one....
+curl -s -H 'Accept: application/json' 'https://odata.domain.fi/OpenDomainData.svc/Domains?$inlinecount=allpages'
 
 wget -O dn42.txt http://ix.ucis.nl/dn42/dnszone2.php?
 ```

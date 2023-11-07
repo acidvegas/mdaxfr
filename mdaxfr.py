@@ -60,8 +60,13 @@ def get_nameservers(target: str) -> list:
 
 
 def get_root_tlds() -> list:
-	'''Get the root TLDs from IANA.'''
-	tlds = urllib.request.urlopen('https://data.iana.org/TLD/tlds-alpha-by-domain.txt').read().decode('utf-8').lower().split('\n')[1:]
+	'''Get the root TLDs from a root nameservers.'''
+	rndroot = [root for root in os.listdir('root') if root.endswith('.root-servers.net.txt')][0]
+	if rndroot:
+		tlds = sorted(set([item.split()[0][:-1] for item in open(rndroot).read().split('\n') if item and 'IN' in item and 'NS' in item]))
+	else:
+		logging.warning('Failed to find root nameserver list, using IANA list')
+		tlds = urllib.request.urlopen('https://data.iana.org/TLD/tlds-alpha-by-domain.txt').read().decode('utf-8').lower().split('\n')[1:]
 	random.shuffle(tlds)
 	return tlds
 
