@@ -24,7 +24,7 @@ attempt_axfr() {
 
     for nameserver_ip in $nameserver_ips; do
         dig AXFR "$tld" "@$nameserver_ip" > "$temp_file"
-        if grep -Eq 'Transfer failed|timed out|connection refused' "$temp_file"; then
+        if ! grep -q 'IN.*NS' "$temp_file"; then
 			echo -e "[\e[31mFAIL\e[0m] AXFR for \e[36m$tld\e[0m on \e[33m$nameserver\e[0m \e[90m($nameserver_ip)\e[0m"
             rm -f "$temp_file"
         else
