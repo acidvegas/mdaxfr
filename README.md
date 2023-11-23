@@ -18,7 +18,14 @@ It is expected to set *realistic* expectations when using this tool. In contempo
 ## Information
 I only wrote this to shit on **[this bozo](https://github.com/flotwig/TLDR-2/)** who took a dead project & brought it back to life by making it even worse. Rather than making a pull request to give this bloke more credit in his "tenure" as a developer, I decided to just rewrite it all from scratch so people can fork off of *clean* code instead.
 
-This repostiory also contains a [pure POSIX version](./mdaxfr) for portability, aswell as a [script](./opennic) to do zone transfers on [OpenNIC TLDs](https://wiki.opennic.org/opennic/dot).
+This repostiory also contains a [pure POSIX version](./mdaxfr) for portability, aswell as a [script](./opennic) to do zone transfers on [OpenNIC TLDs](https://wiki.opennic.org/opennic/dot). Included also is a special [ozones](./ozones) script for fetching a few obscure zones in a non-convential manner.
+
+## One Liner (YEAH THATS RIGHT)
+Just flexing nuts here...little one-liner MASS zone AXFR, ok?
+
+```bash
+curl -s https://www.internic.net/domain/root.zone | awk '$4=="A" || $4=="AAAA" {print substr($1, 3) " " $5}' | sed 's/\.$//' | xargs -n2 sh -c 'dig AXFR "$0" "@$1"'
+```
 
 ___
 

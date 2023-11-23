@@ -11,36 +11,40 @@ resolve_nameserver() {
 }
 
 attempt_axfr() {
-	tld=$1
-	nameserver=$2
-	filename="$3"
-	temp_file="${filename}.temp"
+    tld=$1
+    nameserver=$2
+    filename="$3"
+    temp_file="${filename}.temp"
 
-	nameserver_ips=$(resolve_nameserver "$nameserver")
-	if [ -z "$nameserver_ips" ]; then
-		echo "Failed to resolve nameserver $nameserver"
-		return
-	fi
+    nameserver_ips=$(resolve_nameserver "$nameserver")
+    if [ -z "$nameserver_ips" ]; then
+        echo -e "\e[31m[FAIL]\e[0m AXFR for \e[36m$tld\e[0m on \e[33m$nameserver\e[0m \e[90m(failed to resolve nameserver)\e[0m"
+        return
+    fi
 
-	for nameserver_ip in $nameserver_ips; do
-		dig AXFR "$tld" "@$nameserver_ip" > "$temp_file"
-		if [ $? -eq 0 ]; then
-			mv "$temp_file" "$filename"
-			return 
-		else
-			echo "Failed to perform zone transfer from $nameserver for $tld"
-			rm -f "$temp_file"
-		fi
-	done
+    for nameserver_ip in $nameserver_ips; do
+        dig AXFR "$tld" "@$nameserver_ip" > "$temp_file"
+        if grep -Eq 'Transfer failed|timed out|connection refused' "$temp_file"; then
+			echo -e "[\e[31mFAIL\e[0m] AXFR for \e[36m$tld\e[0m on \e[33m$nameserver\e[0m \e[90m($nameserver_ip)\e[0m"
+            rm -f "$temp_file"
+        else
+            mv "$temp_file" "$filename"
+            echo -e "[\e[32mSUCCESS\e[0m] AXFR for \e[36m$tld\e[0m on \e[33m$nameserver\e[0m \e[90m($nameserver_ip)\e[0m"
+            return
+        fi
+    done
 }
 
+echo "[\e[31WARNING\e[0m] Most nameservers will block AXFR requests \e[90m(It is normal for most of these to fail)\e[0m"
+sleep 3
+
 # For root nameservers
-for root in $(dig +short . NS); do
+for root in $(dig +short . NS | sed 's/\.$//'); do
 	attempt_axfr "." "$root" "$OUTPUT_DIR/root/$root.txt"
 done
 
 # Parse the tld list from a root nameserver
-rndroot=$(find $OUTPUT/root/*.root-servers.net.txt -type f | shuf -n 1)
+rndroot=$(find $OUTPUT_DIR/root/*.root-servers.net.txt -type f | shuf -n 1)
 if [ -z $rndroot ]; then
 	echo "Failed to AXFR a root nameserver (using IANA list instead)"
 	tlds=$(curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | tail -n +2 | tr '[:upper:]' '[:lower:]')
@@ -50,14 +54,14 @@ fi
 
 # For TLD nameservers
 for tld in $tlds; do
-	for ns in $(dig +short "$tld" NS); do
+	for ns in $(dig +short "$tld" NS | sed 's/\.$//'); do
 		attempt_axfr "$tld" "$ns" "$OUTPUT_DIR/$tld.txt"
 	done
 done
 
 # For Public Suffix List TLD nameservers
 for tld in $(curl -s https://publicsuffix.org/list/public_suffix_list.dat | grep -vE '^(//|.*[*!])' | grep '\.' | awk '{print $1}'); do
-	for ns in $(dig +short "$tld" NS); do
+	for ns in $(dig +short "$tld" NS | sed 's/\.$//'); do
 		attempt_axfr "$tld" "$ns" "$OUTPUT_DIR/psl/$tld.txt"
 	done
 done
