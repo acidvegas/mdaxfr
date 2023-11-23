@@ -7,7 +7,7 @@ mkdir -p "$OUTPUT_DIR/root"
 mkdir -p "$OUTPUT_DIR/psl"
 
 resolve_nameserver() {
-	dig +short "$1" A || dig +short "$1" AAAA
+	dig +short AAAA $1 +short -t A $1 2>/dev/null
 }
 
 attempt_axfr() {
@@ -16,19 +16,22 @@ attempt_axfr() {
 	filename="$3"
 	temp_file="${filename}.temp"
 
-	nameserver_ip=$(resolve_nameserver "$nameserver")
-	if [ -z "$nameserver_ip" ]; then
+	nameserver_ips=$(resolve_nameserver "$nameserver")
+	if [ -z "$nameserver_ips" ]; then
 		echo "Failed to resolve nameserver $nameserver"
 		return
 	fi
 
-	dig AXFR "$tld" "@$nameserver_ip" > "$temp_file"
-	if [ $? -eq 0 ]; then
-		mv "$temp_file" "$filename"
-	else
-		echo "Failed to perform zone transfer from $nameserver for $tld"
-		rm -f "$temp_file"
-	fi
+	for nameserver_ip in $nameserver_ips; do
+		dig AXFR "$tld" "@$nameserver_ip" > "$temp_file"
+		if [ $? -eq 0 ]; then
+			mv "$temp_file" "$filename"
+			return 
+		else
+			echo "Failed to perform zone transfer from $nameserver for $tld"
+			rm -f "$temp_file"
+		fi
+	done
 }
 
 # For root nameservers

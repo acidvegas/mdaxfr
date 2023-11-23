@@ -29,17 +29,19 @@ def attempt_axfr(tld: str, nameserver: str, filename: str):
 	else:
 		for ns in nameserver: # Let's try all the IP addresses for the nameserver
 			try:
-				with open(temp_file, 'w') as file:
-					xfr = dns.query.xfr(nameserver.address, tld+'.', lifetime=300)
-					for msg in xfr:
-						for rrset in msg.answer:
-							for rdata in rrset:
-								file.write(f'{rrset.name}.{tld} {rrset.ttl} {rdata}\n')
-				os.rename(temp_file, filename)
+				xfr = dns.query.xfr(ns, tld+'.', lifetime=300)
+				if xfr:
+					with open(temp_file, 'w') as file:
+						for msg in xfr:
+							for rrset in msg.answer:
+								for rdata in rrset:
+									file.write(f'{rrset.name}.{tld} {rrset.ttl} {rdata}\n')
+					os.rename(temp_file, filename)
+					break
 			except Exception as ex:
 				if os.path.exists(temp_file):
 					os.remove(temp_file)
-				logging.error(f'Failed to perform zone transfer from {nameserver.address} for {tld}: {ex}')
+				logging.error(f'Failed to perform zone transfer from {nameserver} ({ns}) for {tld}: {ex}')
 
 
 def get_nameservers(target: str) -> list:
@@ -109,7 +111,7 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='Mass DNS AXFR')
 	parser.add_argument('-c', '--concurrency', type=int, default=30, help='maximum concurrent tasks')
 	parser.add_argument('-o', '--output', default='axfrout', help='output directory')
-	parser.add_argument('-t', '--timeout', type=int, default=30, help='DNS timeout (default: 30)')
+	parser.add_argument('-t', '--timeout', type=int, default=15, help='DNS timeout (default: 15)')
 	args = parser.parse_args()
 
 	os.makedirs(args.output, exist_ok=True)
