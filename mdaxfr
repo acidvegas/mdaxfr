@@ -39,7 +39,9 @@ echo "[\e[31WARNING\e[0m] Most nameservers will block AXFR requests \e[90m(It is
 sleep 3
 
 # For root IP space zones
-for i in $(seq 0 255); do dig +nocmd +noall +answer +multiline $i.in-addr.arpa NS; done > $OUTPUT_DIR/root/in-addr.arpa.txt
+for i in $(seq 0 255); do
+    dig +nocmd +noall +answer +multiline $i.in-addr.arpa NS >> $OUTPUT_DIR/root/in-addr.arpa.txt
+done
 
 # For root nameservers
 for root in $(dig +short . NS | sed 's/\.$//'); do
