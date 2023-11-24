@@ -1,9 +1,6 @@
 #!/bin/sh
 # Mass DNS AXFR (other zones) - developed by acidvegas (https://git.acid.vegas/mdaxfr)
 
-curl -s https://www.internic.net/domain/root.zone | awk '$4=="NS" {gsub(/\.$/, "", $NF); print $NF}'
-curl -s https://www.internic.net/domain/root.zone | awk '$4=="A" || $4=="AAAA" {print $5}'
-
 # https://portal.switch.ch/pub/open-data/#tab-fccd70a3-b98e-11ed-9a74-5254009dc73c-3
 dig @zonedata.switch.ch ch. AXFR -y hmac-sha512:tsig-zonedata-ch-public-21-01:stZwEGApYumtXkh73qMLPqfbIDozWKZLkqRvcjKSpRnsor6A6MxixRL6C2HeSVBQNfMW4wer+qjS0ZSfiWiJ3Q== > ch.txt
 dig @zonedata.switch.ch li. AXFR -y hmac-sha512:tsig-zonedata-li-public-21-01:t8GgeCn+fhPaj+cRy1epox2Vj4hZ45ax6v3rQCkkfIQNg5fsxuU23QM5mzz+BxJ4kgF/jiQyBDBvL+XWPE6oCQ== > li.txt
@@ -26,4 +23,5 @@ wget -O nc.txt https://www.domaine.nc/whos?who=A*
 curl -s -H 'Accept: application/json' 'https://odata.domain.fi/OpenDomainData.svc/Domains?$inlinecount=allpages' # not sure about this one....
 
 wget -O dn42.txt http://ix.ucis.nl/dn42/dnszone2.php? # Darknet
-```
+
+curl -s https://www.internic.net/domain/root.zone | awk '$4=="A" || $4=="AAAA" {print $5}'
