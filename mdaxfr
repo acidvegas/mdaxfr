@@ -38,6 +38,9 @@ attempt_axfr() {
 echo "[\e[31WARNING\e[0m] Most nameservers will block AXFR requests \e[90m(It is normal for most of these to fail)\e[0m"
 sleep 3
 
+# For root IP space zones
+for i in $(seq 0 255); do dig +nocmd +noall +answer +multiline $i.in-addr.arpa NS; done > $OUTPUT_DIR/root/in-addr.arpa.txt
+
 # For root nameservers
 for root in $(dig +short . NS | sed 's/\.$//'); do
 	attempt_axfr "." "$root" "$OUTPUT_DIR/root/$root.txt"
