@@ -20,12 +20,16 @@ I only wrote this to shit on **[this bozo](https://github.com/flotwig/TLDR-2/)**
 
 This repostiory also contains a [pure POSIX version](./mdaxfr) for portability, aswell as a [script](./opennic) to do zone transfers on [OpenNIC TLDs](https://wiki.opennic.org/opennic/dot). Included also is a special [ozones](./ozones) script for fetching a few obscure zones in a non-convential manner.
 
-## One Liner (YEAH THATS RIGHT)
-Just flexing nuts here...little one-liner MASS zone AXFR, ok?
+## Statistics, laughs, & further thinking...
+As of my last scan in 2023, I was only able to AXFR the zones for 8 out of 1,456 root TLDs, with a few of them being zones that were already retrieved by [acidvegas/czds](https://github.com/acidvegas/czds/), and over 100 TLDs in the [Public suffix list](https://publicsuffix.org/). The addition scripts in this repository provide additional zone files collected un-traditionally.
 
+For laughs, here is a one-liner mass zone axfr:
 ```bash
 curl -s https://www.internic.net/domain/root.zone | awk '$4=="A" || $4=="AAAA" {print substr($1, 3) " " $5}' | sed 's/\.$//' | xargs -n2 sh -c 'dig AXFR "$0" "@$1"'
 ```
+**Note:** Don't actually use this lol...
+
+It is interesting to have seen this has worked on some darknet DNS servers...would maybe look into exploring collecting more zones for alterntive DNS routing. Some of that goes beyond an "AXFR" though...
 
 ___
 
