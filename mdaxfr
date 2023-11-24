@@ -35,7 +35,7 @@ attempt_axfr() {
     done
 }
 
-echo "[\e[31WARNING\e[0m] Most nameservers will block AXFR requests \e[90m(It is normal for most of these to fail)\e[0m"
+echo "[\e[31mWARNING\e[0m] Most nameservers will block AXFR requests \e[90m(It is normal for most of these to fail)\e[0m"
 sleep 3
 
 # For root IP space zones
