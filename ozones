@@ -23,5 +23,3 @@ wget -O nc.txt https://www.domaine.nc/whos?who=A*
 curl -s -H 'Accept: application/json' 'https://odata.domain.fi/OpenDomainData.svc/Domains?$inlinecount=allpages' # not sure about this one....
 
 wget -O dn42.txt http://ix.ucis.nl/dn42/dnszone2.php? # Darknet
-
-curl -s https://www.internic.net/domain/root.zone | awk '$4=="A" || $4=="AAAA" {print $5}'

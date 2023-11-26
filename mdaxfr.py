@@ -3,7 +3,6 @@
 
 import logging
 import os
-import random
 import urllib.request
 
 try:
@@ -24,13 +23,17 @@ def attempt_axfr(tld: str, nameserver: str, filename: str):
 	:param filename: The filename to store the zone transfer results in.
 	'''
 	temp_file = filename + '.temp'
-	if not (nameserver := resolve_nameserver(nameserver)):
+	if not (resolvers := resolve_nameserver(nameserver)):
 		logging.error(f'Failed to resolve nameserver {nameserver}: {ex}')
 	else:
-		for ns in nameserver: # Let's try all the IP addresses for the nameserver
+		for ns in resolvers: # Let's try all the IP addresses for the nameserver
 			try:
-				xfr = dns.query.xfr(ns, tld+'.', lifetime=300)
-				if xfr:
+				xfr = dns.query.xfr(ns, tld, lifetime=300)
+				if next(xfr, None) is not None:
+					if not tld:
+						print(f'\033[32mSUCCESS\033[0m AXFR for \033[36m.\033[0m on \033[33m{nameserver}\033[0m \033[90m({ns})\033[0m')
+					else:
+						print(f'\033[32mSUCCESS\033[0m AXFR for \033[36m{tld}\033[0m on \033[33m{nameserver}\033[0m \033[90m({ns})\033[0m')
 					with open(temp_file, 'w') as file:
 						for msg in xfr:
 							for rrset in msg.answer:
@@ -39,8 +42,8 @@ def attempt_axfr(tld: str, nameserver: str, filename: str):
 					os.rename(temp_file, filename)
 					break
 			except Exception as ex:
-				# Most zone transfers are blocked, so we don't want to log them
 				#logging.error(f'Failed to perform zone transfer from {nameserver} ({ns}) for {tld}: {ex}')
+				print(f'\033[31mFAIL\033[0m AXFR for \033[36m{tld}\033[0m on \033[33m{nameserver}\033[0m \033[90m({ns})\033[0m has failed! \033[90m({ex})\033[0m')
 				if os.path.exists(temp_file):
 					os.remove(temp_file)
 
@@ -52,13 +55,11 @@ def get_nameservers(target: str) -> list:
 	:param target: The target domain to get the nameservers for.
 	'''
 	try:
-		ns_records = dns.resolver.resolve(target+'.', 'NS', lifetime=60)
+		ns_records = dns.resolver.resolve(target, 'NS', lifetime=60)
 		nameservers = [str(rr.target)[:-1] for rr in ns_records]
 		return nameservers
-	except dns.exception.Timeout:
-		logging.warning(f'Timeout fetching nameservers for {target}')
-	except dns.resolver.NoNameservers:
-		logging.warning(f'No nameservers found for {target}')
+	except Exception as ex:
+		print(f'\033[31mFAIL\033[0m Error resolving nameservers for \033[36m{target}\033[0m \033[90m({ex})\033[0m')
 	return []
 
 
@@ -68,15 +69,13 @@ def get_root_tlds(output_dir: str) -> list:
 
 	:param output_dir: The output directory to use.
 	'''
-	root_dir = os.path.join(output_dir, 'root')
-	rndroot = [root for root in os.listdir(root_dir) if root.endswith('.root-servers.net.txt')]
+	rndroot = [root for root in os.listdir(output_dir) if root.endswith('.root-servers.net.txt')]
 	if rndroot:
 		rndroot_file = rndroot[0]  # Take the first file from the list
 		tlds = sorted(set([item.split()[0][:-1] for item in open(os.path.join(root_dir, rndroot_file)).read().split('\n') if item and 'IN' in item and 'NS' in item]))
 	else:
 		logging.warning('Failed to find root nameserver list...fallback to using IANA list')
 		tlds = urllib.request.urlopen('https://data.iana.org/TLD/tlds-alpha-by-domain.txt').read().decode('utf-8').lower().split('\n')[1:]
-	random.shuffle(tlds)
 	return tlds
 
 
@@ -123,14 +122,14 @@ if __name__ == '__main__':
 
 	logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+	root_dir = os.path.join(args.output, 'root')
+	os.makedirs(root_dir, exist_ok=True)
 	os.makedirs(args.output, exist_ok=True)
 	dns.resolver._DEFAULT_TIMEOUT = args.timeout
 
 	logging.info('Fetching root nameservers...')
-	root_dir = os.path.join(args.output, 'root')
-	os.makedirs(root_dir, exist_ok=True)
 	with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-		futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, tld + '.txt')) for tld in get_root_tlds(root_dir) for ns in get_nameservers(tld) if ns]
+		futures = [executor.submit(attempt_axfr, '', root, os.path.join(args.output, f'root/{root}.txt')) for root in get_nameservers('.')]
 		for future in concurrent.futures.as_completed(futures):
 			try:
 				future.result()
@@ -139,7 +138,7 @@ if __name__ == '__main__':
 
 	logging.info('Fetching root TLDs...')
 	with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-		futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, tld + '.txt')) for tld in get_root_tlds() for ns in get_nameservers(tld) if ns]
+		futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, tld + '.txt')) for tld in get_root_tlds(root_dir) for ns in get_nameservers(tld) if ns]
 		for future in concurrent.futures.as_completed(futures):
 			try:
 				future.result()
