@@ -48,7 +48,7 @@ def attempt_axfr(tld: str, nameserver: str, filename: str):
 def get_nameservers(target: str) -> list:
 	'''
 	Generate a list of the root nameservers.
-	
+
 	:param target: The target domain to get the nameservers for.
 	'''
 	try:
@@ -62,11 +62,17 @@ def get_nameservers(target: str) -> list:
 	return []
 
 
-def get_root_tlds() -> list:
-	'''Get the root TLDs from a root nameservers.'''
-	rndroot = [root for root in os.listdir('root') if root.endswith('.root-servers.net.txt')][0]
+def get_root_tlds(output_dir: str) -> list:
+	'''
+	Get the root TLDs from a root nameservers.
+
+	:param output_dir: The output directory to use.
+	'''
+	root_dir = os.path.join(output_dir, 'root')
+	rndroot = [root for root in os.listdir(root_dir) if root.endswith('.root-servers.net.txt')]
 	if rndroot:
-		tlds = sorted(set([item.split()[0][:-1] for item in open(rndroot).read().split('\n') if item and 'IN' in item and 'NS' in item]))
+		rndroot_file = rndroot[0]  # Take the first file from the list
+		tlds = sorted(set([item.split()[0][:-1] for item in open(os.path.join(root_dir, rndroot_file)).read().split('\n') if item and 'IN' in item and 'NS' in item]))
 	else:
 		logging.warning('Failed to find root nameserver list...fallback to using IANA list')
 		tlds = urllib.request.urlopen('https://data.iana.org/TLD/tlds-alpha-by-domain.txt').read().decode('utf-8').lower().split('\n')[1:]
@@ -121,14 +127,15 @@ if __name__ == '__main__':
 	dns.resolver._DEFAULT_TIMEOUT = args.timeout
 
 	logging.info('Fetching root nameservers...')
-	os.makedirs(os.path.join(args.output, 'root'), exist_ok=True)
+	root_dir = os.path.join(args.output, 'root')
+	os.makedirs(root_dir, exist_ok=True)
 	with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-		futures = [executor.submit(attempt_axfr, '', root, os.path.join(args.output, f'root/{root}.txt')) for root in get_nameservers('')]
+		futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, tld + '.txt')) for tld in get_root_tlds(root_dir) for ns in get_nameservers(tld) if ns]
 		for future in concurrent.futures.as_completed(futures):
 			try:
 				future.result()
 			except Exception as e:
-				logging.error(f'Error in root server task: {e}')
+				logging.error(f'Error in TLD task: {e}')
 
 	logging.info('Fetching root TLDs...')
 	with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
