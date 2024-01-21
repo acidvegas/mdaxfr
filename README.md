@@ -33,5 +33,4 @@ It is interesting to have seen this has worked on some "darknet" DNS servers...w
 
 ___
 
-###### Mirrors
-[acid.vegas](https://git.acid.vegas/mdaxfr) • [GitHub](https://github.com/acidvegas/mdaxfr) • [GitLab](https://gitlab.com/acidvegas/mdaxfr) • [SuperNETs](https://git.supernets.org/acidvegas/mdaxfr)
+###### Mirrors for this repository: [acid.vegas](https://git.acid.vegas/mdaxfr) • [SuperNETs](https://git.supernets.org/acidvegas/mdaxfr) • [GitHub](https://github.com/acidvegas/mdaxfr) • [GitLab](https://gitlab.com/acidvegas/mdaxfr) • [Codeberg](https://codeberg.org/acidvegas/mdaxfr)
