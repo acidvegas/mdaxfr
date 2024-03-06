@@ -18,7 +18,7 @@ It is expected to set *realistic* expectations when using this tool. In contempo
 ## Information
 I only wrote this to shit on **[this bozo](https://github.com/flotwig/TLDR-2/)** who took a dead project & brought it back to life by making it even worse. Rather than making a pull request to give this bloke more credit in his "tenure" as a developer, I decided to just rewrite it all from scratch so people can fork off of *clean* code instead.
 
-This repostiory also contains a [pure POSIX version](./mdaxfr) for portability, aswell as a [script](./opennic) to do zone transfers on [OpenNIC TLDs](https://wiki.opennic.org/opennic/dot) and a special [ozones](./ozones) script for fetching a few obscure additional zones.
+This repostiory also contains a [pure POSIX version](./mdaxfr) for portability, aswell as a [script](./extras/opennic) to do zone transfers on [OpenNIC TLDs](https://wiki.opennic.org/opennic/dot), a special [ozones](./extras/ozones) script for fetching a few obscure additional zones, and a [domain axfr script](./extras/daxfr) to target a specific website.
 
 ## Statistics, laughs, & further thinking...
 As of my last scan in 2023, I was only able to AXFR the zones for **8** out of **1,456** root TLDs, with a few of them being zones that were already retrieved by [acidvegas/czds](https://github.com/acidvegas/czds/), & **114** out of **7,977** TLDs in the [Public suffix list](https://publicsuffix.org/). The addition scripts in this repository provide an additional **37** zone files.

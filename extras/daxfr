@@ -1,0 +1,40 @@
+#!/bin/sh
+# Domain AXFR - developed by acidvegas (https://git.acid.vegas/mdaxfr)
+# This one will take a domain as an argument and attempt to perform an AXFR against all of the nameservers for that domain.
+
+# Colors
+CYAN="\033[1;36m"
+YELLOW="\033[1;33m"
+RED="\033[1;31m"
+GREEN="\033[1;32m"
+RESET="\033[0m"
+GREY="\033[1;90m"
+
+domain="$1" # base domain only, no http, https, or www (can have a subdomain though)
+
+[ -z "$domain" ] && echo "Invalid URL. Exiting." && exit 1
+
+echo "${YELLOW}Attempting AXFR against ${domain}...${RESET}"
+
+nameservers=$(dig NS +short "$domain")
+
+[ -z "$nameservers" ] && echo "${GREY}No nameservers found for ${domain}${RESET}" && exit 1
+
+echo "$nameservers" | while read -r ns; do
+    ns=$(echo "$ns" | sed 's/\.$//')
+    ips=$(host "$ns" | awk '/has address/ { print $4 }')
+
+    [ -z "$ips" ] && echo "${GREY}No IP addresses found for nameserver $ns under ${domain}. Skipping...${RESET}" && continue
+
+    echo "$ips" | while read -r ip; do
+        axfr_output=$(dig @$ip AXFR "$domain")
+        if echo "$axfr_output" | grep -q "Transfer failed."; then
+            echo "${RED}AXFR attempt from $ip ($ns) on ${domain} was not successful.${RESET}"
+        elif echo "$axfr_output" | grep -q "IN"; then
+            echo "${GREEN}Successful AXFR from $ip ($ns) on on ${domain}:${RESET}"
+            echo "${CYAN}$axfr_output${RESET}"
+        else
+            echo "${RED}AXFR attempt from $ip ($ns) on on ${domain} was not successful.${RESET}"
+        fi
+    done
+done

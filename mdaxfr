@@ -1,22 +1,21 @@
 #!/bin/sh
 # Mass DNS AXFR (POSIX version) - developed by acidvegas (https://git.acid.vegas/mdaxfr)
 
-OUTPUT_DIR="axfrout"
-mkdir -p "$OUTPUT_DIR"
-mkdir -p "$OUTPUT_DIR/root"
-mkdir -p "$OUTPUT_DIR/psl"
+# Define the current date for data organization
+now=$(date +"%Y-%m-%d")
 
-resolve_nameserver() {
-	dig +short AAAA $1 +short -t A $1 2>/dev/null
-}
+# Define the output directory
+output="axfrout/$now"
 
+# Function to attempt an AXFR request on all possible IP addresses for a nameserver
 attempt_axfr() {
     tld=$1
     nameserver=$2
     filename="$3"
-    temp_file="${filename}.temp"
 
-    nameserver_ips=$(resolve_nameserver "$nameserver")
+    temp_file="${filename}.temp"
+    nameserver_ips=$(dig +short A +retry=3 +time=10 $nameserver && dig +short AAAA +retry=3 +time=10 $nameserver)
+
     if [ -z "$nameserver_ips" ]; then
         echo -e "\e[31m[FAIL]\e[0m AXFR for \e[36m$tld\e[0m on \e[33m$nameserver\e[0m \e[90m(failed to resolve nameserver)\e[0m"
         return
@@ -35,21 +34,20 @@ attempt_axfr() {
     done
 }
 
-echo "[\e[31mWARNING\e[0m] Most nameservers will block AXFR requests \e[90m(It is normal for most of these to fail)\e[0m"
-sleep 3
+# Create the output directories (if they don't exist)
+mkdir -p "$output/root"
+mkdir -p "$output/psl"
 
-# For root IP space zones
-for i in $(seq 0 255); do
-    dig +nocmd +noall +answer +multiline $i.in-addr.arpa NS >> $OUTPUT_DIR/root/in-addr.arpa.txt
-done
+# Give a warning about the current state of AXFR requests
+echo "[\e[31mWARNING\e[0m] Most nameservers will block AXFR requests \e[90m(It is normal for most of these to fail)\e[0m" && sleep 3
 
 # For root nameservers
 for root in $(dig +short . NS | sed 's/\.$//'); do
-	attempt_axfr "." "$root" "$OUTPUT_DIR/root/$root.txt"
+	attempt_axfr "." "$root" "$output/root/$root.txt"
 done
 
 # Parse the tld list from a root nameserver
-rndroot=$(find $OUTPUT_DIR/root/*.root-servers.net.txt -type f | shuf -n 1)
+rndroot=$(find $output/root/*.root-servers.net.txt -type f | shuf -n 1)
 if [ -z $rndroot ]; then
 	echo "Failed to AXFR a root nameserver (using IANA list instead)"
 	tlds=$(curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | tail -n +2 | tr '[:upper:]' '[:lower:]')
@@ -60,13 +58,13 @@ fi
 # For TLD nameservers
 for tld in $tlds; do
 	for ns in $(dig +short "$tld" NS | sed 's/\.$//'); do
-		attempt_axfr "$tld" "$ns" "$OUTPUT_DIR/$tld.txt"
+		attempt_axfr "$tld" "$ns" "$output/$tld.txt"
 	done
 done
 
 # For Public Suffix List TLD nameservers
 for tld in $(curl -s https://publicsuffix.org/list/public_suffix_list.dat | grep -vE '^(//|.*[*!])' | grep '\.' | awk '{print $1}'); do
 	for ns in $(dig +short "$tld" NS | sed 's/\.$//'); do
-		attempt_axfr "$tld" "$ns" "$OUTPUT_DIR/psl/$tld.txt"
+		attempt_axfr "$tld" "$ns" "$output/psl/$tld.txt"
 	done
 done

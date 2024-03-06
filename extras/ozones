@@ -12,11 +12,14 @@ dig @zone.internet.ee ee. AXFR > ee.txt
 
 dig @ns1.gov.ps xn--ygbi2ammx. AXFR > xn--ygbi2ammx.txt
 
-wget -O sk.txt https://sk-nic.sk/subory/domains.txt
 
-wget -O gov.txt https://raw.githubusercontent.com/cisagov/dotgov-data/main/gov.txt
 
-wget -O nc.txt https://www.domaine.nc/whos?who=A*
+
+wget -O sk.txt https://sk-nic.sk/subory/domains.txt # not rfc compliant
+
+wget -O gov.txt https://raw.githubusercontent.com/cisagov/dotgov-data/main/gov.txt # czds available also
+
+wget -O nc.txt https://www.domaine.nc/whos?who=A* # Need to crawl the http maybe for this one...
 
 # https://www.afnic.fr/produits-services/services-associes/donnees-partagees/
 
