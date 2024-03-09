@@ -1,0 +1,30 @@
+#!/bin/sh
+# ICANN AXFR - developed by acidvegas (https://git.acid.vegas/mdaxfr)
+
+# Notes: None of these nameservers show in an NS lookup for the zone, but they do respond to AXFR (https://www.dns.icann.org/services/axfr/)
+nameservers="lax.xfr.dns.icann.org iad.xfr.dns.icann.org"
+zones_served=". in-addr.arpa. arpa. root-servers.net. ipv4only.arpa. ip6.arpa. ip6-servers.arpa. mcast.net."
+
+output_dir="output/icann_axfr"
+
+mkdir -p $output_dir
+
+for zone in $zones_served; do
+    for ns in $nameservers; do
+        ips=$(host $ns | awk '/has (IPv6 )?address/ { print $NF }')
+        for ip in $ips; do
+            echo "Attempting AXFR for $zone from $ns ($ip)"
+            dig @$ip $zone AXFR > $output_dir/$zone.$ns.$ip.txt
+        done
+    done
+done
+
+for i in seq 224 239; do
+    for ns in $nameservers; do
+        ips=$(host $ns | awk '/has (IPv6 )?address/ { print $NF }')
+        for ip in $ips; do
+            echo "Attempting AXFR for $zone from $ns ($ip)"
+            dig @$ip $i.in-addr.arpa. AXFR > $output_dir/$i.in-addr.arpa.$ns.$ip.txt
+        done
+    done
+done
