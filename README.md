@@ -1,27 +1,50 @@
 # Mass DNS AXFR (Zone Transfer)
 
-###### [Zone Transfer](https://en.wikipedia.org/wiki/DNS_zone_transfer) on all of the [Root Nameservers](https://en.wikipedia.org/wiki/Root_name_server) and [Top-level Domains](https://en.wikipedia.org/wiki/Top-level_domain) *(TLDs)*.
+## Information
+MDAXFR allows you to perform a DNS [Zone Transfer](https://en.wikipedia.org/wiki/DNS_zone_transfer) against a target domain by resolving all of the domains nameservers to their respective A/AAAA records and making an AXFR attempt against each of the IP addresses.
+
+You can also use this tool against the [Root Nameservers](https://en.wikipedia.org/wiki/Root_name_server) and [Top-level Domains](https://en.wikipedia.org/wiki/Top-level_domain) *(TLD)*, including those in the [Public Suffix List](https://en.wikipedia.org/wiki/Public_Suffix_List) *(PSL)* aswell.
+
+![](.screens/preview_ripe.png)
+![](.screens/preview_root.png)
 
 ## Expectations & Legalities
 It is expected to set *realistic* expectations when using this tool. In contemporary network configurations, AXFR requests are typically restricted, reflecting best practices in DNS security. While many nameservers now disallow AXFR requests, there may still be occasional instances where configurations permit them. Always exercise due diligence and ensure ethical use.
 
-## Requirements
+## Usage
+### POSIX Version
+
+```shell
+./mdaxfr <option>
+```
+
+###### Options
+| Argument      | Description                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------- |
+| `-tld`,       | Perform AXFR on all TLDs                                                                    |
+| `-psl`,       | Perform AXFR on all PSL TLDs                                                                |
+| `<axfr_file>` | Perform AXFR on all domains found in `<axfr_file>` *(must be an AXFR output file from dig)* |
+| `<domain>`    | Perform AXFR on `<domain>`                                                                  |
+
+### Python Version
+```shell
+python mdaxfr.py <option>
+```
+
+###### Requirements
 - [dnspython](https://pypi.org/project/dnspython/) *(`pip install dnspython`)*
 
-## Usage
+###### Options
 | Argument              | Description                                          |
 | --------------------- | ---------------------------------------------------- |
 | `-c`, `--concurrency` | Maximum concurrent tasks.                            |
 | `-o`, `--output`      | Specify the output directory *(default is axfrout)*. |
 | `-t`, `--timeout`     | DNS timeout *(default: 30)*                          |
 
-## Information
+## Statistics, laughs, & further thinking...
 I only wrote this to shit on **[this bozo](https://github.com/flotwig/TLDR-2/)** who took a dead project & brought it back to life by making it even worse. Rather than making a pull request to give this bloke more credit in his "tenure" as a developer, I decided to just rewrite it all from scratch so people can fork off of *clean* code instead.
 
-This repostiory also contains a [pure POSIX version](./mdaxfr) for portability, aswell as a [script](./extras/opennic) to do zone transfers on [OpenNIC TLDs](https://wiki.opennic.org/opennic/dot), a special [ozones](./extras/ozones) script for fetching a few obscure additional zones, and a [domain axfr script](./extras/daxfr) to target a specific website.
-
-## Statistics, laughs, & further thinking...
-As of my last scan in 2023, I was only able to AXFR the zones for **8** out of **1,456** root TLDs, with a few of them being zones that were already retrieved by [acidvegas/czds](https://github.com/acidvegas/czds/), & **114** out of **7,977** TLDs in the [Public suffix list](https://publicsuffix.org/). The addition scripts in this repository provide an additional **37** zone files.
+As of my last scan in 2023, I was only able to AXFR the zones for **8** out of **1,456** root TLDs, with a few of them being zones that were already retrieved by [acidvegas/czds](https://github.com/acidvegas/czds/), & **114** out of **7,977** TLDs in the [Public suffix list](https://publicsuffix.org/). The [addition scripts](./extras/) in this repository provide an additional **37** zone files.
 
 For laughs, here is a one-liner mass zone axfr:
 ```bash
@@ -29,7 +52,7 @@ curl -s https://www.internic.net/domain/root.zone | awk '$4=="A" || $4=="AAAA" {
 ```
 **Note:** Don't actually use this lol...
 
-It is interesting to have seen this has worked on some "darknet" DNS servers...would maybe look into exploring collecting more zones for alterntive DNS routing. Some of that goes beyond an "AXFR" though...
+It is interesting to have seen this has worked on some "darknet" DNS servers...would maybe look into exploring collecting more zones for alterntive DNS routing. I am also intruiged at how much you can explore [ARPANET](https://en.wikipedia.org/wiki/ARPANET) with AXFRs...more ARPAgheddon coming soon...
 
 ___
 
