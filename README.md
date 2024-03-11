@@ -1,45 +1,40 @@
 # Mass DNS AXFR (Zone Transfer)
 
+![](./.screens/preview.gif)
+
 ## Information
 MDAXFR allows you to perform a DNS [Zone Transfer](https://en.wikipedia.org/wiki/DNS_zone_transfer) against a target domain by resolving all of the domains nameservers to their respective A/AAAA records and making an AXFR attempt against each of the IP addresses.
-
-You can also use this tool against the [Root Nameservers](https://en.wikipedia.org/wiki/Root_name_server) and [Top-level Domains](https://en.wikipedia.org/wiki/Top-level_domain) *(TLD)*, including those in the [Public Suffix List](https://en.wikipedia.org/wiki/Public_Suffix_List) *(PSL)* aswell.
-
-![](.screens/preview_ripe.png)
-![](.screens/preview_root.png)
 
 ## Expectations & Legalities
 It is expected to set *realistic* expectations when using this tool. In contemporary network configurations, AXFR requests are typically restricted, reflecting best practices in DNS security. While many nameservers now disallow AXFR requests, there may still be occasional instances where configurations permit them. Always exercise due diligence and ensure ethical use.
 
-## Usage
-### POSIX Version
-
+## Usage:
+- AXFR a single domain
 ```shell
-./mdaxfr <option>
+./mdaxfr ripe.net
 ```
 
-###### Options
-| Argument      | Description                                                                                 |
-| ------------- | ------------------------------------------------------------------------------------------- |
-| `-tld`,       | Perform AXFR on all TLDs                                                                    |
-| `-psl`,       | Perform AXFR on all PSL TLDs                                                                |
-| `<axfr_file>` | Perform AXFR on all domains found in `<axfr_file>` *(must be an AXFR output file from dig)* |
-| `<domain>`    | Perform AXFR on `<domain>`                                                                  |
-
-### Python Version
+- AXFR a list of domains
 ```shell
-python mdaxfr.py <option>
+cat domain_list.txt | ./mdaxfr
 ```
 
-###### Requirements
-- [dnspython](https://pypi.org/project/dnspython/) *(`pip install dnspython`)*
+- AXFR all domains in an AXFR output file
+```shell
+domain="ripe.net" cat axfr-ripe.log | grep -aE "\s+IN\s+NS\s+" | grep -avE "^${domain}\.\s+" | awk '{print $1}' | sort -u | sed 's/\.$//' | ./mdaxfr
+```
 
-###### Options
-| Argument              | Description                                          |
-| --------------------- | ---------------------------------------------------- |
-| `-c`, `--concurrency` | Maximum concurrent tasks.                            |
-| `-o`, `--output`      | Specify the output directory *(default is axfrout)*. |
-| `-t`, `--timeout`     | DNS timeout *(default: 30)*                          |
+###### You can also use this tool against the [Root Nameservers](https://en.wikipedia.org/wiki/Root_name_server) and [Top-level Domains](https://en.wikipedia.org/wiki/Top-level_domain) *(TLD)*, including those in the [Public Suffix List](https://en.wikipedia.org/wiki/Public_Suffix_List) *(PSL)* aswell.
+
+- AXFR on all TLDs
+```shell
+curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | tail -n +2 | tr '[:upper:]' '[:lower:] | ./mdaxfr
+```
+
+- AXFR on all PSL TLDs
+```shell
+curl -s https://publicsuffix.org/list/public_suffix_list.dat | grep -vE '^(//|.*[*!])' | grep '\.' | awk '{print $1}' | ./mdaxfr
+```
 
 ## Statistics, laughs, & further thinking...
 I only wrote this to shit on **[this bozo](https://github.com/flotwig/TLDR-2/)** who took a dead project & brought it back to life by making it even worse. Rather than making a pull request to give this bloke more credit in his "tenure" as a developer, I decided to just rewrite it all from scratch so people can fork off of *clean* code instead.

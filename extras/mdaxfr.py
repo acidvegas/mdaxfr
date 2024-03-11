@@ -3,6 +3,7 @@
 
 import logging
 import os
+import re
 import urllib.request
 
 try:
@@ -14,53 +15,50 @@ except ImportError:
 	raise SystemExit('missing required \'dnspython\' module (pip install dnspython)')
 
 
-def attempt_axfr(tld: str, nameserver: str, filename: str):
-	'''
-	Perform a DNS zone transfer on a target domain.
+# Colours
+BLUE   = '\033[1;34m'
+CYAN   = '\033[1;36m'
+GREEN  = '\033[1;32m'
+GREY   = '\033[1;90m'
+PINK   = '\033[1;95m'
+PURPLE = '\033[0;35m'
+RED    = '\033[1;31m'
+YELLOW = '\033[1;33m'
+RESET  = '\033[0m'
 
-	:param target: The target domain to perform the zone transfer on.
+
+def attempt_axfr(domain: str, nameserver: str, nameserver_ip: str):
+	'''
+	Request a zone transfer from a nameserver on a domain.
+
+	:param domain: The domain to perform the zone transfer on.
 	:param nameserver: The nameserver to perform the zone transfer on.
-	:param filename: The filename to store the zone transfer results in.
+	:param nameserver_ip: The IP address of the nameserver.
 	'''
-	temp_file = filename + '.temp'
-	if not (resolvers := resolve_nameserver(nameserver)):
-		logging.error(f'Failed to resolve nameserver {nameserver}: {ex}')
-	else:
-		for ns in resolvers: # Let's try all the IP addresses for the nameserver
-			try:
-				xfr = dns.query.xfr(ns, tld, lifetime=300)
-				if next(xfr, None) is not None:
-					if not tld:
-						print(f'\033[32mSUCCESS\033[0m AXFR for \033[36m.\033[0m on \033[33m{nameserver}\033[0m \033[90m({ns})\033[0m')
-					else:
-						print(f'\033[32mSUCCESS\033[0m AXFR for \033[36m{tld}\033[0m on \033[33m{nameserver}\033[0m \033[90m({ns})\033[0m')
-					with open(temp_file, 'w') as file:
-						for msg in xfr:
-							for rrset in msg.answer:
-								for rdata in rrset:
-									file.write(f'{rrset.name}.{tld} {rrset.ttl} {rdata}\n')
-					os.rename(temp_file, filename)
-					break
-			except Exception as ex:
-				#logging.error(f'Failed to perform zone transfer from {nameserver} ({ns}) for {tld}: {ex}')
-				print(f'\033[31mFAIL\033[0m AXFR for \033[36m{tld}\033[0m on \033[33m{nameserver}\033[0m \033[90m({ns})\033[0m has failed! \033[90m({ex})\033[0m')
-				if os.path.exists(temp_file):
-					os.remove(temp_file)
+
+	print(f'                {YELLOW}Attempting AXFR for {CYAN}{domain}{RESET} on {PURPLE}{nameserver} {GREY}({nameserver_ip}){RESET}')
+
+	zone = dns.zone.from_xfr(dns.query.xfr(nameserver_ip, domain))
+
+	record_count = sum(len(node.rdatasets) for node in zone.nodes.values())
+
+	print(f'                {GREEN}AXFR successful for {CYAN}{domain}{RESET} on {PURPLE}{nameserver} {GREY}({nameserver_ip}){RESET} - {record_count:,} records')
+
+	with open(os.path.join('axfrout', f'{domain}_{nameserver}_{nameserver_ip}.log'), 'w') as file:
+		file.write(zone.to_text())
 
 
-def get_nameservers(target: str) -> list:
+def get_nameservers(domain: str) -> list:
 	'''
 	Generate a list of the root nameservers.
 
 	:param target: The target domain to get the nameservers for.
 	'''
-	try:
-		ns_records = dns.resolver.resolve(target, 'NS', lifetime=60)
-		nameservers = [str(rr.target)[:-1] for rr in ns_records]
-		return nameservers
-	except Exception as ex:
-		print(f'\033[31mFAIL\033[0m Error resolving nameservers for \033[36m{target}\033[0m \033[90m({ex})\033[0m')
-	return []
+
+	ns_records  = dns.resolver.resolve(domain, 'NS', lifetime=30)
+	nameservers = [str(rr.target)[:-1] for rr in ns_records]
+
+	return nameservers
 
 
 def get_root_tlds(output_dir: str) -> list:
@@ -100,13 +98,49 @@ def resolve_nameserver(nameserver: str) -> list:
 
 	:param nameserver: The nameserver to resolve.
 	'''
+
 	data = []
+
 	for version in ('A', 'AAAA'):
-		try:
-			data += [ip.address for ip in dns.resolver.resolve(nameserver, version, lifetime=60)]
-		except:
-			pass
+		data.extend([ip.address for ip in dns.resolver.resolve(nameserver, version, lifetime=30)])
+
 	return data
+
+
+def process_domain(domain: str):
+	domain = re.sub(r'^https?://|^(www\.)|(/.*$)', '', domain)
+
+	print(f'{PINK}Looking up nameservers for {CYAN}{domain}{RESET}')
+
+	try:
+		nameservers = get_nameservers(domain)
+	except Exception as ex:
+		print(f'    {RED}Error resolving nameservers for {CYAN}{domain} {GREY}({ex}){RESET}')
+		return
+	
+	if not nameservers:
+		print(f'    {GREY}No nameservers found for {CYAN}{domain}{RESET}')
+		return
+	
+	print(f'    {BLUE}Found {len(nameservers):,} nameservers for {CYAN}{domain}{RESET}')
+
+	for nameserver in nameservers:
+		print(f'        {PINK}Looking up IP addresses for {PURPLE}{nameserver}{RESET}')
+
+		try:
+			nameserver_ips = resolve_nameserver(nameserver)
+		except Exception as ex:
+			print(f'            {RED}Error resolving IP addresses for {PURPLE}{nameserver} {GREY}({ex}){RESET}')
+			continue
+
+		if not nameserver_ips:
+			print(f'            {GREY}No IP addresses found for {PURPLE}{nameserver}{RESET}')
+			continue
+
+		print(f'            {BLUE}Found {len(nameserver_ips):,} IP addresses for {PURPLE}{nameserver}{RESET}')
+
+		for nameserver_ip in nameserver_ips:
+			attempt_axfr(domain, nameserver, nameserver_ip)
 
 
 
@@ -115,9 +149,11 @@ if __name__ == '__main__':
 	import concurrent.futures
 
 	parser = argparse.ArgumentParser(description='Mass DNS AXFR')
+	parser.add_argument('-d', '--domain', type=str,help='domain to perform AXFR on')
+	parser.add_argument('-i', '--input', type=str, help='input directory')
+	parser.add_argument('-t', '--tld', type=str, help='TLD to perform AXFR on')
+	parser.add_argument('-p', '--psl', action='store_true', help='use the Public Suffix List')
 	parser.add_argument('-c', '--concurrency', type=int, default=30, help='maximum concurrent tasks')
-	parser.add_argument('-o', '--output', default='axfrout', help='output directory')
-	parser.add_argument('-t', '--timeout', type=int, default=15, help='DNS timeout (default: 15)')
 	args = parser.parse_args()
 
 	logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

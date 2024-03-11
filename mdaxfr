@@ -1,6 +1,20 @@
 #!/bin/sh
 # Mass DNS AXFR (POSIX version) - developed by acidvegas (https://git.acid.vegas/mdaxfr)
 
+# Usage:
+#     AXFR on a single domain:
+#         ./mdaxfr <domain>
+#     AXFR on a list of domains:
+#         cat domain_list.txt | ./mdaxfr
+#     AXFR on all domains in an AXFR output file:
+#         domain="ripe.net" cat axfr-ripe.log | grep -aE "\s+IN\s+NS\s+" | grep -avE "^${domain}\.\s+" | awk '{print $1}' | sort -u | sed 's/\.$//' | ./mdaxfr
+#     AXFR on all TLDs:
+#         curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | tail -n +2 | tr '[:upper:]' '[:lower:]' | ./mdaxfr
+#     AXFR on all PSL TLDs:
+#         curl -s https://publicsuffix.org/list/public_suffix_list.dat | grep -vE '^(//|.*[*!])' | grep '\.' | awk '{print $1}' | ./mdaxfr
+#     AXFR one-liner to rule them all:
+#         curl -s https://www.internic.net/domain/root.zone | awk '$4=="A" || $4=="AAAA" {print substr($1, 3) " " $5}' | sed 's/\.$//' | xargs -n2 sh -c 'dig AXFR "$0" "@$1"'
+
 # Colors
 BLUE="\033[1;34m"
 CYAN="\033[1;36m"
@@ -15,7 +29,6 @@ RESET="\033[0m"
 # Set output directory
 output_dir="axfrout"
 mkdir -p $output_dir
-
 
 axfr() {
     domain=$1
@@ -35,7 +48,6 @@ axfr() {
         echo "                ${RED}    Failed AXFR for ${CYAN}${domain}${RED} from ${PURPLE}${ns} ${GREY}(${ip})${RESET}"
     fi
 }
-
 
 process_domain() {
     domain=$1
@@ -65,90 +77,12 @@ process_domain() {
             axfr "$domain" "$ns" "$ip"
         done
 
-        
     done
 }
-
-
-read_axfr_out() {
-    axfr_output_file=$1
-
-    root=$(grep -m1 '^; <<>> DiG' $axfr_output_file | awk '{print $NF}')
-    domains=$(grep -aE "\s+IN\s+NS\s+" "$axfr_output_file" | grep -avE "^${root}\.\s+" | awk '{print $1}' | sort -u | sed 's/\.$//')
-
-    [ -z "$domains" ] && echo "${GREY}No domains found for ${root}${RESET}" && return
- 
-    total_domains=$(echo "$domains" | wc -l)
-    echo "${BLUE}Found ${total_domains} domains for ${CYAN}${root}${BLUE} zone"
-
-    for domain in $domains; do
-        process_domain $domain
-    done
-}
-
-
-psl_crawl() {
-    psl=$(curl -s https://publicsuffix.org/list/public_suffix_list.dat | grep -vE '^(//|.*[*!])' | grep '\.' | awk '{print $1}')
-
-    [ -z "$psl" ] && echo "${RED}No PSL TLDs found${RESET}" && exit 1
-
-    total_psl=$(echo "$psl" | wc -l)
-    echo "${BLUE}Found ${total_psl} PSL TLDs${RESET}"
-
-    # Process the PSL TLDs
-    for tld in $psl; do
-        process_domain $tld
-    done
-}
-
-
-tld_crawl() {
-    process_domain "."
-
-    rndroot=$(find $output_dir/*.root-servers.net.txt -type f | shuf -n 1)
-
-    if [ -z $rndroot ]; then
-        echo "${GREY}No root nameserver found, using IANA TLD list${RESET}"
-        tlds=$(curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | tail -n +2 | tr '[:upper:]' '[:lower:]')
-    else 
-        tlds=$(cat $rndroot | grep -aE '\s+IN\s+NS\s+' | grep -avE "^\.\s+" | awk '{print $1}' | sed 's/\.$//' | sort -u)
-    fi
-
-    [ -z "$tlds" ] && echo "${RED}No TLDs found${RESET}" && exit 1
-
-    total_tld=$(echo "$tlds" | wc -l)
-    echo "${BLUE}Found ${total_tld} TLDs${RESET}"
-
-    # Process the TLDs
-    for tld in $tlds; do
-        process_domain $tld
-    done
-}
-
-
 
 if [ -t 0 ]; then
-    if [ $# -ne 1 0 ]; then
-        echo "Usage: $0 <option>"
-        echo ""
-        echo "Options:"
-        echo "      -tld : Perform AXFR on all TLDs"
-        echo "      -psl : Perform AXFR on all PSL TLDs"
-        echo "    <file> : Process AXFR output file (must be an AXFR output file from dig)"
-        echo "  <domain> : Perform AXFR on a single domain"
-        echo ""
-        echo "Standard Input:"
-        echo "  cat domain_list.txt | $0"
-        exit 1
-    elif [ $1 = '-tld' ]; then
-        tld_crawl
-    elif [ $1 = '-psl' ]; then
-        psl_crawl
-    elif [ -f $1 ]; then
-        read_axfr_out $1
-    else
-        process_domain $1
-    fi
+    [ $# -ne 1 ] && echo "Usage: $0 <domain> or cat domain_list.txt | $0" && exit 1
+    process_domain $1
 else
     while IFS= read -r line; do
         process_domain $line
