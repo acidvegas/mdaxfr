@@ -6,8 +6,10 @@
 #         ./mdaxfr <domain>
 #     AXFR on a list of domains:
 #         cat domain_list.txt | ./mdaxfr
+#     AXFR on a list of domains using parallel:
+#         parallel -a domain_list.txt -j 10 ./mdaxfr
 #     AXFR on all domains in an AXFR output file:
-#         domain="ripe.net" cat axfr-ripe.log | grep -aE "\s+IN\s+NS\s+" | grep -avE "^${domain}\.\s+" | awk '{print $1}' | sort -u | sed 's/\.$//' | ./mdaxfr
+#         domain="in-addr.arpa" cat axfrout/in-addr.arpa.txt | grep -aE "\s+IN\s+NS\s+" | grep -avE "^${domain}\.\s+" | awk '{print $1}' | sort -u | sed 's/\.$//' | ./mdaxfr
 #     AXFR on all TLDs:
 #         curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | tail -n +2 | tr '[:upper:]' '[:lower:]' | ./mdaxfr
 #     AXFR on all PSL TLDs:
