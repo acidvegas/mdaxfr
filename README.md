@@ -40,6 +40,11 @@ curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | tail -n +2 | tr '
 curl -s https://publicsuffix.org/list/public_suffix_list.dat | grep -vE '^(//|.*[*!])' | grep '\.' | awk '{print $1}' | ./mdaxfr
 ```
 
+- A python version of this tool with better concurrency control is available [here](./extras/mdaxfr.py):
+```shell
+python ./extras/mdaxfr.py --tlds -c 30
+```
+
 ## Statistics, laughs, & further thinking...
 I only wrote this to shit on **[this bozo](https://github.com/flotwig/TLDR-2/)** who took a dead project & brought it back to life by making it even worse. Rather than making a pull request to give this bloke more credit in his "tenure" as a developer, I decided to just rewrite it all from scratch so people can fork off of *clean* code instead.
 
