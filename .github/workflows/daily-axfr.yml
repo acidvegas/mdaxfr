@@ -1,0 +1,50 @@
+name: Daily AXFR Scan
+
+on:
+  schedule:
+    # Run at midnight UTC daily
+    - cron: '0 0 * * *'
+  # Optional: Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Full git history needed to track changes
+          fetch-depth: 0
+
+      - name: Set up environment
+        run: |
+          chmod +x ./mdaxfr
+          mkdir -p axfrout
+
+      - name: Run AXFR scan
+        run: |
+          curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | \
+          tail -n +2 | \
+          tr '[:upper:]' '[:lower:]' | \
+          ./mdaxfr
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Commit and push changes
+        run: |
+          # Stage only the axfrout directory
+          git add axfrout/
+          
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          
+          git commit -m "Auto: Daily AXFR scan results $(date -u '+%Y-%m-%d')"
+          git push 
