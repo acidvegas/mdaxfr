@@ -45,6 +45,8 @@ I only wrote this to shit on **[this bozo](https://github.com/flotwig/TLDR-2/)**
 
 As of my last scan in 2023, I was only able to AXFR the zones for **8** *(.er, .fj, .gp, .mp, .mw, .ni, .sl, .xn--54b7fta0cc)* out of **1,456** root TLDs, & **114** out of **7,977** TLDs in the [Public suffix list](https://publicsuffix.org/). The [addition scripts](./extras/) in this repository provide an additional **37** zone files.
 
+This repository also includes a GitHub Actions workflow that will automatically perform a daily scan of the root TLDs and push the results to the [axfrout/root](./axfrout/) directory.
+
 For laughs, here is a one-liner mass zone axfr:
 ```bash
 curl -s https://www.internic.net/domain/root.zone | awk '$4=="A" || $4=="AAAA" {print substr($1, 3) " " $5}' | sed 's/\.$//' | xargs -n2 sh -c 'dig AXFR "$0" "@$1"'
