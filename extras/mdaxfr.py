@@ -155,16 +155,14 @@ if __name__ == '__main__':
 	parser.add_argument('-t', '--tlds', action='store_true', help='Perform AXFR on all TLDs')
 	parser.add_argument('-p', '--psl', action='store_true', help='use the Public Suffix List')
 	parser.add_argument('-c', '--concurrency', type=int, default=30, help='maximum concurrent tasks')
-	parser.add_argument('-o', '--output', type=str, default='axfrout', help='output directory')
+	parser.add_argument('-o', '--output', dest='output_dir', type=str, default='axfrout', help='output directory')
 	args = parser.parse_args()
 
 	logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-	output_dir = args.output  # Store the output directory
-	root_dir = os.path.join(output_dir, 'root')  # Use the stored output directory
-
 	# Create output directories
-	os.makedirs(output_dir, exist_ok=True)
+	os.makedirs(args.output_dir, exist_ok=True)
+	root_dir = os.path.join(args.output_dir, 'root')
 	os.makedirs(root_dir, exist_ok=True)
 
 	# Set DNS timeout
@@ -221,7 +219,7 @@ if __name__ == '__main__':
 		elif args.psl:
 			# PSL mode
 			logging.info('Fetching PSL domains...')
-			psl_dir = os.path.join(output_dir, 'psl')  # Use output_dir here too
+			psl_dir = os.path.join(args.output_dir, 'psl')
 			os.makedirs(psl_dir, exist_ok=True)
 			
 			domains = get_psl_tlds()
