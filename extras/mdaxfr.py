@@ -160,9 +160,11 @@ if __name__ == '__main__':
 
 	logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+	output_dir = args.output  # Store the output directory
+	root_dir = os.path.join(output_dir, 'root')  # Use the stored output directory
+
 	# Create output directories
-	os.makedirs(args.output, exist_ok=True)
-	root_dir = os.path.join(args.output, 'root')
+	os.makedirs(output_dir, exist_ok=True)
 	os.makedirs(root_dir, exist_ok=True)
 
 	# Set DNS timeout
@@ -219,7 +221,7 @@ if __name__ == '__main__':
 		elif args.psl:
 			# PSL mode
 			logging.info('Fetching PSL domains...')
-			psl_dir = os.path.join(args.output, 'psl')
+			psl_dir = os.path.join(output_dir, 'psl')  # Use output_dir here too
 			os.makedirs(psl_dir, exist_ok=True)
 			
 			domains = get_psl_tlds()
