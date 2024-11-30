@@ -147,46 +147,95 @@ def process_domain(domain: str):
 if __name__ == '__main__':
 	import argparse
 	import concurrent.futures
+	import sys
 
 	parser = argparse.ArgumentParser(description='Mass DNS AXFR')
-	parser.add_argument('-d', '--domain', type=str,help='domain to perform AXFR on')
-	parser.add_argument('-i', '--input', type=str, help='input directory')
-	parser.add_argument('-t', '--tld', type=str, help='TLD to perform AXFR on')
+	parser.add_argument('-d', '--domain', type=str, help='domain to perform AXFR on')
+	parser.add_argument('-i', '--input', type=str, help='input file')
+	parser.add_argument('-t', '--tlds', action='store_true', help='Perform AXFR on all TLDs')
 	parser.add_argument('-p', '--psl', action='store_true', help='use the Public Suffix List')
 	parser.add_argument('-c', '--concurrency', type=int, default=30, help='maximum concurrent tasks')
+	parser.add_argument('-o', '--output', type=str, default='axfrout', help='output directory')
 	args = parser.parse_args()
 
 	logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+	# Create output directories
+	os.makedirs(args.output, exist_ok=True)
 	root_dir = os.path.join(args.output, 'root')
 	os.makedirs(root_dir, exist_ok=True)
-	os.makedirs(args.output, exist_ok=True)
-	dns.resolver._DEFAULT_TIMEOUT = args.timeout
 
-	logging.info('Fetching root nameservers...')
-	with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-		futures = [executor.submit(attempt_axfr, '', root, os.path.join(args.output, f'root/{root}.txt')) for root in get_nameservers('.')]
-		for future in concurrent.futures.as_completed(futures):
-			try:
-				future.result()
-			except Exception as e:
-				logging.error(f'Error in TLD task: {e}')
+	# Set DNS timeout
+	dns.resolver._DEFAULT_TIMEOUT = 30
 
-	logging.info('Fetching root TLDs...')
 	with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-		futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, tld + '.txt')) for tld in get_root_tlds(root_dir) for ns in get_nameservers(tld) if ns]
-		for future in concurrent.futures.as_completed(futures):
+		if args.domain:
+			# Single domain mode
+			process_domain(args.domain)
+		
+		elif args.input:
+			# Input file mode
 			try:
-				future.result()
-			except Exception as e:
-				logging.error(f'Error in TLD task: {e}')
+				with open(args.input, 'r') as f:
+					domains = [line.strip() for line in f if line.strip()]
+				futures = [executor.submit(process_domain, domain) for domain in domains]
+				for future in concurrent.futures.as_completed(futures):
+					try:
+						future.result()
+					except Exception as e:
+						logging.error(f'Error processing domain: {e}')
+			except FileNotFoundError:
+				logging.error(f'Input file not found: {args.input}')
+				sys.exit(1)
 
-	logging.info('Fetching PSL TLDs...')
-	os.makedirs(os.path.join(args.output, 'psl'), exist_ok=True)
-	with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
-		futures = [executor.submit(attempt_axfr, tld, ns, os.path.join(args.output, f'psl/{tld}.txt')) for tld in get_psl_tlds() for ns in get_nameservers(tld) if ns]
-		for future in concurrent.futures.as_completed(futures):
-			try:
-				future.result()
-			except Exception as e:
-				logging.error(f'Error in TLD task: {e}')
+		elif args.tlds:
+			# TLD mode
+			logging.info('Fetching root nameservers...')
+			# First get root nameservers
+			for root in get_nameservers('.'):
+				try:
+					attempt_axfr('', root, os.path.join(root_dir, f'{root}.txt'))
+				except Exception as e:
+					logging.error(f'Error processing root nameserver {root}: {e}')
+
+			# Then process TLDs
+			logging.info('Processing TLDs...')
+			tlds = get_root_tlds(root_dir)
+			futures = []
+			for tld in tlds:
+				try:
+					nameservers = get_nameservers(tld)
+					for ns in nameservers:
+						futures.append(executor.submit(process_domain, tld))
+				except Exception as e:
+					logging.error(f'Error processing TLD {tld}: {e}')
+			
+			for future in concurrent.futures.as_completed(futures):
+				try:
+					future.result()
+				except Exception as e:
+					logging.error(f'Error in TLD task: {e}')
+
+		elif args.psl:
+			# PSL mode
+			logging.info('Fetching PSL domains...')
+			psl_dir = os.path.join(args.output, 'psl')
+			os.makedirs(psl_dir, exist_ok=True)
+			
+			domains = get_psl_tlds()
+			futures = []
+			for domain in domains:
+				try:
+					futures.append(executor.submit(process_domain, domain))
+				except Exception as e:
+					logging.error(f'Error processing PSL domain {domain}: {e}')
+			
+			for future in concurrent.futures.as_completed(futures):
+				try:
+					future.result()
+				except Exception as e:
+					logging.error(f'Error in PSL task: {e}')
+
+		else:
+			parser.print_help()
+			sys.exit(1)

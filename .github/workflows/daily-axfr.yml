@@ -28,19 +28,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install dnspython
 
-      - name: Set up environment
+      - name: Create directories
         run: |
+          mkdir -p axfrout/root
           chmod +x ./extras/mdaxfr.py
-          mkdir -p axfrout
 
-      - name: Run AXFR scan
+      - name: Run AXFR scan with TLDs
         run: |
-          curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | \
-          tail -n +2 | \
-          tr '[:upper:]' '[:lower:]' | \
-          while read domain; do
-            python ./extras/mdaxfr.py -d "$domain"
-          done
+          python ./extras/mdaxfr.py --tlds
 
       - name: Configure Git
         run: |
@@ -49,8 +44,9 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          # Stage only the axfrout directory
+          # Stage both directories
           git add axfrout/
+          git add root/
           
           # Only commit if there are changes
           if git diff --staged --quiet; then
@@ -59,4 +55,4 @@ jobs:
           fi
           
           git commit -m "Auto: Daily AXFR scan results $(date -u '+%Y-%m-%d')"
-          git push 
+          git push
