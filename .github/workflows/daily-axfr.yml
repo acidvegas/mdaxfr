@@ -44,9 +44,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          # Stage both directories
+          # Stage only the axfrout directory (which includes root/)
           git add axfrout/
-          git add root/
           
           # Only commit if there are changes
           if git diff --staged --quiet; then
