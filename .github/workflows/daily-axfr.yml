@@ -35,7 +35,7 @@ jobs:
 
       - name: Run AXFR scan with TLDs
         run: |
-          python ./extras/mdaxfr.py --tlds
+          python ./extras/mdaxfr.py --tlds -c 10
 
       - name: Configure Git
         run: |
