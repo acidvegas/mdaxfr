@@ -1,5 +1,5 @@
-@ 10800 IN SOA ekushey.btcl.net.bd. root.btcl.net.bd. 2025011615 120 3600 604800 10800
-@ 10800 IN RRSIG SOA 8 1 10800 20250214234908 20250115224908 15315 @ YHYInHQpycpR6/FiN8YDc1nqm/2pbztI hxsuxlk2rLqvSlDvMlzWF/Ec8u7tZYQ6 3wAfU63SPVKmK+KgwT+7XAOCsZnFYUMA ZKKyQpUPPNE3C1mRX8l2QV9bdsYo9Kg3 e2o2wlb+Lz6dVx3GgNyQ8wLeaTBw3ZiF BHJa9p9hPmQ=
+@ 10800 IN SOA ekushey.btcl.net.bd. root.btcl.net.bd. 2025011712 120 3600 604800 10800
+@ 10800 IN RRSIG SOA 8 1 10800 20250215235116 20250116225116 15315 @ gpMhwa/65W+DrefkRm+RtTpbtCmxC1rD GQrwu2tA3yvJzB+Q9KsBJxxqkvusIjrg Mx+1qzb1+ceMft13dyPUcX4F3cO861PJ GUzoN68wyiy19KL0j3jfKmy0QW1Hp/8L pZQ9e0Ai9FJvEtDoERVL7SJQ9qJOkDyt qhOE7EPM+pU=
 @ 10800 IN NS ekushey.btcl.net.bd.
 @ 10800 IN NS bayanno.btcl.net.bd.
 @ 10800 IN NS bd-ns.anycast.pch.net.
@@ -586,7 +586,7 @@ xn--b5be0efj7aj3axe2g4clebs9rbi 10800 IN RRSIG NSEC 8 2 10800 20250212144202 202
 xn--b5be0efj7aj3axe2g4clebs9rbi 10800 IN NSEC xn--b5bp9c0b4cb3cbb NS RRSIG NSEC
 xn--b5be0efj7aj3axe2g4clebs9rbi 10800 IN NS dns5.centriohost.com.
 xn--b5be0efj7aj3axe2g4clebs9rbi 10800 IN NS dns6.centriohost.com.
-xn--b5bp9c0b4cb3cbb 10800 IN RRSIG NSEC 8 2 10800 20250124095028 20241225085857 15315 @ lAku1F8uA704agBZxbfo8jvQSNefFHDM NX68tMPSxHDD6oMnDlamO4pomxVkiz0g Ttyqwv3VHaCLsa+UVKFKZ4BPBnRyMc4T rtVe7UC5TPZe7T8e5Eaujs0aB7ftw31e eW3Iiq/ZXILqc9cNcrzIReCUSgC0AFJ1 BAxyfybo67Q=
+xn--b5bp9c0b4cb3cbb 10800 IN RRSIG NSEC 8 2 10800 20250215210126 20250116205028 15315 @ rUvnHLwpdZVRpdqesV77CUYoUw2p+VQ8 ddAQibmOAC7oDDkHwG0DBsfbwb/NUt9l eFmmNcv1zt1xvUJJpfz5F3xtenpY2aNq DYv9ZPlErFYRpExV4o/ifMdmnzc5WKZW k9tKkisoOlpIw3pWHOp3YgnBSJozMmLS ZhY4qbihs6w=
 xn--b5bp9c0b4cb3cbb 10800 IN NSEC xn--b5bpb1izcaca3dbd NS RRSIG NSEC
 xn--b5bp9c0b4cb3cbb 10800 IN NS ns1.bcc.gov.bd.
 xn--b5bp9c0b4cb3cbb 10800 IN NS ns2.bcc.gov.bd.
