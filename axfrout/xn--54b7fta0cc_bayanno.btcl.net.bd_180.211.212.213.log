@@ -1,16 +1,16 @@
-@ 10800 IN SOA ekushey.btcl.net.bd. root.btcl.net.bd. 2025032312 120 3600 604800 10800
-@ 10800 IN RRSIG SOA 8 1 10800 20250422000315 20250322230315 15315 @ gnLqVZ5d4SJk2NHd9J3RO7rjbs05U3Kg 3KIraWBN31z64ufC6hWtwW2KphsnGcnq 1cTemtca+2XPBmAQjTOvVHYIYuKg/SSn e1/To0Aagp+oc/8OLYef+fttvJea06wE 6flk9y6nMzsSdhenoPvdVfaHVJm9j2Em TJLZeaIMpfs=
+@ 10800 IN SOA ekushey.btcl.net.bd. root.btcl.net.bd. 2025032512 120 3600 604800 10800
+@ 10800 IN RRSIG SOA 8 1 10800 20250424000420 20250324230420 15315 @ C7Re1TiU4wWbrhD2ZUABnDLJkWJ+8dV2 2jF8ttiBpBSM+lvtFnaB5pjpqCzmKwI4 o9wRo/nLQOCnVepmdwW0Av5JZaoou8+j BkT2vx5qE6yuFka5BvyGtPN7HxgJ2bhK U3Gyg+lqGVnFKZYBOE6vgztZAdx3pbbk D3XbwKCyKL0=
 @ 10800 IN NS ekushey.btcl.net.bd.
 @ 10800 IN NS bayanno.btcl.net.bd.
 @ 10800 IN NS bd-ns.anycast.pch.net.
 @ 10800 IN RRSIG NS 8 1 10800 20250405062259 20250306053345 15315 @ q3mkypVFonR5s0nChGspVY8dlIBBjLkb JRXAePn8UtngOeTHJdj2PMmOd51/QURs LMSsBEvNe+SN6zG6+D5FJBFAIbDgXyln lOKMSpLLAOGQ9kjQ92/UX1QLS4xo3DCb P3b1Loah77TiQ7tYdF9hFI/IEwqBhn+o n2wgeivD8H0=
 @ 10800 IN NSEC xn----32dhv6cdc4bbp8eb NS SOA RRSIG NSEC DNSKEY
-@ 10800 IN RRSIG NSEC 8 1 10800 20250331183456 20250301180350 15315 @ JkQD+nRP3YKLtuQ/AfEUtBqtfa95Z6xv 1VDjVC4r5+xBtA6nPm3IRUwPJ4OYJu6D LqqXPcWYuJRAs/o+nXHMVWnW7g2cvMup d+wT+ft0Nj3+Va6P4qyd3D9qp/gDM1KJ OPhrgft4Z7Nobtr0WqdNZ9b39HKDRASY l+E4/QpohZw=
+@ 10800 IN RRSIG NSEC 8 1 10800 20250423063346 20250324053456 15315 @ irKSfZnzYSNrHmP8ts6ZngMZ7SY6JPp4 WAw1A8lFDRtmEAjBS/Ml9FsU5wJjCDhT L4MtXv4r7R1qfoa2tEZskT69yoTQTLfK mWDhvht4eHtpgBErviRtiNqqYU3vJL7i aMn/k65u1hd1KTtEt21VRbzIV8BvseFI T8vukZ5zQRE=
 @ 10800 IN DNSKEY 256 3 8 AwEAAbpZI/h1vLh2uHjMUY4uVSuYrYsA mKd32Ig0KPyFPNOxBcjrmOR6ypXh+zTE mTVg6UKvA3WXfJNwsNS36bxvLTrsT45v LcEUNzPTOyrcLq9oM0QKNXQcXlHTVN8K l2J20EBmQjeNK60FAQWnFohY2WoEGABe Wg0FUL6fiNRkRq8F
 @ 10800 IN DNSKEY 257 3 8 AwEAAc3eAC/OU1vXWM5YuAll5A9JFZxM grfy8vqpN3MZsoxNMZTJngfnaqWyJDKu NIVHlVtQbi8az2wqC6p11Wx4M75IOWs0 NVpRhtNj3gppsk93g/3fN+inENeg8PUn wQboenYb4iijIQLcdLLw7WFjVNsJAL3N /P3VXVsvd/1aNROrr9tmSjvYUp2AJe6g 6biIMEnRhBIKvaV9JV0pSa/m6GQeDB1g 6sybvRd6XjJWKiB/JI8DrieMSncuqTRy kbh8GrvHXu9Iqm6OBsWBrzDix5xT2gcy WL6SvhF+gfvuODdIOh58U2YI3YvTQ0T/ 4oxvf9vzPK5xhXMLWNRw94dZBYs=
 @ 10800 IN RRSIG DNSKEY 8 1 10800 20250406045728 20250307041231 15315 @ psqsp0xZ/onIhnJg2AfZZxlX7YSk0mpE vnYuAhQncLRY4JMo3LYVClTqiZjKLRTP tPa4RODEiGGHdpYL3ZRlOLnRww0lt987 EvywX4uEGMRXsXZ7iHAKVJieYtqicxhZ shBAj+S9SmDXPwAFMZO9UI3UjlVPnnbN 3aWYoJxgWNQ=
 @ 10800 IN RRSIG DNSKEY 8 1 10800 20250406045728 20250307041231 63049 @ zTEgMEmJ4UeVR5pJbxtj58DhvpqJXJ6k 3Tcp4UbxT3/WnsyWfz0u6q8JmKoOOZ0J D13LVR5SqlmP/CJOr1jrSZk+tvGAPXS1 MRiPfcJOLRN+DswydmH8/r2ugXvY3V4u xT2Ax9FAMNWcPYaPuo5/5USxUByXbZtq NyhE+kBlWMVNawuBQQCW9k4mA17Gxtaj NzrZ+zzjTPHB6LV7vjDVvSL7NLN9YCk9 2Kvw+6pARzxhwrffCQ1iAjToTJGmZTSC /OscRh6CivQaZahT0G3qndnNTJ5Ps4++ uQg8ZyeTcNDHrAKRk0jENImNfsU9Sk+X Tyq6ENTP9CP/u/JRBzd8cQ==
-xn----32dhv6cdc4bbp8eb 10800 IN RRSIG NSEC 8 2 10800 20250331183456 20250301180350 15315 @ VlpAKh8s4G9OWZIA5lM5oC1h7WzJsdRo J3WwU3LYm99lQrIFJ4eN4rTLSjt6zuEf 6gONADtwORiQgPMuMPcBqHu7/EagGDMh UfHja34CTAxN0zyg0F2SwWOXe0m4LWav kt0/QkmzPGq1rMkjAZPt3TIj8FuHE5SB 7cGp3X8XieM=
+xn----32dhv6cdc4bbp8eb 10800 IN RRSIG NSEC 8 2 10800 20250423063346 20250324053456 15315 @ GZt0PcQT35TsCRd/bFTMSdL/w1odVFOy ninCd55RPyFbINQJTNYKLTM434l76GA4 c1Ca4cyyxAYHqF6UANauYFzBMia9lIK9 UjDg1wHverrTDyaoeCjFPFYsX0nAPMEL UuFh/rJ2NTf25kNugtTygU6L43sZ4fF9 a1DnU+2Qhg0=
 xn----32dhv6cdc4bbp8eb 10800 IN NSEC xn----91d8adtl0acmirg8b2f1ai3vdb NS RRSIG NSEC
 xn----32dhv6cdc4bbp8eb 10800 IN NS leia.ns.cloudflare.com.
 xn----32dhv6cdc4bbp8eb 10800 IN NS sean.ns.cloudflare.com.
@@ -20,8 +20,8 @@ xn----91d8adtl0acmirg8b2f1ai3vdb 10800 IN NS ns1.bangladesh.gov.bd.
 xn----91d8adtl0acmirg8b2f1ai3vdb 10800 IN NS ns2.bangladesh.gov.bd.
 xn----b1d8gacjs3al3dyb6ek3o 10800 IN RRSIG NSEC 8 2 10800 20250420162659 20250321152827 15315 @ Sk+Qq0nW249r+GLUF9xgggVxgdP9cIyb JgJDrkxfW8+zSlWZEbXLJ6WQBVh8WNKg 2TanZWHwB1P/tcsk1W2ZjfogW743AbgI CFgaO3akgme68SQF5S801ZTvBBzzUvp3 nmfZkeg5YtEnmVZVNhUjzn0WniF/xJ26 dzvUlP46kBQ=
 xn----b1d8gacjs3al3dyb6ek3o 10800 IN NSEC xn----c2d8axa0aae5d0b9joac NS RRSIG NSEC
-xn----b1d8gacjs3al3dyb6ek3o 10800 IN NS dns.bttb.net.bd.
-xn----b1d8gacjs3al3dyb6ek3o 10800 IN NS slave.bttb.net.bd.
+xn----b1d8gacjs3al3dyb6ek3o 10800 IN NS dns.btcl.net.bd.
+xn----b1d8gacjs3al3dyb6ek3o 10800 IN NS slave.btcl.net.bd.
 xn----c2d8axa0aae5d0b9joac 10800 IN RRSIG NSEC 8 2 10800 20250417054325 20250318044824 15315 @ FUE7xPxDn3AlZ5aOJVcfp4xJmcXciYHe gGlppcdlQRuZnlkjI8eCbo1pAwu7rMtc BnnfBQQ+aFv+TDshykAglHPq+ODVTUuF s3snwyd9FBCa/nn943OEOZ4U9AsZrV5t CtV4w9aBuSp410seszmDz0YWSCtvi/Yl iX1puM3lE3I=
 xn----c2d8axa0aae5d0b9joac 10800 IN NSEC xn--05b5arf3f8ad NS RRSIG NSEC
 xn----c2d8axa0aae5d0b9joac 10800 IN NS aida.ns.cloudflare.com.
@@ -116,8 +116,8 @@ xn--54b2b4azcrq6fcc2m 10800 IN NS ns1161.websitewelcome.com.
 xn--54b2b4azcrq6fcc2m 10800 IN NS ns1162.websitewelcome.com.
 xn--54b2b5cipdp9gdrs1l 10800 IN RRSIG NSEC 8 2 10800 20250415172218 20250316165300 15315 @ jlWV8FJg9a4N5+zrvnK8CJBwUBPDcS9E o0ZEFMCI/ln63I+gOv/A3P24Y0bO5oMp ylbUnAC+ISd3+nmIFVjHIHjUrPFrUQhP k8zfbIMVjg9wtZ6qBdQ3aMzwcmHzTdQI MsOdUZtt8syY97ySv+3BXJbX3qrK7/jB SVgCMjkFu0w=
 xn--54b2b5cipdp9gdrs1l 10800 IN NSEC xn--54b2b8b6bt9cvc NS RRSIG NSEC
-xn--54b2b5cipdp9gdrs1l 10800 IN NS dns.bttb.net.bd.
-xn--54b2b5cipdp9gdrs1l 10800 IN NS slave.bttb.net.bd.
+xn--54b2b5cipdp9gdrs1l 10800 IN NS dns.btcl.net.bd.
+xn--54b2b5cipdp9gdrs1l 10800 IN NS slave.btcl.net.bd.
 xn--54b2b8b6bt9cvc 10800 IN RRSIG NSEC 8 2 10800 20250415185929 20250316183017 15315 @ HrYUvCxN8NdlXE7XzVn/CAJi20Js1h0b sIQC/hHqSSgNB0nIdUhwdPnCTpjZM1lD W0/irPuWo9oTFYOeToCiQT2San/zJ6/4 KyGREdfYYzaAzBT9kUKqI9kqwiuNjOQc 312f6ajqIXU/5rTiIagt/3S0epb/id5B gDWmKuJV9xA=
 xn--54b2b8b6bt9cvc 10800 IN NSEC xn--54b2bt6atzv2jc2m NS RRSIG NSEC
 xn--54b2b8b6bt9cvc 10800 IN NS ns1.servconfig.com.
@@ -144,12 +144,12 @@ xn--54b2efwczk7a9dce8hc 10800 IN NS ns1.bcc.gov.bd.
 xn--54b2efwczk7a9dce8hc 10800 IN NS ns2.bcc.gov.bd.
 xn--54b3fl6an3b2e 10800 IN RRSIG NSEC 8 2 10800 20250415190243 20250316181938 15315 @ CF93gGplM1uqQrH+b1BG6WstxkVnxjjS nwMO0Xp0nFY6jUD4biFnb7t5Vd8I/QiZ WCFxCzdrZYSuyooUnAd3PMmuq+XcWYZo DCXcYg4vbDa90wVmKF+FrKzjY1OMM8d1 ig9qhy1Rm2QiKyfv+J3H5rYNXBIE/2y5 fQGFEZtaehI=
 xn--54b3fl6an3b2e 10800 IN NSEC xn--54b5dqftczu1bzedc2j3cd NS RRSIG NSEC
-xn--54b3fl6an3b2e 10800 IN NS dns.bttb.net.bd.
-xn--54b3fl6an3b2e 10800 IN NS slave.bttb.net.bd.
+xn--54b3fl6an3b2e 10800 IN NS dns.btcl.net.bd.
+xn--54b3fl6an3b2e 10800 IN NS slave.btcl.net.bd.
 xn--54b5dqftczu1bzedc2j3cd 10800 IN RRSIG NSEC 8 2 10800 20250415211310 20250316203938 15315 @ kACQE8P8ut67CGqqLs52JxPE/ZABb/Vt HcMeRKCI68hYIXaq9hgq1QQuKJPlv786 1fIBIgEKUo6EE5CcTDcYqwXV3enLy9dw LPwQ3a0tEfrE1su+5CebWPPAcNVFGm8k 6SNL1Xsy/P6Fe0imffmgVaIwIfwz8nqu ytuDZYkxyOQ=
 xn--54b5dqftczu1bzedc2j3cd 10800 IN NSEC xn--54b6d5ajgp7ekcehb NS RRSIG NSEC
-xn--54b5dqftczu1bzedc2j3cd 10800 IN NS dns.bttb.net.bd.
-xn--54b5dqftczu1bzedc2j3cd 10800 IN NS slave.bttb.net.bd.
+xn--54b5dqftczu1bzedc2j3cd 10800 IN NS dns.btcl.net.bd.
+xn--54b5dqftczu1bzedc2j3cd 10800 IN NS slave.btcl.net.bd.
 xn--54b6d5ajgp7ekcehb 10800 IN RRSIG NSEC 8 2 10800 20250415193412 20250316191139 15315 @ i++9oidr+2PScdFHvx5SrBPhwJTTxjSN h3wtwlQwbAd/mF+k2U/LbndUIkwll6H+ f5dMyaijg/jefOI/90DtE5Gs4TPc78nW pmrgtiAVcTuS4aAT6KuNqBw43bD1E4p8 UmiZYoXoTwDWSJgBb6DHxAzv9k5VQPZj PiFV5LJrOpg=
 xn--54b6d5ajgp7ekcehb 10800 IN NSEC xn--54b6ekibv7bq0de3g NS RRSIG NSEC
 xn--54b6d5ajgp7ekcehb 10800 IN NS cns55.webhostbox.net.
@@ -160,8 +160,8 @@ xn--54b6ekibv7bq0de3g 10800 IN NS ns1.rootserver.pw.
 xn--54b6ekibv7bq0de3g 10800 IN NS ns2.rootserver.pw.
 xn--54b6emfxj3as1cc4hd0f 10800 IN RRSIG NSEC 8 2 10800 20250415193714 20250316190959 15315 @ VKtwBpfH2RK805u2cSi2amKx4xplPEXc hfbvQArvdddWhtLWvh10pc/02I16ckKj J2zbxQv42mkhfjhHzgX8muODvzV+6e4a r7DMwWZD3ptmiYfYuuZztaKSDKX8KtUC vf0cmfTVHn1S7x7fsLkl2pQKhy2slWgB XlWCy0Qxpcs=
 xn--54b6emfxj3as1cc4hd0f 10800 IN NSEC xn--54b6eqazv8bc7e NS RRSIG NSEC
-xn--54b6emfxj3as1cc4hd0f 10800 IN NS dns.bttb.net.bd.
-xn--54b6emfxj3as1cc4hd0f 10800 IN NS slave.bttb.net.bd.
+xn--54b6emfxj3as1cc4hd0f 10800 IN NS dns.btcl.net.bd.
+xn--54b6emfxj3as1cc4hd0f 10800 IN NS slave.btcl.net.bd.
 xn--54b6eqazv8bc7e 10800 IN RRSIG NSEC 8 2 10800 20250416214753 20250317212031 15315 @ YURg2vh1RFDWxUYGy73wN+lswgq2mwXR Wm/Cws9XTHGTC7jtbhidlCWzo1VyGaHU RUmPPLmxsvDYnCdtUe8R0+/kcSR/c3x8 AsVqh15vbgkgV9AnbxgP/r6QaR+pYed1 uR75y9vq2snD0aGWOw5pwxel19XpLR6L T2g9hKdlMfE=
 xn--54b6eqazv8bc7e 10800 IN NSEC xn--54b7af2cb3bbqg8bly7ehl0c5adkn9m0dqbl NS RRSIG NSEC
 xn--54b6eqazv8bc7e 10800 IN NS kobe.ns.cloudflare.com.
@@ -203,7 +203,7 @@ xn--54bgg6jlbw3cd1byfcf5j 10800 IN RRSIG NSEC 8 2 10800 20250415185434 202503161
 xn--54bgg6jlbw3cd1byfcf5j 10800 IN NSEC xn--54bh0c3duasf7ducd7n NS RRSIG NSEC
 xn--54bgg6jlbw3cd1byfcf5j 10800 IN NS ns1.bol-online.com.
 xn--54bgg6jlbw3cd1byfcf5j 10800 IN NS ns2.bol-online.com.
-xn--54bh0c3duasf7ducd7n 10800 IN RRSIG NSEC 8 2 10800 20250331033237 20250301032047 15315 @ Q7h0knwBR2Kop1OwDC72DZXM7dpSiU/y Htk8JMLjaT55CuoT6tZr1JqGPyASv+Re 5I75toOV02rMgn7kSZh1dHd99FP4bClI cPyQTocQXTTP9Gs6ss7PoJoFjGV8Or4b +iX/c9Ou/aT1HSptJ1IPBj4ZtUThslI6 4bHNtcKens8=
+xn--54bh0c3duasf7ducd7n 10800 IN RRSIG NSEC 8 2 10800 20250422144929 20250323143237 15315 @ Vdt1+bCncsDrjUoHEbmdqMwlbuwZTXcy /xqVqkwWmhoKUUxcaatZ30dh46TqtLNe efFxzxI+ufRpq9/vqS73zewXq1OLnSwW XpLcgWD9Yreuh6CJficPuBEaaAe09px0 9PraQ6W2zjVPTDeZ2paivGK3cY57aHk8 5x1cnJdF+jw=
 xn--54bh0c3duasf7ducd7n 10800 IN NSEC xn--54bid6a4a8jtbycc6ccp8p NS RRSIG NSEC
 xn--54bh0c3duasf7ducd7n 10800 IN NS ns1.nothi.org.bd.
 xn--54bh0c3duasf7ducd7n 10800 IN NS ns2.nothi.org.bd.
@@ -248,12 +248,12 @@ xn--65be4bak4bp 10800 IN RRSIG NSEC 8 2 10800 20250408232914 20250309222914 1531
 xn--65be4bak4bp 10800 IN NSEC xn--65bp7a3a6ab NS RRSIG NSEC
 xn--65be4bak4bp 10800 IN NS ns1.quantummethod.info.
 xn--65be4bak4bp 10800 IN NS ns2.quantummethod.info.
-xn--65bp7a3a6ab 10800 IN RRSIG NSEC 8 2 10800 20250331112041 20250301110002 15315 @ FheZ6xQDO3ObuYzEg6861i9Oz5XNEPfU ATy+VqeLEZCEBz4VvHOWsCY9Y7FkXP7C dfmTz7/0Sa5PmXp9t24/PJ4DSwUynLu6 rrEqSCLXspeDFEeqTfWW+jr/nJYEn2s2 vMEawT88yKas0SCTuvubHv0ojYsuMgSO C2IZMuxoJWw=
+xn--65bp7a3a6ab 10800 IN RRSIG NSEC 8 2 10800 20250422222401 20250323222041 15315 @ aeKof5+sbuSn6Y9tQLNmSZ3GDpYLieU9 MHmvW1h8zYEfIeWyt2zIt7qM7Rux8jMY lXMxy2wOxhOKi23Qqi+TaUGU9qOG1R86 w1Rd29Q/n6w3wu7Ptv0gwgKLUagsrecI wezqy5jus0aM30ka5/hc07J0kTQ0R7K0 NLnPIiPkvRg=
 xn--65bp7a3a6ab 10800 IN NSEC xn--65bp7aza1bb NS RRSIG NSEC
 xn--65bp7a3a6ab 10800 IN NS dns.btcl.net.bd.
 xn--65bp7a3a6ab 10800 IN NS ns1.ssbdhosting.com.
 xn--65bp7a3a6ab 10800 IN NS slave.btcl.net.bd.
-xn--65bp7aza1bb 10800 IN RRSIG NSEC 8 2 10800 20250331112041 20250301110002 15315 @ cBz0K2mR0hNNN1KBCJ7xlVyj1wgWcGaH XXHVQqoXQcElmhmWDaIRi+5AWlPLsPzA KlmyoaiOduGjYaOtk4vdRi0C/ne6YExz uVlGRfXOCOsD0dIsFrayNk6nJ+IY+jIH 9sO2Dw6LkorugXHH4s/Dnx7oq2g7/gKo hJ8XOG9Terg=
+xn--65bp7aza1bb 10800 IN RRSIG NSEC 8 2 10800 20250422222401 20250323222041 15315 @ FqIRH1dh3SCd/swOcN7s8+7YPkDsgp7C +AGrKize4x5eUUpGWTbtPdUiAMLaVWf5 t7ukXrGGzWoNfhMa3z/ojWGI7zXtoQyc tsVnFTom+QknLkBuMWZ/qVTjwLGt/z0F k1ZnqTggusVnXmuNqFvvo3WbEn+Q7iH+ KUrsIWcdoBk=
 xn--65bp7aza1bb 10800 IN NSEC xn--75bkg1e NS RRSIG NSEC
 xn--65bp7aza1bb 10800 IN NS cheryl.ns.cloudflare.com.
 xn--65bp7aza1bb 10800 IN NS lennon.ns.cloudflare.com.
@@ -289,8 +289,8 @@ xn--84bdgb4a1gybu2bh2af8fvad3ewaggeebi73a 10800 IN NS ns1.dtechonline.xyz.
 xn--84bdgb4a1gybu2bh2af8fvad3ewaggeebi73a 10800 IN NS ns2.dtechonline.xyz.
 xn--84be0dvcc8p 10800 IN RRSIG NSEC 8 2 10800 20250404113507 20250305113039 15315 @ nEzYyVfm5DCEKFRhtS2m+QKPjlrvF46n TolMOJPBSTZmJ3dHxggc0rstk2CE2h5c nUfpDr7oQs7ybvlDHTjfqNsIQYEnrSLt mlH1y6K1sv40rTWfhwgNmj5sESszlBvL oOTLwaohU6ckVcCwUfhVARrCro4midQ/ l2ASgA2iECQ=
 xn--84be0dvcc8p 10800 IN NSEC xn--84be7d2bby3al2idb NS RRSIG NSEC
-xn--84be0dvcc8p 10800 IN NS dns.bttb.net.bd.
-xn--84be0dvcc8p 10800 IN NS slave.bttb.net.bd.
+xn--84be0dvcc8p 10800 IN NS dns.btcl.net.bd.
+xn--84be0dvcc8p 10800 IN NS slave.btcl.net.bd.
 xn--84be7d2bby3al2idb 10800 IN RRSIG NSEC 8 2 10800 20250415185929 20250316183017 15315 @ q7H//y8KVTtbbaasG8+QZM2rq5+j/kFD yOg/fOd+oMKUF1cT0oRd16GtKG6Rmt9q zXSKYJ76SqSimjBGbR/EjL8WaEd7E2No C3divZ+mbwEMxvZskK5ZqKE2aGVTB6gM 4hPvsUM79DyfdP2dZCwFxbg6OktM55fp s22uf+Fi/ZU=
 xn--84be7d2bby3al2idb 10800 IN NSEC xn--84bh7i0c NS RRSIG NSEC
 xn--84be7d2bby3al2idb 10800 IN NS ns1.dns-parking.com.
@@ -327,8 +327,8 @@ xn--94b2eraib0c0bd9i 10800 IN NS ns1.xeonbd.com.
 xn--94b2eraib0c0bd9i 10800 IN NS ns2.xeonbd.com.
 xn--94b2erar7dn 10800 IN RRSIG NSEC 8 2 10800 20250415192827 20250316185858 15315 @ n9/SVwpWdRV5ji0eaLlsYzGCkrZJV86q YZbi35ihepLooa81qSIMe7v4YoF4lR7g o4WGbP1k9TwIe8mxC+VKBqmwQ3dYP0UZ QjuoiZeEDYYbeBQPJacNA76XaeZlf7Um /4Njf6tHVAe8SSK+Ugua+og+GLQhp0eb QMYRwhcBOIA=
 xn--94b2erar7dn 10800 IN NSEC xn--94b4a9anrl7bd5jcc2p NS RRSIG NSEC
-xn--94b2erar7dn 10800 IN NS dns.bttb.net.bd.
-xn--94b2erar7dn 10800 IN NS slave.bttb.net.bd.
+xn--94b2erar7dn 10800 IN NS dns.btcl.net.bd.
+xn--94b2erar7dn 10800 IN NS slave.btcl.net.bd.
 xn--94b4a9anrl7bd5jcc2p 10800 IN RRSIG NSEC 8 2 10800 20250415201941 20250316193920 15315 @ n2fhlTp4Bu8xzf4+b+qwhe4Ho5skM6VO gk+risNT/0jIZwRzb5irAZVA2IaBzwkt XLDvYbp+YCbkltS4VxH4eWVESDC+4dMR JVAN+hHdSu4j5HlqAGHFk+HZ23+G3I96 LwrlQ9UwrT42q9RKOpq1wqt4FwnxUAvo lp3BxXMF+Qc=
 xn--94b4a9anrl7bd5jcc2p 10800 IN NSEC xn--94b4a9bc3bn0he1f NS RRSIG NSEC
 xn--94b4a9anrl7bd5jcc2p 10800 IN NS ns1.dhakawebhost.com.
@@ -352,16 +352,16 @@ xn--94b7bxcfb9av1bcv 10800 IN NS quincy.ns.cloudflare.com.
 xn--94b7bxcfb9av1bcv 10800 IN NS kristina.ns.cloudflare.com.
 xn--94b8a4dc9kna 10800 IN RRSIG NSEC 8 2 10800 20250419165022 20250320161341 15315 @ fY9tbcfPCslQRCh55HLoaWitF8RccoQL Nvia2BAp4RIo9UqzMCbH/umq+yvzZqq6 9wCfwixew16kVoP5ph1EWHL/mbJR3Amm PEOLotr39MsXaQUnalc75KkSJSI7Cs6d VpRRkBkM9V8R3ZnEY1GIsN3pv2ee3i7f eFcBCxJXVNo=
 xn--94b8a4dc9kna 10800 IN NSEC xn--94b8c5acs2gdb NS RRSIG NSEC
-xn--94b8a4dc9kna 10800 IN NS dns.bttb.net.bd.
-xn--94b8a4dc9kna 10800 IN NS slave.bttb.net.bd.
+xn--94b8a4dc9kna 10800 IN NS dns.btcl.net.bd.
+xn--94b8a4dc9kna 10800 IN NS slave.btcl.net.bd.
 xn--94b8c5acs2gdb 10800 IN RRSIG NSEC 8 2 10800 20250415181200 20250316172448 15315 @ NQHBaqYlEmr9l84GyKHz6rtcJnJHUDP9 z/GlXjxArXr+A7XPOweAGn7aYfUdj1WU kPE7xUJjaqLw6MIbgY9Mo8oc4gCdM0Id mQ2cNquBDA+AxjJtwe0++DOaSNbtiECg siVZWjcbD7wvR9GCa3cO7rNHIo3njF7v peZPIU9rvAM=
 xn--94b8c5acs2gdb 10800 IN NSEC xn--94b8cuaqi6hcb NS RRSIG NSEC
 xn--94b8c5acs2gdb 10800 IN NS ns1.bcc.gov.bd.
 xn--94b8c5acs2gdb 10800 IN NS ns2.bcc.gov.bd.
 xn--94b8cuaqi6hcb 10800 IN RRSIG NSEC 8 2 10800 20250415175554 20250316175007 15315 @ IBhUSRtKyZb7kJC7BvQVMS6XixiAFIIQ SkMNUG99v6P2rVfastkp3UHVpw79bvZM Sly/lQOPrKUAyuIbpND/qnYZOft/AH0Q 9fWyXsEKD0JJ+rfITGDOvW+6R+ptH/Xf sYRBVGJtF34LBCqeHGETFTocV4RF4UGm cPVdrzFPgAE=
 xn--94b8cuaqi6hcb 10800 IN NSEC xn--94b8dgapcp5a5iza4kf NS RRSIG NSEC
-xn--94b8cuaqi6hcb 10800 IN NS dns.bttb.net.bd.
-xn--94b8cuaqi6hcb 10800 IN NS slave.bttb.net.bd.
+xn--94b8cuaqi6hcb 10800 IN NS dns.btcl.net.bd.
+xn--94b8cuaqi6hcb 10800 IN NS slave.btcl.net.bd.
 xn--94b8dgapcp5a5iza4kf 10800 IN RRSIG NSEC 8 2 10800 20250415211310 20250316203938 15315 @ CkfrUeZjRF5IqgYMgY6taoDXBTxA4YLv Ac7Ro+TSTKHUgEDjtOQS73kR7W/o4zyv kp1B7CyGUnMb1j3aG14ogMOXCDwLOGw4 whHGXLs6t6WMbxkw54bXJTs5vsrnhdlZ g2l3+NdiV2etT8Sd6hSMkxplIe3xgeV5 vNVuBbZBHjQ=
 xn--94b8dgapcp5a5iza4kf 10800 IN NSEC xn--94b8draz8e6c NS RRSIG NSEC
 xn--94b8dgapcp5a5iza4kf 10800 IN NS vda6100a.trouble-free.net.
@@ -370,7 +370,7 @@ xn--94b8draz8e6c 10800 IN RRSIG NSEC 8 2 10800 20250415193924 20250316193039 153
 xn--94b8draz8e6c 10800 IN NSEC xn--94b8dxaas7b8a0a NS RRSIG NSEC
 xn--94b8draz8e6c 10800 IN NS vda6100a.trouble-free.net.
 xn--94b8draz8e6c 10800 IN NS vda6100b.trouble-free.net.
-xn--94b8dxaas7b8a0a 10800 IN RRSIG NSEC 8 2 10800 20250331155910 20250301150030 15315 @ OIWNtCDym9l4ScxqRIuLKweuy1RwCvTn dqsEiTroyl4ys+2+l8LK5XE46WI9YOjy bOcGCEsf5pbxWp6PYIzYyrSq0rt0wZZc TR1CfxyeaFGSRHD6EHOvkCGIotusVE67 WcQO/rxBSqDvOKyLLWefYOocjVfw4wGs BHQ2r1AH1uY=
+xn--94b8dxaas7b8a0a 10800 IN RRSIG NSEC 8 2 10800 20250423033312 20250324025910 15315 @ r9tb9ByqRX3fWCJR6+j+CfLT8CdtXIGG WbWhpqL46n2gnbl4EC8s2zxWEPdchvBN x5bOB9K5+Z+vxpZi025QXjALdI2RH4iC +FGogCr0apNTIsSuZg14xqOvKUfH53K0 B/3TQ6ovEUEPWx9NXl+GK0dG39GcAify Yrl5sqZKpQw=
 xn--94b8dxaas7b8a0a 10800 IN NSEC xn--94baae5pzab0j NS RRSIG NSEC
 xn--94b8dxaas7b8a0a 10800 IN NS dns1.namecheaphosting.com.
 xn--94b8dxaas7b8a0a 10800 IN NS dns2.namecheaphosting.com.
@@ -480,12 +480,12 @@ xn--b5b1awvxm4bg1jqabdbcq 10800 IN NS dns1.namecheaphosting.com.
 xn--b5b1awvxm4bg1jqabdbcq 10800 IN NS dns2.namecheaphosting.com.
 xn--b5b1b8cycb 10800 IN RRSIG NSEC 8 2 10800 20250415190243 20250316181938 15315 @ MwZX+sKRyXwZbrfeqdoEB81iI9f8rKBg wbhw5vxS0a2aHUJkrXwtOrAc+sF47Srx duep9ysKMR9rEiX72ALdGr28v4o1lkpo riW0faRC5PzGsR5b/oqQ84UoMs0aLDYE gljyNdTnBTvDO08W+hBKygHZ7WShITiV rJTAetJuIaU=
 xn--b5b1b8cycb 10800 IN NSEC xn--b5b1bf0lb NS RRSIG NSEC
-xn--b5b1b8cycb 10800 IN NS dns.bttb.net.bd.
-xn--b5b1b8cycb 10800 IN NS slave.bttb.net.bd.
+xn--b5b1b8cycb 10800 IN NS dns.btcl.net.bd.
+xn--b5b1b8cycb 10800 IN NS slave.btcl.net.bd.
 xn--b5b1bf0lb 10800 IN RRSIG NSEC 8 2 10800 20250415191255 20250316181306 15315 @ AJIXtHiDjewc/Ee3CNY6uyTMGXMeenh0 W9RT77Pbrj9y4DXukjOUK3oIpdo9mUv9 EZ0DcDgmZ7PPMKyngmyj27h02s4wzmKx ts/2LM7wbW3263QKY9M8D4CVptYtvH2z QzDOeJZ02Beq5wOjBjWgHHJzOawpG2p3 AJtdV9fupvc=
 xn--b5b1bf0lb 10800 IN NSEC xn--b5b1cfc1c4b0e5ctce NS RRSIG NSEC
-xn--b5b1bf0lb 10800 IN NS dns.bttb.net.bd.
-xn--b5b1bf0lb 10800 IN NS slave.bttb.net.bd.
+xn--b5b1bf0lb 10800 IN NS dns.btcl.net.bd.
+xn--b5b1bf0lb 10800 IN NS slave.btcl.net.bd.
 xn--b5b1cfc1c4b0e5ctce 10800 IN RRSIG NSEC 8 2 10800 20250415193113 20250316190710 15315 @ LELlzkT5kpWpfb/v5Iu8vNihNtLKqcYN jUCnajhlaUWwvmOludXco4TlHZ4svPvS 8aU6vrbausVT6TLdai4y1jD9MqQmxq6P yDu7H8OJaXhvEqcUO874NjnUs2GCP9Ai ClCP9QTbBT0R+ANpnZTjQCUWQl35wRoi a7J85RHwpVc=
 xn--b5b1cfc1c4b0e5ctce 10800 IN NSEC xn--b5b2a4a1dq2d7a2cb NS RRSIG NSEC
 xn--b5b1cfc1c4b0e5ctce 10800 IN NS ns6011.hostgator.com.
@@ -540,8 +540,8 @@ xn--b5b9dta6d 10800 IN NS dns3.hostever.com.
 xn--b5b9dta6d 10800 IN NS dns4.hostever.com.
 xn--b5ba0d2c2ec 10800 IN RRSIG NSEC 8 2 10800 20250415211310 20250316203938 15315 @ SYFK/ZlVVlVSNPxTMUZZNak7QhO4nUGQ wZwsDopFEWHE5I49mEqviF7vwO09l84d asiDhPfJHvGmwA2tDKCtHVzfkSvkZHyf tdj+HG8Mk2BOzn+FY9CpK08TzcGzCk7L vIWoK/WCqDApOawZTcmjexAimWnmSrzW AFPy1OiN3+0=
 xn--b5ba0d2c2ec 10800 IN NSEC xn--b5ba5b9emjb3dwccd2p NS RRSIG NSEC
-xn--b5ba0d2c2ec 10800 IN NS dns.bttb.net.bd.
-xn--b5ba0d2c2ec 10800 IN NS slave.bttb.net.bd.
+xn--b5ba0d2c2ec 10800 IN NS dns.btcl.net.bd.
+xn--b5ba0d2c2ec 10800 IN NS slave.btcl.net.bd.
 xn--b5ba5b9emjb3dwccd2p 10800 IN RRSIG NSEC 8 2 10800 20250416150240 20250317140240 15315 @ I3dItx+DC9fzVdTo1bT7EN9vkNS/zSHy UT0bPgmCzNZoOu4mHopbnhqFMAqiSWrJ hPnz/xAtw6IkkyHYtxJ0Scx8+sGanOIf U5NekpYtJsGk6/0oOzFtvAKnV43O9/Ah Vwv4lXc5kUjpHIuiAPXEs9en8Ax17ygc 6sR9MGdKB6M=
 xn--b5ba5b9emjb3dwccd2p 10800 IN NSEC xn--b5ba5eab4cb7dxda5dfp9hucya NS RRSIG NSEC
 xn--b5ba5b9emjb3dwccd2p 10800 IN NS dns1.bcc.gov.bd.
@@ -552,8 +552,8 @@ xn--b5ba5eab4cb7dxda5dfp9hucya 10800 IN NS ns1.xeonbd.com.
 xn--b5ba5eab4cb7dxda5dfp9hucya 10800 IN NS ns2.xeonbd.com.
 xn--b5ba6ewbikfo2e1cdpb2q 10800 IN RRSIG NSEC 8 2 10800 20250421104318 20250322103015 15315 @ fRVvEgoEtgpGyA8PCvF5Sqh8bI3CZghv YeX1OJSpJPhupkdZpcObbTTFmc7FoRCb sqhY3A4rbisBNqkeOS06GXp+4iUPGlPm bPWTs8QWMzm8XD/swmZoKCPF3l7KuZ4b 4RC2vmAgZeiyL80ffOskv0+/iJhjh2P0 gBVMl5Jxjs0=
 xn--b5ba6ewbikfo2e1cdpb2q 10800 IN NSEC xn--b5bd1b9b3b5azgqaebb NS RRSIG NSEC
-xn--b5ba6ewbikfo2e1cdpb2q 10800 IN NS dns.bttb.net.bd.
-xn--b5ba6ewbikfo2e1cdpb2q 10800 IN NS slave.bttb.net.bd.
+xn--b5ba6ewbikfo2e1cdpb2q 10800 IN NS dns.btcl.net.bd.
+xn--b5ba6ewbikfo2e1cdpb2q 10800 IN NS slave.btcl.net.bd.
 xn--b5bd1b9b3b5azgqaebb 10800 IN RRSIG NSEC 8 2 10800 20250415181601 20250316175341 15315 @ q0BO1G/p7px2xK+eHckyvNj+rBu2CV1b uSQ9NcLOLeFcGdSPbboeEjW0YCkUPt43 aW/EaEwyQdX50W39YHko5MM5kVqs0Ibr MZ2oNDXDvJIDOzGkJmzheI5KxB5qnALV 4RIYlJp8UWfagD6B/IQZkHDmG8J1uSLX tdGu6XuYQiA=
 xn--b5bd1b9b3b5azgqaebb 10800 IN NSEC xn--b5bd1b9b8ch5gqaebb NS RRSIG NSEC
 xn--b5bd1b9b3b5azgqaebb 10800 IN NS ns5.zhostbd.com.
@@ -693,17 +693,17 @@ xn--f6baw6al 10800 IN NS premium5.webrserver.com.
 xn--f6baw6al 10800 IN NS premium6.webrserver.com.
 xn--f6bczs 10800 IN RRSIG NSEC 8 2 10800 20250403175739 20250304175413 15315 @ NpjcRoWSmrDiK1I7smj0V5aTnXdNU0WU QaFN6pXdKSkRFq+0Z1mgHvlWJSae6w6j 1R3nxqn+UDhtUSri7DCEF++P9cTCEF/6 4UiqxVewFMAk/So3nWz2BpstTN1wTvCe DozyTbs7nDVIicPGxXhpQVYXUD+i9DAB 5NbbeKEt1/Y=
 xn--f6bczs 10800 IN NSEC xn--f6bi0b8a NS RRSIG NSEC
-xn--f6bczs 10800 IN NS dns.bttb.net.bd.
-xn--f6bczs 10800 IN NS slave.bttb.net.bd.
+xn--f6bczs 10800 IN NS dns.btcl.net.bd.
+xn--f6bczs 10800 IN NS slave.btcl.net.bd.
 xn--f6bi0b8a 10800 IN RRSIG NSEC 8 2 10800 20250417233214 20250318223214 15315 @ FvSJQcgds4LXG48f1SOBUPkvZY8/exA+ fdiVHusVVB9tIZasHrpOjJClhrtHSA6m SC6ZoV/XAHsMBLuIwTva0BVzNz0z+OZX JdpJI2LUmUhkWcboX9vjslcPyqznyXqr /s97JG8U40DvZjRgsuvQqJ4YBllPvKe/ DVdlmWWwkvg=
 xn--f6bi0b8a 10800 IN NSEC xn--j5b0dbc3dwbdb NS RRSIG NSEC
 xn--f6bi0b8a 10800 IN NS dns.btcl.net.bd.
 xn--f6bi0b8a 10800 IN NS slave.btcl.net.bd.
-xn--j5b0dbc3dwbdb 10800 IN RRSIG NSEC 8 2 10800 20250331195348 20250301185527 15315 @ Twq8ZhOudMhhekSaiSzApLLQ2xjiI9OQ SGePWlJ7Gzr7BRz/lbjlEsvI4BFiAODH 6VEunAZ8vA82oEh7tHtt7ipcQW9e1CTu lA8m92SFzGBF/nEmSLCozp0KwUdk1qRi QrsmJ8Zw/ZdlgNly2H0cVnj1KFWtSggi SoPTvxuzpQY=
+xn--j5b0dbc3dwbdb 10800 IN RRSIG NSEC 8 2 10800 20250423065950 20250324065348 15315 @ LOQXHkISm1JxTqK579RO8G/H40kWTkPi J70q1ZkWyYPqsZIenk8FFHBkeWe5wY+4 WBP2JPT8ArPxpWfZykydHK+ykHpZ1fbf A8fkMn85bB63VMy/FIwXRzGYIWW5+5A1 LxW7rFGB16kjVM8J8Vas3NDyqi4okjet YZ0/K7higB0=
 xn--j5b0dbc3dwbdb 10800 IN NSEC xn--j5b4craj8cub NS RRSIG NSEC
 xn--j5b0dbc3dwbdb 10800 IN NS ns1.nothi.org.bd.
 xn--j5b0dbc3dwbdb 10800 IN NS ns2.nothi.org.bd.
-xn--j5b4craj8cub 10800 IN RRSIG NSEC 8 2 10800 20250331195348 20250301185527 15315 @ WxvzCbNMWMzPZ7/Lt1UFzCGD5/mJBqt/ bSFNgwigBPHZCDluus9eMxhM+63YfAtZ fog7pKm7nTHWt19QqHC9zDuMocnE8sxN WQg1f4k98scKKWcKa8PVd9Ie0tKtcNrB zbKPFtqQN1v9rLDM1yRklh+V7DVeY/SF SMqh3D07vQE=
+xn--j5b4craj8cub 10800 IN RRSIG NSEC 8 2 10800 20250423065950 20250324065348 15315 @ AMGRLe+zSvBKB6O6rW6NUozTH7YtG1JV hsBpAEZFRJLZZh6Jx/XTeabJidW+F9vu kZyQUidIiDJCJRgzugWgmw2bQMbmWimP a56vEcmIDiTLgkhFSrVI1BChQxuUuiI/ KR49N2guthBAouXljF9425e8rKR9YGjP ABRJA/pQzOA=
 xn--j5b4craj8cub 10800 IN NSEC xn--j5b5ab0kc NS RRSIG NSEC
 xn--j5b4craj8cub 10800 IN NS ns1.ssbdhosting.com.
 xn--j5b4craj8cub 10800 IN NS ns2.ssbdhosting.com.
@@ -737,7 +737,7 @@ xn--j5ba1b9cc4b1b0cbd 10800 IN RRSIG NSEC 8 2 10800 20250415185610 2025031618245
 xn--j5ba1b9cc4b1b0cbd 10800 IN NSEC xn--j5ba4fi5a6ab9cbb NS RRSIG NSEC
 xn--j5ba1b9cc4b1b0cbd 10800 IN NS ns1.bangladesh.gov.bd.
 xn--j5ba1b9cc4b1b0cbd 10800 IN NS ns2.bangladesh.gov.bd.
-xn--j5ba4fi5a6ab9cbb 10800 IN RRSIG NSEC 8 2 10800 20250331033237 20250301032047 15315 @ DUpQ9Dj0icbEAKHsVVbtHfaFvbj/wv6y SFoZUZ9E9xHMzQdrMvoe0A12irVwnXO5 GfUkaOxToD5Oxn2tlw2+e13qTnOi5N6t KoeSuDe2bqGIkXD7aorntA3fBvxJ/7f7 SGtp1nGO2ifkAz1WcLS1KFqriIBE8BpI cJaVr5pG9oU=
+xn--j5ba4fi5a6ab9cbb 10800 IN RRSIG NSEC 8 2 10800 20250422144929 20250323143237 15315 @ ntKMvFeticPlS22IcyML1Yux85cPRB2j +kO2qZxaT07WTCn3fUYD++OSMMKJFCz0 0/lySE5UdEn9bxdF6WTi+avswcwTrHSw XHZsgMWm+7XZK5C8qftMCtX71VKQiX9S fGVSPiYIyDnxFcrLQs/ynJfEEw6UgO32 duT+NUVeMo0=
 xn--j5ba4fi5a6ab9cbb 10800 IN NSEC xn--j5ba7cyb8c0b NS RRSIG NSEC
 xn--j5ba4fi5a6ab9cbb 10800 IN NS ns1.nothi.org.bd.
 xn--j5ba4fi5a6ab9cbb 10800 IN NS ns2.nothi.org.bd.
@@ -804,12 +804,12 @@ xn--n5b0booh0dxbef6i0a 10800 IN NS ns2.mysecurecloudhost.com.
 xn--n5b0booh0dxbef6i0a 10800 IN NS ns3.mysecurecloudhost.com.
 xn--n5bh5a0a0bddq2guar8mib 10800 IN RRSIG NSEC 8 2 10800 20250420230326 20250321230150 15315 @ jyRohUNHs/tQBXTgKPQfZdnCV5phiFpR dPLgVSRy1wdfzXHL6DA+E8TpdHA7IP0w zedVybiQ5gqNHW/EQNXsqHu4GNXtwQzX J7nMPWNdy+qszTi/93xZ1c9RzQ73SOb9 Rpn+TQho1Gb2O2nwL9gLQ3VAVdN0F/Wq 9NOI0yNjDFc=
 xn--n5bh5a0a0bddq2guar8mib 10800 IN NSEC xn--n5bi4cb1a3d1bl NS RRSIG NSEC
-xn--n5bh5a0a0bddq2guar8mib 10800 IN NS dns.bttb.net.bd.
-xn--n5bh5a0a0bddq2guar8mib 10800 IN NS slave.bttb.net.bd.
+xn--n5bh5a0a0bddq2guar8mib 10800 IN NS dns.btcl.net.bd.
+xn--n5bh5a0a0bddq2guar8mib 10800 IN NS slave.btcl.net.bd.
 xn--n5bi4cb1a3d1bl 10800 IN RRSIG NSEC 8 2 10800 20250420110957 20250321103049 15315 @ KyDxFIuZzXPrLhqicyJLmWvDUkjxbkMy TZPLVHIonkIGSafdeiXhf280rV5eWkEp Zg0ngH/e0259JLShETVjTJDDnxewMqWN tCnJnlsJnLFPVYOYmm96/6HL7o6ExTqt bfj6lrFLne4I86zT7zH3c6F5MauTEOXB 7XvnHxmtnfM=
 xn--n5bi4cb1a3d1bl 10800 IN NSEC xn--n5by1a0ap3do NS RRSIG NSEC
-xn--n5bi4cb1a3d1bl 10800 IN NS dns.bttb.net.bd.
-xn--n5bi4cb1a3d1bl 10800 IN NS slave.bttb.net.bd.
+xn--n5bi4cb1a3d1bl 10800 IN NS dns.btcl.net.bd.
+xn--n5bi4cb1a3d1bl 10800 IN NS slave.btcl.net.bd.
 xn--n5by1a0ap3do 10800 IN RRSIG NSEC 8 2 10800 20250415181200 20250316172448 15315 @ mWykOtgPziWVNa9RWJYr0GK5TflKaIpE eg1K14suFZLzkE9jAJ0c2HNbgyoZMoWK VNf+YYbZvHAAI2w0d8CJUZ3qmPsgPpo5 wuxaen9X+3j5ESFbTv0bah5d+sUBMAgO cqlnWLmIbl/a08bf3AZyPomOVOS3h8u0 4QulXhMGpp4=
 xn--n5by1a0ap3do 10800 IN NSEC xn--p5b1bfsr6e5e NS RRSIG NSEC
 xn--n5by1a0ap3do 10800 IN NS ns1.mail6bd.net.
@@ -848,8 +848,8 @@ xn--p5b3a6af2ei0h 10800 IN NS ns1.dns-parking.com.
 xn--p5b3a6af2ei0h 10800 IN NS ns2.dns-parking.com.
 xn--p5b3aa3bjc0hge7kf 10800 IN RRSIG NSEC 8 2 10800 20250405012928 20250306010842 15315 @ cv2fhoqIcE8FqAZsCeTPLvdipj4y/AvM oUellDPNnmBukkGPe5g+JoH9hiWIOW5v aZzP7cgP4HwYc8qfBJHBQ/z9YrfUm05a va8H5tIk7gkpxxHWl60lQBvpDetOo+AZ twQcCNwkZKZh1lScAOLEpxsRhWHgJlFv IVUeaKHrm1E=
 xn--p5b3aa3bjc0hge7kf 10800 IN NSEC xn--p5b3cnv6a NS RRSIG NSEC
-xn--p5b3aa3bjc0hge7kf 10800 IN NS dns.bttb.net.bd.
-xn--p5b3aa3bjc0hge7kf 10800 IN NS slave.bttb.net.bd.
+xn--p5b3aa3bjc0hge7kf 10800 IN NS dns.btcl.net.bd.
+xn--p5b3aa3bjc0hge7kf 10800 IN NS slave.btcl.net.bd.
 xn--p5b3cnv6a 10800 IN RRSIG NSEC 8 2 10800 20250415193924 20250316193039 15315 @ hcChMFwwKSXVDqqVL9Fa4RkChcn/N0rI MIFOGD0JSOu28MYAM8fG4bouPM8C3+Sf dtTLjqaH1+fiWBJVZisaC+DPH8NbLPOR 58b0dP+Zu4HwGPcVfQqMqPXjz7lW6gjN UmxLcpVZoSth1ltC35LMYl6HUhI+j3QS B776IJr+Uw4=
 xn--p5b3cnv6a 10800 IN NSEC xn--p5b4ae3esb1f NS RRSIG NSEC
 xn--p5b3cnv6a 10800 IN NS ns.sourcedns.com.
@@ -913,8 +913,8 @@ xn--p5ba3ab6b6afbeq9fd7b2acftb5ska9ak 10800 IN NS ns1.quantummethod.info.
 xn--p5ba3ab6b6afbeq9fd7b2acftb5ska9ak 10800 IN NS ns2.quantummethod.info.
 xn--p5ba3m 10800 IN RRSIG NSEC 8 2 10800 20250411040306 20250312035451 15315 @ esLac2Bon7dlzPsWrezEaqh1JZlERkMu o2oun/5KYaDJyAT3xHzGv06xcbRMIhIe gb77g+seFLLpfKnCwh9agyYleJpx94jh mqRzXAEeYCA0sCEa6FcuWyo55VW2fTbK FOWR1EkRUpJMWclIlX9NcFYwWIpdFC2W wj5QhhV3+VU=
 xn--p5ba3m 10800 IN NSEC xn--p5ba4a8a0hbb0e NS RRSIG NSEC
-xn--p5ba3m 10800 IN NS dns.bttb.net.bd.
-xn--p5ba3m 10800 IN NS slave.bttb.net.bd.
+xn--p5ba3m 10800 IN NS dns.btcl.net.bd.
+xn--p5ba3m 10800 IN NS slave.btcl.net.bd.
 xn--p5ba4a8a0hbb0e 10800 IN RRSIG NSEC 8 2 10800 20250415202320 20250316193905 15315 @ Bzdb6zHWYDN3hXZI8CYPFkEnGU6YgecG Te/OQsICdcOQ4hy3ofz309I0oJ4VZzbG /fn/2uNoFC9X8ieMKFgsI/gZR3SswNCH S2ZoJnaGf6jHV50dn2stuPqrsVzszUX0 Gt0psgoyh7LJDCw6/nt0E5jZSdAQsmo9 yHEHWCCKoXQ=
 xn--p5ba4a8a0hbb0e 10800 IN NSEC xn--p5ba8era1ab8d0dta NS RRSIG NSEC
 xn--p5ba4a8a0hbb0e 10800 IN NS ns1.securehostingpanel.com.
@@ -1026,12 +1026,12 @@ xn--p5bugpn1bae1juac4iwb6a 10800 IN NS ns1.quantummethod.info.
 xn--p5bugpn1bae1juac4iwb6a 10800 IN NS ns2.quantummethod.info.
 xn--p5bwlyr3hra1h 10800 IN RRSIG NSEC 8 2 10800 20250418100942 20250319093825 15315 @ PBrf+sCCipWykgC/6PdUZWYcIodqmUID aKEEavu5taEt+2mi8qSEV5N1kc8cfGjq gTpN/EIA3mydRj/Rkl4ypVsFA9b6biAP S1YLL9ibACT07yswquTXxQiOy58S9M4s ZiLhmw31vlAqutYVTCRxTfbFa8SQ8ADE +DaPUeOW+Ho=
 xn--p5bwlyr3hra1h 10800 IN NSEC xn--p5bx6a8bwbbc4a NS RRSIG NSEC
-xn--p5bwlyr3hra1h 10800 IN NS dns.bttb.net.bd.
-xn--p5bwlyr3hra1h 10800 IN NS slave.bttb.net.bd.
+xn--p5bwlyr3hra1h 10800 IN NS dns.btcl.net.bd.
+xn--p5bwlyr3hra1h 10800 IN NS slave.btcl.net.bd.
 xn--p5bx6a8bwbbc4a 10800 IN RRSIG NSEC 8 2 10800 20250415185501 20250316182626 15315 @ mM4WSzHMI4u6Z/6zcyi8N/shoKHcdc1w ry0TD0K/4doOf0Yv7YUZCqpyVxiSEGmI TSK1MjAuE4iUbm+o63ZysBLoh4lrWr9I VaaGIJUEvOyGlh6jQm511BWmFs4T9FJ8 gcIt0zdgaiP9eD6Hmp9wiB6TC+VLNSVF WyY1WtmaYG8=
 xn--p5bx6a8bwbbc4a 10800 IN NSEC xn--p5bx6ak6fb NS RRSIG NSEC
-xn--p5bx6a8bwbbc4a 10800 IN NS dns.bttb.net.bd.
-xn--p5bx6a8bwbbc4a 10800 IN NS slave.bttb.net.bd.
+xn--p5bx6a8bwbbc4a 10800 IN NS dns.btcl.net.bd.
+xn--p5bx6a8bwbbc4a 10800 IN NS slave.btcl.net.bd.
 xn--p5bx6ak6fb 10800 IN RRSIG NSEC 8 2 10800 20250415202744 20250316195124 15315 @ OsUIrVaZJy2SgDsBvLqDn57Q3tNjowim XmpPB7SnEFeDGvYhbchNdaEU3RW6OXGF BA8InWa1yJZvvPwVFnNNQEVkbsW+Qqqb 1EaMGH4hc4UxvINVPSA2kxSuSW/A5FIa NLyMZZcO2V4ZZspxDowCv0PvUu1ReTGz LyEky8gNyeE=
 xn--p5bx6ak6fb 10800 IN NSEC xn--p5by1bbj9bwicq NS RRSIG NSEC
 xn--p5bx6ak6fb 10800 IN NS dns1.bdcom.com.
@@ -1057,7 +1057,7 @@ xn--q5b6a1azdzd 10800 IN RRSIG NSEC 8 2 10800 20250421233039 20250322223039 1531
 xn--q5b6a1azdzd 10800 IN NSEC xn--q5bh6bb6atb6gf1a7dud NS RRSIG NSEC
 xn--q5b6a1azdzd 10800 IN NS ns1.nothi.org.bd.
 xn--q5b6a1azdzd 10800 IN NS ns2.nothi.org.bd.
-xn--q5bh6bb6atb6gf1a7dud 10800 IN RRSIG NSEC 8 2 10800 20250331233003 20250301223003 15315 @ UU4JE+avTilxMcZyFh31H+nzXuobKlZl fXTj9o7kdLvguN6Yy9MZZrCFZ1oXWB7A t0ZXQ5695c69KecyFK72IXwPl/YW9eDG rP3/+q/cKbqTODIU5XnesSRkBHvS9JLd WMAF4LkN9ixl+N2rPJ+nLL3tJThLGu8k J+Sw1zlkDi0=
+xn--q5bh6bb6atb6gf1a7dud 10800 IN RRSIG NSEC 8 2 10800 20250423111703 20250324103003 15315 @ jyLlDsafNQIsj3KacJU6uuFhuqp/uAz7 +dV5th0cUEtulTDYSlDThMjJww9pSHSi 9TJEQVWzzMOBluz3DlD+Xk3U0LjmFeX8 rU9d/tGhm43UNHksVfCumZx5LOG2ynzb Kpa1elBe4dOMOuwHjVHhACc58l8iTdtg IunasqQzIyY=
 xn--q5bh6bb6atb6gf1a7dud 10800 IN NSEC xn--r5bjj6ceb4ab7c9cedc7he NS RRSIG NSEC
 xn--q5bh6bb6atb6gf1a7dud 10800 IN NS ns1.yourpromobd.com.
 xn--q5bh6bb6atb6gf1a7dud 10800 IN NS ns2.yourpromobd.com.
@@ -1093,8 +1093,8 @@ xn--w5b6ae3ei9tag 10800 IN NS dns2.bcc.gov.bd.
 xn--w5b6ae3ei9tag 10800 IN NS dns3.bcc.gov.bd.
 xn--w5b8bq 10800 IN RRSIG NSEC 8 2 10800 20250407080041 20250308070041 15315 @ iV4btBlbua2U9Ap+y3J6RxAS5UTMvYUQ /cs8xAvD8/xWg15U1dww4UCKrmravV73 8PV0cBbE0CK9MoF2doouD22b+wF0OCun 5kgW06/hliehsJZ90qP3KKRKvzteEr+g WYYzzn/Y85XA4yNl/hHNoBXKu8/98RVg XrO4n+O5MBA=
 xn--w5b8bq 10800 IN NSEC xn--w5bge4evcdb NS RRSIG NSEC
-xn--w5b8bq 10800 IN NS slave.bttb.net.bd.
 xn--w5b8bq 10800 IN NS gv-rxtzxzrkgmpref.dv.googlehosted.com.
+xn--w5b8bq 10800 IN NS slave.btcl.net.bd.
 xn--w5bge4evcdb 10800 IN RRSIG NSEC 8 2 10800 20250407080041 20250308070041 15315 @ plxkZwK6fHem5LxAxBxraIRe1XLjbKko SSmqJs1c9WK5DmaH40/r9OtqlrjoJgxf Mf3Amk66lBwXE8stovhGKQHELP1bsho1 YSxcwxM2OrBmUqE8lcgiuyZgYpIZy6bH puWM8QefwxPraE4vpj2dS4At3U8dtohG CqeTBNvtiyE=
 xn--w5bge4evcdb 10800 IN NSEC xn--w5bj6ac4dvbb NS RRSIG NSEC
 xn--w5bge4evcdb 10800 IN NS elsa.ns.cloudflare.com.
@@ -1109,8 +1109,8 @@ xn--w5bjb3b7fbp 10800 IN NS ns1.nothi.org.bd.
 xn--w5bjb3b7fbp 10800 IN NS ns2.nothi.org.bd.
 xn--w5bne3acri1iece3oe 10800 IN RRSIG NSEC 8 2 10800 20250415193714 20250316190959 15315 @ WqEc4izy2vBTW8Ya3ASFiANFX3zypzbf Durhlu/WPkrlwxJAhgo6X2obRzQsS5TS Hnr8jAOTuBXWRr1/IpwYYSkp34mQxVQI 598QDTGiYkoqsX6klawAuXp1wgwrNYkE cG+rtX49ugn8/NK5n3RkPdjEP6lWaTBy ZdTzS1ZwmSc=
 xn--w5bne3acri1iece3oe 10800 IN NSEC xn--w5bpmr1gi NS RRSIG NSEC
-xn--w5bne3acri1iece3oe 10800 IN NS dns.bttb.net.bd.
-xn--w5bne3acri1iece3oe 10800 IN NS slave.bttb.net.bd.
+xn--w5bne3acri1iece3oe 10800 IN NS dns.btcl.net.bd.
+xn--w5bne3acri1iece3oe 10800 IN NS slave.btcl.net.bd.
 xn--w5bpmr1gi 10800 IN RRSIG NSEC 8 2 10800 20250402100203 20250303094307 15315 @ LLoRxAL5NqgMg75a0D1VKp5+R8X9Qiyb 1oceFtU57kAATtlnTv6aX4QOYureDG+k zvtDrwjjJGfzonHs+Hdf/ILEBtSiOS/Z JsOSgcs7cW4g7bBwtdGYI+MqWYclC2Bi 13wB1oM1g9kbi18SHPbtBd0AZBwZMtW+ 6Z8ds4Hxk7M=
 xn--w5bpmr1gi 10800 IN NSEC xn--w5bu0dtag NS RRSIG NSEC
 xn--w5bpmr1gi 10800 IN NS kai.ns.cloudflare.com.
@@ -1122,8 +1122,8 @@ xn--w5bu0dtag 10800 IN NS dns2.p01.nsone.net.
 xn--w5bu0dtag 10800 IN NS dns3.p01.nsone.net.
 xn--w5buqm9dkk6d 10800 IN RRSIG NSEC 8 2 10800 20250407172300 20250308163838 15315 @ f0oCD4c5IX9yH6JDIpRMkmWDAkuSNfzP ypjuPG6+QLRpYBg8PLGiicuZosPM6oGr 0a6hxNLRRZNMcmBs/RR6qseZeITvh8YZ eaJtMXYSOsE5w2zoci/yOFN2eg6ZJ4Is z9ZekNjnNIqcRnd3dXHswD3GEiLvBZb3 sH5jS0GjRWw=
 xn--w5buqm9dkk6d 10800 IN NSEC xn--w5bxv6ckd NS RRSIG NSEC
-xn--w5buqm9dkk6d 10800 IN NS dns.bttb.net.bd.
-xn--w5buqm9dkk6d 10800 IN NS slave.bttb.net.bd.
+xn--w5buqm9dkk6d 10800 IN NS dns.btcl.net.bd.
+xn--w5buqm9dkk6d 10800 IN NS slave.btcl.net.bd.
 xn--w5bxv6ckd 10800 IN RRSIG NSEC 8 2 10800 20250407172300 20250308163838 15315 @ cvkBunqH/Xs+KRgBAEDmAilvBmT5H5N1 d3GXmiTsQUuW3EGvY4KHKi7OnHqVQM3o SsfB2zw8RqNNv3OGowSNrVWJN/mZqaAd ncmP7lXicrH/lKrDGmji02L95nNs4zmn NRr1geKzkPcNB1T809HSNFpekJHpA5ju iXSxLTs/8/A=
 xn--w5bxv6ckd 10800 IN NSEC xn--w5byr7db NS RRSIG NSEC
 xn--w5bxv6ckd 10800 IN NS ns1.codebound.ltd.
@@ -1132,12 +1132,12 @@ xn--w5byr7db 10800 IN RRSIG NSEC 8 2 10800 20250409205429 20250310201024 15315 @
 xn--w5byr7db 10800 IN NSEC xn--z5b0cg1a2b NS RRSIG NSEC
 xn--w5byr7db 10800 IN NS ns1.zaman.com.bd.
 xn--w5byr7db 10800 IN NS ns2.zaman.com.bd.
-xn--z5b0cg1a2b 10800 IN RRSIG NSEC 8 2 10800 20250330211254 20250228202218 15315 @ rMyjXZfQrdempnMnnckb5pFYvP5Eb+mp PPWlEp9SnoUNeJNv5f6pKMMGp9aUIxl7 Vl0bfxw3D8rKj6O+ghh2W9Ixoq4u1EOO V56psThGZrRSiGs21W6NsBhjFfQ61oPD wj2ZloKSdAD/NjAdDvm+L4kW/4Rt4VoB CDsC/zpd8GM=
+xn--z5b0cg1a2b 10800 IN RRSIG NSEC 8 2 10800 20250422081310 20250323081254 15315 @ cxc/jwlqjycAqBTmSMLKBiPSuFsBpuQW z1f34waLNiZz7pK0oGh4o+vlJGib6q7i dhpobq8mUbkgdg+q7XFP2suwrlfC23t6 74f9yQb4sK36A4lXkVsE0CQgoj05OfNQ e+5Z2jes8CuJ4cuor4GliNIZH4L962zi CwEyltpvylk=
 xn--z5b0cg1a2b 10800 IN NSEC xn--z5b3abed8ejdce NS RRSIG NSEC
 xn--z5b0cg1a2b 10800 IN NS ns3.dhakawebhost.com.
 xn--z5b0cg1a2b 10800 IN NS ns4.dhakawebhost.com.
 xn--z5b0cg1a2b 10800 IN NS ns6.dhakawebhost.com.
-xn--z5b3abed8ejdce 10800 IN RRSIG NSEC 8 2 10800 20250330211254 20250228202218 15315 @ BvS4aw596Car7W7JoO+LF3tfn5Y+T/Iu wcn4tIXIlL9LeqcAk0ohHKI6Umuk0hWa mZ+TixgmfWOothA4cyZd54rE4EM3OJdN cmCbkoWOqZNMek8395tpuJOMYU69+3vi CdI4fzw2aHE6Z83JHUqErazSdC31gPRa I9W2oPI3Pmw=
+xn--z5b3abed8ejdce 10800 IN RRSIG NSEC 8 2 10800 20250422081310 20250323081254 15315 @ FB1+MItushiIqisNRJXLGGLn8F6lhcOH zhd7dxWkiQtYin79j6Hj07/JAR7edwx3 yFhlsNBYrPIWu62EiNjoUjyndZ8Zc4c2 6IwG825mTPyIptVdBSiprcsfdiP0anWa l8GSHTPHpwuHkwmW1nykC9Bdx8DOfGkg xRRg7pbc2P0=
 xn--z5b3abed8ejdce 10800 IN NSEC xn--z5ba8etc5a5m NS RRSIG NSEC
 xn--z5b3abed8ejdce 10800 IN NS ns1.dewan-it.com.
 xn--z5b3abed8ejdce 10800 IN NS ns2.dewan-it.com.
