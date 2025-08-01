@@ -1,5 +1,5 @@
-@ 3600 IN SOA ns1.nic hostmaster.nic 2025073023 3600 3600 604800 3600
-@ 3600 IN TXT "Generation Time: 1753916411"
+@ 3600 IN SOA ns1.nic hostmaster.nic 2025073124 3600 3600 604800 3600
+@ 3600 IN TXT "Generation Time: 1754004006"
 @ 3600 IN NS ns.nic
 @ 3600 IN NS ns1.nic
 @ 3600 IN NS ns2.nic
@@ -1809,8 +1809,8 @@ ala-ok 3600 IN NS ns1.regzone.de.
 ala-ok 3600 IN NS ns1.regzone.cz.
 alabanzafm 3600 IN NS ns10100.ifastnet.com.
 alabanzafm 3600 IN NS ns20100.ifastnet.com.
-alacarta 3600 IN NS pablo.ns.cloudflare.com.
-alacarta 3600 IN NS cheryl.ns.cloudflare.com.
+alacarta 3600 IN NS dee.ns.cloudflare.com.
+alacarta 3600 IN NS ray.ns.cloudflare.com.
 alacta 3600 IN NS ns-923.awsdns-51.net.
 alacta 3600 IN NS ns-1629.awsdns-11.co.uk.
 alacta 3600 IN NS ns-333.awsdns-41.com.
@@ -2638,6 +2638,10 @@ americanstrokeassociation 3600 IN NS ns5.markmonitor.com.
 americanstrokeassociation 3600 IN NS ns2.markmonitor.com.
 americantint 3600 IN NS ns4.hostmar.com.
 americantint 3600 IN NS ns3.hostmar.com.
+amerigo 3600 IN NS dns1.midominio
+amerigo 3600 IN NS dns2.midominio
+amerigo 3600 IN NS dns3.midominio
+amerigo 3600 IN NS dns4.midominio
 amerikitchen 3600 IN NS dns4.midominio
 amerikitchen 3600 IN NS dns3.midominio
 amerikitchen 3600 IN NS dns2.midominio
@@ -4882,6 +4886,10 @@ barletta 3600 IN NS dns1.grupoambar.com
 barletta 3600 IN NS dns2.grupoambar.com
 barlleno 3600 IN NS dns2.supremedns.com.
 barlleno 3600 IN NS dns1.supremedns.com.
+barracuda 3600 IN NS dns1.midominio
+barracuda 3600 IN NS dns2.midominio
+barracuda 3600 IN NS dns3.midominio
+barracuda 3600 IN NS dns4.midominio
 barrapayan 3600 IN NS arely.ns.cloudflare.com.
 barrapayan 3600 IN NS jasper.ns.cloudflare.com.
 barresociety 3600 IN NS dns1.midominio
@@ -7859,6 +7867,10 @@ casatempo 3600 IN NS dns2.midominio
 casatempo 3600 IN NS dns1.midominio
 casatop 3600 IN NS meg.ns.cloudflare.com.
 casatop 3600 IN NS cullen.ns.cloudflare.com.
+casaurbana 3600 IN NS dns1.midominio
+casaurbana 3600 IN NS dns2.midominio
+casaurbana 3600 IN NS dns3.midominio
+casaurbana 3600 IN NS dns4.midominio
 cascan 3600 IN NS ns2.dns-parking.com.
 cascan 3600 IN NS ns1.dns-parking.com.
 caselogic 3600 IN NS nsusa.comlaude.net.
@@ -11328,6 +11340,8 @@ cromos 3600 IN NS troy.ns.cloudflare.com.
 cromos 3600 IN NS aron.ns.cloudflare.com.
 crossfilm 3600 IN NS sreeni.ns.cloudflare.com.
 crossfilm 3600 IN NS santino.ns.cloudflare.com.
+crow 3600 IN NS lamar.ns.cloudflare.com.
+crow 3600 IN NS gracie.ns.cloudflare.com.
 crowdium 3600 IN NS ns2.crowdium.com.
 crowdium 3600 IN NS ns1.crowdium.com.
 crowe 3600 IN NS dns3.idp365.net.
@@ -11429,8 +11443,8 @@ csf 3600 IN NS dns2.midominio
 csf 3600 IN NS dns1.midominio
 csi 3600 IN NS ns2.us.opalstack.com.
 csi 3600 IN NS ns1.us.opalstack.com.
-csm 3600 IN NS ns2.dns-parking.com.
 csm 3600 IN NS ns1.dns-parking.com.
+csm 3600 IN NS ns2.dns-parking.com.
 csp 3600 IN NS dns4.midominio
 csp 3600 IN NS dns3.midominio
 csp 3600 IN NS dns2.midominio
@@ -11475,6 +11489,10 @@ ctp 3600 IN NS ns1.caresa.com
 ctp 3600 IN NS ns2.caresa.com
 ctpc 3600 IN NS nick.ns.cloudflare.com.
 ctpc 3600 IN NS kiki.ns.cloudflare.com.
+ctue 3600 IN NS dns1.midominio
+ctue 3600 IN NS dns2.midominio
+ctue 3600 IN NS dns3.midominio
+ctue 3600 IN NS dns4.midominio
 ctx 3600 IN NS gina.ns.cloudflare.com.
 ctx 3600 IN NS ernest.ns.cloudflare.com.
 cua 3600 IN NS 170.ns2.abovedomains.com.
@@ -11489,6 +11507,10 @@ cuantomedas 3600 IN NS dns4.midominio
 cuantomedas 3600 IN NS dns3.midominio
 cuantomedas 3600 IN NS dns2.midominio
 cuantomedas 3600 IN NS dns1.midominio
+cuartopoder 3600 IN NS ns1.efiservers.com.
+cuartopoder 3600 IN NS ns2.efiservers.com.
+cuartopoder 3600 IN NS ns3.efiservers.com.
+cuartopoder 3600 IN NS ns4.efiservers.com.
 cuba 3600 IN NS graham.ns.cloudflare.com.
 cuba 3600 IN NS bethany.ns.cloudflare.com.
 cube 3600 IN NS rosemary.ns.cloudflare.com.
@@ -12397,6 +12419,8 @@ destinia 3600 IN NS ns.classicweb.com.
 destinia 3600 IN NS ns2.classicweb.com.
 destinojet 3600 IN NS rick.ns.cloudflare.com.
 destinojet 3600 IN NS adelaide.ns.cloudflare.com.
+destinosrd 3600 IN NS ns83.securenet-server.net.
+destinosrd 3600 IN NS ns84.securenet-server.net.
 desvelaterd 3600 IN NS dns4.midominio
 desvelaterd 3600 IN NS dns3.midominio
 desvelaterd 3600 IN NS dns2.midominio
@@ -12961,6 +12985,10 @@ divix 3600 IN NS dns2.midominio
 divix 3600 IN NS dns1.midominio
 divorcio 3600 IN NS ns11.wixdns.net.
 divorcio 3600 IN NS ns10.wixdns.net.
+divorcios 3600 IN NS dns1.midominio
+divorcios 3600 IN NS dns2.midominio
+divorcios 3600 IN NS dns3.midominio
+divorcios 3600 IN NS dns4.midominio
 divulga 3600 IN NS ns2.bluehost.com.
 divulga 3600 IN NS ns1.bluehost.com.
 dix 3600 IN NS ns110.websitewelcome.com.
@@ -15075,10 +15103,6 @@ empirica 3600 IN NS ns1.bluehost.com.
 empirica 3600 IN NS ns2.bluehost.com.
 emplea 3600 IN NS vicente.ns.cloudflare.com.
 emplea 3600 IN NS dalary.ns.cloudflare.com.
-emplean 3600 IN NS dns4.midominio
-emplean 3600 IN NS dns3.midominio
-emplean 3600 IN NS dns2.midominio
-emplean 3600 IN NS dns1.midominio
 empleo 3600 IN NS ns3.domainmanager.com.
 empleo 3600 IN NS ns4.domainmanager.com.
 empleo809 3600 IN NS ada.ns.cloudflare.com.
@@ -15971,10 +15995,6 @@ everyday 3600 IN NS ns-253.awsdns-31.com.
 everyday 3600 IN NS ns-800.awsdns-36.net.
 everydayhero 3600 IN NS ns2.parkingcrew.net.
 everydayhero 3600 IN NS ns1.parkingcrew.net.
-everydayi 3600 IN NS ns4.netim.net.
-everydayi 3600 IN NS ns3.netim.net.
-everydayi 3600 IN NS ns2.netim.net.
-everydayi 3600 IN NS ns1.netim.net.
 evestudio 3600 IN NS ns3.digitalocean.com.
 evestudio 3600 IN NS ns2.digitalocean.com.
 evestudio 3600 IN NS ns1.digitalocean.com.
@@ -16592,10 +16612,9 @@ faunaly 3600 IN NS dns4.midominio
 faunaly 3600 IN NS dns3.midominio
 faunaly 3600 IN NS dns2.midominio
 faunaly 3600 IN NS dns1.midominio
-favela 3600 IN NS dns4.midominio
-favela 3600 IN NS dns3.midominio
-favela 3600 IN NS dns2.midominio
-favela 3600 IN NS dns1.midominio
+favela 3600 IN NS ns1.digitalocean.com.
+favela 3600 IN NS ns2.digitalocean.com.
+favela 3600 IN NS ns3.digitalocean.com.
 favole 3600 IN NS dns4.midominio
 favole 3600 IN NS dns3.midominio
 favole 3600 IN NS dns2.midominio
@@ -18089,10 +18108,9 @@ futurama 3600 IN NS dns4.midominio
 futurama 3600 IN NS dns3.midominio
 futurama 3600 IN NS dns2.midominio
 futurama 3600 IN NS dns1.midominio
-futurard 3600 IN NS ns4.bdm.microsoftonline.com.
-futurard 3600 IN NS ns3.bdm.microsoftonline.com.
-futurard 3600 IN NS ns2.bdm.microsoftonline.com.
-futurard 3600 IN NS ns1.bdm.microsoftonline.com.
+futurard 3600 IN NS ns1.digitalocean.com.
+futurard 3600 IN NS ns2.digitalocean.com.
+futurard 3600 IN NS ns3.digitalocean.com.
 future 3600 IN NS ns4.supercp.com.
 future 3600 IN NS ns3.supercp.com.
 future 3600 IN NS ns2.supercp.com.
@@ -18173,6 +18191,8 @@ gabilon 3600 IN NS dns4.midominio
 gabilon 3600 IN NS dns3.midominio
 gabilon 3600 IN NS dns2.midominio
 gabilon 3600 IN NS dns1.midominio
+gabriellareginato 3600 IN NS ns53.domaincontrol.com.
+gabriellareginato 3600 IN NS ns54.domaincontrol.com.
 gabrielsosa 3600 IN NS ns2.raintempresarial.com.
 gabrielsosa 3600 IN NS ns1.raintempresarial.com.
 gaceladigital 3600 IN NS ns1045.ui-dns.com.
@@ -18732,6 +18752,10 @@ giants 3600 IN NS ns-1660.awsdns-15.co.uk.
 giants 3600 IN NS ns-127.awsdns-15.com.
 giants 3600 IN NS ns-cloud-c3.googledomains.com.
 giants 3600 IN NS ns-cloud-c2.googledomains.com.
+gicarq 3600 IN NS ns2.wixdns.net.
+gicarq 3600 IN NS ns3.wixdns.net.
+gicarq 3600 IN NS ns8131.hostgator.com.
+gicarq 3600 IN NS ns8132.hostgator.com.
 gid 3600 IN NS cns2063.hostgator.com.
 gid 3600 IN NS cns2064.hostgator.com.
 gif 3600 IN NS dns1.midominio
@@ -19282,6 +19306,10 @@ gourmet 3600 IN NS dns4.midominio
 gourmet 3600 IN NS dns3.midominio
 gourmet 3600 IN NS dns2.midominio
 gourmet 3600 IN NS dns1.midominio
+gourmetrd 3600 IN NS dns1.midominio
+gourmetrd 3600 IN NS dns2.midominio
+gourmetrd 3600 IN NS dns3.midominio
+gourmetrd 3600 IN NS dns4.midominio
 gov 3600 IN NS phloem.uoregon.edu.
 gov 3600 IN NS ns2.nic
 gov 3600 IN NS ns4.nic
@@ -21275,6 +21303,8 @@ hybridclub 3600 IN NS ns1.siteground.net.
 hybridclub 3600 IN NS ns2.siteground.net.
 hyccomercial 3600 IN NS ns2.dns-parking.com.
 hyccomercial 3600 IN NS ns1.dns-parking.com.
+hydra1303 3600 IN NS lina.ns.cloudflare.com.
+hydra1303 3600 IN NS ryan.ns.cloudflare.com.
 hydrafacial 3600 IN NS nsusa.comlaude.net.
 hydrafacial 3600 IN NS nssui.comlaude.ch.
 hydrafacial 3600 IN NS nsgbr.comlaude.co.uk.
@@ -22711,6 +22741,10 @@ invista 3600 IN NS dns1.midominio
 invita 3600 IN NS cdns3.interserver.net.
 invita 3600 IN NS cdns2.interserver.net.
 invita 3600 IN NS cdns1.interserver.net.
+invitan 3600 IN NS dns1.midominio
+invitan 3600 IN NS dns2.midominio
+invitan 3600 IN NS dns3.midominio
+invitan 3600 IN NS dns4.midominio
 invitro 3600 IN NS dns4.midominio
 invitro 3600 IN NS dns3.midominio
 invitro 3600 IN NS dns2.midominio
@@ -23462,6 +23496,10 @@ jomalone 3600 IN NS ns2.elcompanies.com.
 jomalone 3600 IN NS ns4.elcompanies.com.
 jonas 3600 IN NS rosa.ns.cloudflare.com.
 jonas 3600 IN NS arch.ns.cloudflare.com.
+jonathanbatista 3600 IN NS dns1.midominio
+jonathanbatista 3600 IN NS dns2.midominio
+jonathanbatista 3600 IN NS dns3.midominio
+jonathanbatista 3600 IN NS dns4.midominio
 joo 3600 IN NS kate.ns.cloudflare.com.
 joo 3600 IN NS greg.ns.cloudflare.com.
 jor 3600 IN NS ns-1765.awsdns-28.co.uk.
@@ -24737,10 +24775,6 @@ lacoste 3600 IN NS ns3.markmonitor.com.
 lacoste 3600 IN NS ns4.markmonitor.com.
 lacoste 3600 IN NS ns5.markmonitor.com.
 lacoste 3600 IN NS ns6.markmonitor.com.
-lacronica 3600 IN NS ns-1110.awsdns-10.org.
-lacronica 3600 IN NS ns-976.awsdns-58.net.
-lacronica 3600 IN NS ns-1629.awsdns-11.co.uk.
-lacronica 3600 IN NS ns-98.awsdns-12.com.
 lacuisineappliances 3600 IN NS ns08.domaincontrol.com.
 lacuisineappliances 3600 IN NS ns07.domaincontrol.com.
 lad 3600 IN NS ns4.mysecurecloudhost.com.
@@ -25452,6 +25486,8 @@ lestoff 3600 IN NS ns2.acw.at.
 lestoff 3600 IN NS ns1.acw.at.
 let 3600 IN NS ns2.dns-parking.com.
 let 3600 IN NS ns1.dns-parking.com.
+letech 3600 IN NS ns8131.hostgator.com.
+letech 3600 IN NS ns8132.hostgator.com.
 letme 3600 IN NS ns102.ovh.net.
 letme 3600 IN NS dns102.ovh.net.
 letreros 3600 IN NS ns2.s20.intodomain.net.
@@ -27884,6 +27920,10 @@ mejorseguroaffinity 3600 IN NS dns4.midominio
 mejorseguroaffinity 3600 IN NS dns3.midominio
 mejorseguroaffinity 3600 IN NS dns2.midominio
 mejorseguroaffinity 3600 IN NS dns1.midominio
+melalu 3600 IN NS dns1.midominio
+melalu 3600 IN NS dns2.midominio
+melalu 3600 IN NS dns3.midominio
+melalu 3600 IN NS dns4.midominio
 melerich 3600 IN NS dns4.midominio
 melerich 3600 IN NS dns3.midominio
 melerich 3600 IN NS dns2.midominio
@@ -28202,10 +28242,6 @@ metacomercial 3600 IN NS dns4.midominio
 metacomercial 3600 IN NS dns3.midominio
 metacomercial 3600 IN NS dns2.midominio
 metacomercial 3600 IN NS dns1.midominio
-metadata 3600 IN NS ns8182.hostgator.com.
-metadata 3600 IN NS ns8181.hostgator.com.
-metadata 3600 IN NS dns4.midominio
-metadata 3600 IN NS dns3.midominio
 metadatos 3600 IN NS ns8910.banahosting.com.
 metadatos 3600 IN NS ns8911.banahosting.com.
 metafacebook 3600 IN NS ns5.101domain.com.
@@ -28235,12 +28271,6 @@ metamessenger 3600 IN NS ns1.101domain.com.
 metanovi 3600 IN NS ns5.101domain.com.
 metanovi 3600 IN NS ns2.101domain.com.
 metanovi 3600 IN NS ns1.101domain.com.
-metapuntacana 3600 IN NS dns4.midominio
-metapuntacana 3600 IN NS dns3.midominio
-metapuntacana 3600 IN NS dns2.midominio
-metapuntacana 3600 IN NS dns1.midominio
-metapuntacana 3600 IN NS ns1.vercel-dns.com.
-metapuntacana 3600 IN NS ns2.vercel-dns.com.
 metapwr 3600 IN NS ns3.instradns.com.
 metapwr 3600 IN NS ns2.instradns.com.
 metapwr 3600 IN NS ns1.instradns.com.
@@ -28313,6 +28343,10 @@ mevoydefinde 3600 IN NS dns4.midominio
 mevoydefinde 3600 IN NS dns3.midominio
 mevoydefinde 3600 IN NS dns2.midominio
 mevoydefinde 3600 IN NS dns1.midominio
+mewi 3600 IN NS dns1.midominio
+mewi 3600 IN NS dns2.midominio
+mewi 3600 IN NS dns3.midominio
+mewi 3600 IN NS dns4.midominio
 mexicoentusmanos 3600 IN NS dns4.comlaude-dns.eu.
 mexicoentusmanos 3600 IN NS dns3.comlaude-dns.co.uk.
 mexicoentusmanos 3600 IN NS dns2.comlaude-dns.net.
@@ -28379,9 +28413,9 @@ miapartamento 3600 IN NS ns6247.hostgator.com.
 miapuesta 3600 IN NS dns1.idp365.net.
 miapuesta 3600 IN NS dns2.idp365.net.
 miapuesta 3600 IN NS dns3.idp365.net.
-miauto 3600 IN NS cdns1.intereserver.net.
-miauto 3600 IN NS cdns2.intereserver.net.
-miauto 3600 IN NS cdns3.intereserver.net.
+miauto 3600 IN NS cdns1.interserver.net.
+miauto 3600 IN NS cdns2.interserver.net.
+miauto 3600 IN NS cdns3.interserver.net.
 mib 3600 IN NS ns4.combell.net.
 mib 3600 IN NS ns3.combell.net.
 mibabyen 3600 IN NS dns2.intodomain.net.
@@ -29014,10 +29048,6 @@ mnsp 3600 IN NS ns44.cloudns.net.
 mnsp 3600 IN NS ns43.cloudns.net.
 mnsp 3600 IN NS ns42.cloudns.net.
 mnsp 3600 IN NS ns41.cloudns.net.
-mobigamesdominicana 3600 IN NS dns4.midominio
-mobigamesdominicana 3600 IN NS dns3.midominio
-mobigamesdominicana 3600 IN NS dns2.midominio
-mobigamesdominicana 3600 IN NS dns1.midominio
 mobil 3600 IN NS a14-65.akam.net.
 mobil 3600 IN NS a13-67.akam.net.
 mobil 3600 IN NS a10-67.akam.net.
@@ -29762,6 +29792,8 @@ mumba 3600 IN NS dns4.midominio
 mumba 3600 IN NS dns3.midominio
 mumba 3600 IN NS dns2.midominio
 mumba 3600 IN NS dns1.midominio
+mumu 3600 IN NS ns10.ovh.net.
+mumu 3600 IN NS dns10.ovh.net.
 mun 3600 IN NS ns.elmundo.es.
 mun 3600 IN NS ns.elmundo.org.
 munchmaster 3600 IN NS dns4.midominio
@@ -33761,8 +33793,6 @@ plantarenacer 3600 IN NS dns4.midominio
 plantarenacer 3600 IN NS dns3.midominio
 plantarenacer 3600 IN NS dns2.midominio
 plantarenacer 3600 IN NS dns1.midominio
-plantasexpress 3600 IN NS nspro23.hostgator.mx.
-plantasexpress 3600 IN NS nspro22.hostgator.mx.
 plantilla 3600 IN NS dns4.midominio
 plantilla 3600 IN NS dns3.midominio
 plantilla 3600 IN NS dns2.midominio
@@ -36155,6 +36185,10 @@ recipedia 3600 IN NS ns4-44.azure-dns.info.
 recipedia 3600 IN NS ns3-44.azure-dns.org.
 recipedia 3600 IN NS ns2-44.azure-dns.net.
 recipedia 3600 IN NS ns1-44.azure-dns.com.
+reclaimed 3600 IN NS dns1.midominio
+reclaimed 3600 IN NS dns2.midominio
+reclaimed 3600 IN NS dns3.midominio
+reclaimed 3600 IN NS dns4.midominio
 reclamos 3600 IN NS ns6462.hostgator.com.
 reclamos 3600 IN NS ns6461.hostgator.com.
 recluta 3600 IN NS ns4-32.azure-dns.info.
@@ -36169,10 +36203,6 @@ reclutamientos 3600 IN NS dns4.midominio
 reclutamientos 3600 IN NS dns3.midominio
 reclutamientos 3600 IN NS dns2.midominio
 reclutamientos 3600 IN NS dns1.midominio
-reclutan 3600 IN NS dns4.midominio
-reclutan 3600 IN NS dns3.midominio
-reclutan 3600 IN NS dns2.midominio
-reclutan 3600 IN NS dns1.midominio
 recmed 3600 IN NS ns-1241.awsdns-27.org.
 recmed 3600 IN NS ns-597.awsdns-10.net.
 recmed 3600 IN NS ns-28.awsdns-03.com.
@@ -37005,10 +37035,8 @@ rightnowclimatefund 3600 IN NS nssui.comlaude.ch.
 rightnowclimatefund 3600 IN NS nsgbr.comlaude.co.uk.
 rightplace 3600 IN NS owen.ns.cloudflare.com.
 rightplace 3600 IN NS meg.ns.cloudflare.com.
-rigo 3600 IN NS dns4.midominio
-rigo 3600 IN NS dns3.midominio
-rigo 3600 IN NS dns2.midominio
-rigo 3600 IN NS dns1.midominio
+rigo 3600 IN NS ns1.dns-parking.com.
+rigo 3600 IN NS ns2.dns-parking.com.
 rijkzwaan 3600 IN NS ns3.yourdomainprovider.net.
 rijkzwaan 3600 IN NS ns2.yourdomainprovider.net.
 rijkzwaan 3600 IN NS ns1.yourdomainprovider.net.
@@ -38774,6 +38802,10 @@ sercon 3600 IN NS dns4.midominio
 sercon 3600 IN NS dns3.midominio
 sercon 3600 IN NS dns2.midominio
 sercon 3600 IN NS dns1.midominio
+serdnet 3600 IN NS dns1.midominio
+serdnet 3600 IN NS dns2.midominio
+serdnet 3600 IN NS dns3.midominio
+serdnet 3600 IN NS dns4.midominio
 serenade 3600 IN NS ns12.servicio-online.net.
 serenade 3600 IN NS ns11.servicio-online.net.
 serenade 3600 IN NS ns10.servicio-online.net.
@@ -39614,6 +39646,8 @@ smarket 3600 IN NS ns2.bluehost.com.
 smarket 3600 IN NS ns1.bluehost.com.
 smart 3600 IN NS ns2.eftydns.com.
 smart 3600 IN NS ns1.eftydns.com.
+smartagro 3600 IN NS ns1.dns-parking.com.
+smartagro 3600 IN NS ns2.dns-parking.com.
 smartauctions 3600 IN NS ns4-33.azure-dns.info.
 smartauctions 3600 IN NS ns3-33.azure-dns.org.
 smartauctions 3600 IN NS ns2-33.azure-dns.net.
@@ -40864,8 +40898,8 @@ student 3600 IN NS ns-570.awsdns-07.net.
 student 3600 IN NS ns-1266.awsdns-30.org.
 student 3600 IN NS ns-400.awsdns-50.com.
 student 3600 IN NS ns-1681.awsdns-18.co.uk.
-studentuniverse 3600 IN NS pdns01.domaincontrol.com.
-studentuniverse 3600 IN NS pdns02.domaincontrol.com.
+studentuniverse 3600 IN NS ns19.domaincontrol.com.
+studentuniverse 3600 IN NS ns20.domaincontrol.com.
 studio 3600 IN NS sean.ns.cloudflare.com.
 studio 3600 IN NS dayana.ns.cloudflare.com.
 studio11 3600 IN NS ns2.dislanet.com.
@@ -46372,10 +46406,8 @@ welta 3600 IN NS dns4.midominio
 welta 3600 IN NS dns3.midominio
 welta 3600 IN NS dns2.midominio
 welta 3600 IN NS dns1.midominio
-werent 3600 IN NS dns1.midominio
-werent 3600 IN NS dns2.midominio
-werent 3600 IN NS dns3.midominio
-werent 3600 IN NS dns4.midominio
+werent 3600 IN NS ns1.bluehost.com.
+werent 3600 IN NS ns2.bluehost.com.
 werk 3600 IN NS ns2.s20.intodomain.net.
 werk 3600 IN NS ns1.s20.intodomain.net.
 werkindustrial 3600 IN NS ns03.trademarkarea.com.
@@ -46462,6 +46494,10 @@ what 3600 IN NS ns-2042.awsdns-63.co.uk.
 what 3600 IN NS ns-578.awsdns-08.net.
 what2 3600 IN NS ns.lh.pl.
 what2 3600 IN NS ns2.lighthosting.net.
+whatcanai 3600 IN NS dns1.midominio
+whatcanai 3600 IN NS dns2.midominio
+whatcanai 3600 IN NS dns3.midominio
+whatcanai 3600 IN NS dns4.midominio
 whatcanwe 3600 IN NS ns3.netim.net.
 whatcanwe 3600 IN NS ns2.netim.net.
 whatcanwe 3600 IN NS ns1.netim.net.
@@ -47000,6 +47036,8 @@ xcmg 3600 IN NS dns4.midominio
 xcmg 3600 IN NS dns3.midominio
 xcmg 3600 IN NS dns2.midominio
 xcmg 3600 IN NS dns1.midominio
+xd 3600 IN NS ram.ns.cloudflare.com.
+xd 3600 IN NS serenity.ns.cloudflare.com.
 xe 3600 IN NS ns2.gofruits.co.
 xe 3600 IN NS ns1.gofruits.co.
 xee 3600 IN NS ns03.trademarkarea.com.
@@ -47388,10 +47426,10 @@ yoyo 3600 IN NS ns-1712.awsdns-22.co.uk.
 yoyo 3600 IN NS ns-1466.awsdns-55.org.
 yoyo 3600 IN NS ns-766.awsdns-31.net.
 yoyo 3600 IN NS ns-35.awsdns-04.com.
-yp 3600 IN NS ns1.dns24.net.
-yp 3600 IN NS ns2.dns24.net.
-yp 3600 IN NS ns3.dns24.net.
-yp 3600 IN NS ns4.dns24.net.
+yp 3600 IN NS ns-241.awsdns-30.com.
+yp 3600 IN NS ns-889.awsdns-47.net.
+yp 3600 IN NS ns-1440.awsdns-52.org.
+yp 3600 IN NS ns-2017.awsdns-60.co.uk.
 ys 3600 IN NS dns1.midominio
 ys 3600 IN NS dns2.midominio
 ys 3600 IN NS dns3.midominio
