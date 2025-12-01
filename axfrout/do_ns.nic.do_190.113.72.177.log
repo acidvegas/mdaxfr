@@ -1,4 +1,4 @@
-@ 3600 IN SOA ns1.nic hostmaster.nic 2025112924 3600 3600 604800 3600
+@ 3600 IN SOA ns1.nic hostmaster.nic 2025113024 3600 3600 604800 3600
 @ 3600 IN NS ns.nic
 @ 3600 IN NS ns1.nic
 @ 3600 IN NS ns2.nic
@@ -6,7 +6,7 @@
 @ 3600 IN NS ns4.nic
 @ 3600 IN NS ns5.nic
 @ 3600 IN NS a.lactld.org.
-@ 3600 IN TXT "Generation Time: 1764456904"
+@ 3600 IN TXT "Generation Time: 1764543314"
 00 3600 IN NS carlos.ns.cloudflare.com.
 00 3600 IN NS dorthy.ns.cloudflare.com.
 007 3600 IN NS ns2.arvixeshared.com.
@@ -745,10 +745,6 @@ acentotv 3600 IN NS nicole.ns.cloudflare.com.
 acentotv 3600 IN NS gabriel.ns.cloudflare.com.
 acer 3600 IN NS ns2.intodomain.net.
 acer 3600 IN NS ns1.intodomain.net.
-acercmac 3600 IN NS dns4.midominio
-acercmac 3600 IN NS dns3.midominio
-acercmac 3600 IN NS dns2.midominio
-acercmac 3600 IN NS dns1.midominio
 acermac 3600 IN NS dns4.midominio
 acermac 3600 IN NS dns3.midominio
 acermac 3600 IN NS dns2.midominio
@@ -1354,8 +1350,8 @@ aga 3600 IN NS ns-1551.awsdns-01.co.uk.
 aga 3600 IN NS ns-1205.awsdns-22.org.
 agador 3600 IN NS kevin.quicns.org.
 agador 3600 IN NS mike.quicns.net.
-agape 3600 IN NS jerry.ns.cloudflare.com.
-agape 3600 IN NS anita.ns.cloudflare.com.
+agape 3600 IN NS dns1.midominio
+agape 3600 IN NS dns2.midominio
 agapebakery 3600 IN NS ns1.dreamhost.com.
 agapebakery 3600 IN NS ns2.dreamhost.com.
 agapebakery 3600 IN NS ns3.dreamhost.com.
@@ -3973,10 +3969,8 @@ ati 3600 IN NS dns4.midominio
 ati 3600 IN NS dns3.midominio
 ati 3600 IN NS dns2.midominio
 ati 3600 IN NS dns1.midominio
-atiempo 3600 IN NS dns1.midominio
-atiempo 3600 IN NS dns2.midominio
-atiempo 3600 IN NS dns3.midominio
-atiempo 3600 IN NS dns4.midominio
+atiempo 3600 IN NS ns1.vultr.com.
+atiempo 3600 IN NS ns2.vultr.com.
 atiempocompleto 3600 IN NS ns2.siteground.net.
 atiempocompleto 3600 IN NS ns1.siteground.net.
 atinsa 3600 IN NS dns4.midominio
@@ -9204,6 +9198,8 @@ cif 3600 IN NS ns2-44.azure-dns.net.
 cif 3600 IN NS ns1-44.azure-dns.com.
 cifre 3600 IN NS ns1.hostchocolate.com.
 cifre 3600 IN NS ns4.hostchocolate.com.
+cigar 3600 IN NS ns1.dns-parking.com.
+cigar 3600 IN NS ns2.dns-parking.com.
 cigarclub101 3600 IN NS dns1.midominio
 cigarclub101 3600 IN NS dns2.midominio
 cigarclub101 3600 IN NS dns3.midominio
@@ -15759,10 +15755,6 @@ encuestabhd 3600 IN NS ns4-03.azure-dns.info.
 encuestabhd 3600 IN NS ns3-03.azure-dns.org.
 encuestabhd 3600 IN NS ns2-03.azure-dns.net.
 encuestabhd 3600 IN NS ns1-03.azure-dns.com.
-encuestacannabis 3600 IN NS dns1.midominio
-encuestacannabis 3600 IN NS dns2.midominio
-encuestacannabis 3600 IN NS dns3.midominio
-encuestacannabis 3600 IN NS dns4.midominio
 encuestasrd 3600 IN NS ns2.siteground.net.
 encuestasrd 3600 IN NS ns1.siteground.net.
 encurta 3600 IN NS lovisa.ns.cloudflare.com.
@@ -17544,10 +17536,8 @@ figueire 3600 IN NS dns2.midominio
 figueire 3600 IN NS dns1.midominio
 figurella 3600 IN NS dns2.midominio
 figurella 3600 IN NS dns1.midominio
-fii 3600 IN NS dns1.midominio
-fii 3600 IN NS dns2.midominio
-fii 3600 IN NS dns3.midominio
-fii 3600 IN NS dns4.midominio
+fii 3600 IN NS ns1.dns-parking.com.
+fii 3600 IN NS ns2.dns-parking.com.
 fijofy 3600 IN NS dns4.midominio
 fijofy 3600 IN NS dns3.midominio
 fijofy 3600 IN NS dns2.midominio
@@ -21304,9 +21294,6 @@ highlight 3600 IN NS ns2.101domain.com.
 highlight 3600 IN NS ns1.101domain.com.
 highpro 3600 IN NS ns2.s21.intodomain.net.
 highpro 3600 IN NS ns1.s21.intodomain.net.
-highway 3600 IN NS ns03.trademarkarea.com.
-highway 3600 IN NS ns02.trademarkarea.com.
-highway 3600 IN NS ns01.trademarkarea.com.
 higuero 3600 IN NS kenneth.ns.cloudflare.com.
 higuero 3600 IN NS erin.ns.cloudflare.com.
 hikvision 3600 IN NS ns1.dnsres.net.
@@ -21819,9 +21806,6 @@ howmetaerospace 3600 IN NS edns1.ultradns.com.
 howto 3600 IN NS dns3.idp365.net.
 howto 3600 IN NS dns2.idp365.net.
 howto 3600 IN NS dns1.idp365.net.
-howy 3600 IN NS ns.udag.org.
-howy 3600 IN NS ns.udag.net.
-howy 3600 IN NS ns.udag.de.
 hoy 3600 IN NS ns0.dnsmadeeasy.com.
 hoy 3600 IN NS ns1.dnsmadeeasy.com.
 hp 3600 IN NS ns1.hp.com.
@@ -25316,8 +25300,8 @@ kreston 3600 IN NS ns-173-a.gandi.net.
 kreston 3600 IN NS ns-232-c.gandi.net.
 krestonrd 3600 IN NS dns1.intodomain.net.
 krestonrd 3600 IN NS dns2.intodomain.net.
-krispykreme 3600 IN NS jerry.ns.cloudflare.com.
-krispykreme 3600 IN NS anita.ns.cloudflare.com.
+krispykreme 3600 IN NS dns1.midominio
+krispykreme 3600 IN NS dns2.midominio
 kro 3600 IN NS beth.ns.cloudflare.com.
 kro 3600 IN NS dave.ns.cloudflare.com.
 krob 3600 IN NS dns4.midominio
@@ -33675,10 +33659,8 @@ palabran 3600 IN NS dns4.midominio
 palabran 3600 IN NS dns3.midominio
 palabran 3600 IN NS dns2.midominio
 palabran 3600 IN NS dns1.midominio
-palabrayvida 3600 IN NS dns1.midominio
-palabrayvida 3600 IN NS dns2.midominio
-palabrayvida 3600 IN NS dns3.midominio
-palabrayvida 3600 IN NS dns4.midominio
+palabrayvida 3600 IN NS maxim.ns.cloudflare.com.
+palabrayvida 3600 IN NS nelly.ns.cloudflare.com.
 palacepuntacanahotel 3600 IN NS ns3.instradns.com.
 palacepuntacanahotel 3600 IN NS ns2.instradns.com.
 palacepuntacanahotel 3600 IN NS ns1.instradns.com.
@@ -38550,15 +38532,6 @@ rodacaribe 3600 IN NS dns1.midominio
 rodacaribe 3600 IN NS dns2.midominio
 rodacaribe 3600 IN NS dns3.midominio
 rodacaribe 3600 IN NS dns4.midominio
-rodaco 3600 IN NS alt4.aspmx.l.google.com.
-rodaco 3600 IN NS alt3.aspmx.l.google.com.
-rodaco 3600 IN NS alt2.aspmx.l.google.com.
-rodaco 3600 IN NS alt1.aspmx.l.google.com.
-rodaco 3600 IN NS aspmx.l.google.com.
-rodaco 3600 IN NS ns-814.awsdns-37.net.
-rodaco 3600 IN NS ns-165.awsdns-20.com.
-rodaco 3600 IN NS ns-1432.awsdns-51.org.
-rodaco 3600 IN NS ns-1858.awsdns-40.co.uk.
 rodan2 3600 IN NS ns01.dns.nexus.
 rodan2 3600 IN NS ns02.dns.nexus.
 rodandord 3600 IN NS ns4020.banahosting.com.
@@ -39323,8 +39296,6 @@ santacruz 3600 IN NS ns3-01.azure-dns.org.
 santacruz 3600 IN NS ns2-01.azure-dns.net.
 santacruz 3600 IN NS ns1-01.azure-dns.com.
 santacruz 3600 IN NS ns4-01.azure-dns.info.
-santafe 3600 IN NS ns2.dns-parking.com.
-santafe 3600 IN NS ns1.dns-parking.com.
 santafeclub 3600 IN NS dns4.midominio
 santafeclub 3600 IN NS dns3.midominio
 santafeclub 3600 IN NS dns2.midominio
@@ -42705,6 +42676,10 @@ superkiddos 3600 IN NS anechosting.mars.orderbox-dns.com.
 superkiddos 3600 IN NS anechosting.earth.orderbox-dns.com.
 superkiddos 3600 IN NS anechosting.venus.orderbox-dns.com.
 superkiddos 3600 IN NS anechosting.mercury.orderbox-dns.com.
+superkiko 3600 IN NS dns1.midominio
+superkiko 3600 IN NS dns2.midominio
+superkiko 3600 IN NS dns3.midominio
+superkiko 3600 IN NS dns4.midominio
 superkiwi 3600 IN NS ns-92.awsdns-11.com.
 superkiwi 3600 IN NS ns-846.awsdns-41.net.
 superkiwi 3600 IN NS ns-1813.awsdns-34.co.uk.
@@ -44195,6 +44170,10 @@ thomas-signe 3600 IN NS ns1.gruposigne.com.
 thomascook 3600 IN NS nsusa.comlaude.net.
 thomascook 3600 IN NS nssui.comlaude.ch.
 thomascook 3600 IN NS nsgbr.comlaude.co.uk.
+thraive 3600 IN NS dns1.midominio
+thraive 3600 IN NS dns2.midominio
+thraive 3600 IN NS dns3.midominio
+thraive 3600 IN NS dns4.midominio
 three 3600 IN NS ns5.101domain.com.
 three 3600 IN NS ns2.101domain.com.
 three 3600 IN NS ns1.101domain.com.
@@ -44661,6 +44640,8 @@ toor 3600 IN NS ns-121.awsdns-15.com.
 toor 3600 IN NS ns-1330.awsdns-38.org.
 toor 3600 IN NS ns-1684.awsdns-18.co.uk.
 toor 3600 IN NS ns-981.awsdns-58.net.
+top 3600 IN NS ns1.eftydns.com.
+top 3600 IN NS ns2.eftydns.com.
 topcar 3600 IN NS dns1.midominio
 topcar 3600 IN NS dns2.midominio
 topcar 3600 IN NS dns3.midominio
@@ -45810,8 +45791,8 @@ ultimahora 3600 IN NS dns1.midominio
 ultimahora 3600 IN NS dns2.midominio
 ultimahora 3600 IN NS dns3.midominio
 ultimahora 3600 IN NS dns4.midominio
-ultimatesecurity 3600 IN NS ns1.inmotionhosting.com.
-ultimatesecurity 3600 IN NS ns2.inmotionhosting.com.
+ultimatesecurity 3600 IN NS ns1573.websitewelcome.com.
+ultimatesecurity 3600 IN NS ns1574.websitewelcome.com.
 ultra 3600 IN NS ns2.domain.io.
 ultra 3600 IN NS ns1.domain.io.
 ultracarros 3600 IN NS dns1.midominio
@@ -46387,10 +46368,6 @@ valdez 3600 IN NS dns4.midominio
 valdez 3600 IN NS dns3.midominio
 valdez 3600 IN NS dns2.midominio
 valdez 3600 IN NS dns1.midominio
-vale 3600 IN NS dns4.midominio
-vale 3600 IN NS dns3.midominio
-vale 3600 IN NS dns2.midominio
-vale 3600 IN NS dns1.midominio
 valetz 3600 IN NS dns4.midominio
 valetz 3600 IN NS dns3.midominio
 valetz 3600 IN NS dns2.midominio
