@@ -1,68 +1,68 @@
-@ 86400 IN SOA ns1 domreg.usp.ac 2025121524 21600 3600 1209600 86400
-@ 86400 IN RRSIG NSEC3PARAM 15 1 86400 20251229231551 20251215214551 40779 @ Y6QRhoP9vBliLlyc8R1PFAp3wWDrQsc3 LfMep85SQDWD/Pggt5StodAazx5Og6v+ i8PD3SMfB6E+lh3WC8Y5Bw==
-@ 86400 IN RRSIG ZONEMD 15 1 86400 20251229231551 20251215214551 40779 @ qaR8p9RsrQ/sS8lV9oRfPWxtW7CSoisM lnvRtfbjprfLhNX8teJ2tdpx22fnPd49 pa6J0+OhmScIy9KO3inLCA==
+@ 86400 IN SOA ns1 domreg.usp.ac 2025121623 21600 3600 1209600 86400
+@ 86400 IN RRSIG NSEC3PARAM 15 1 86400 20251230230557 20251216213557 40779 @ i9HqCUnqZ3O2d6xEk3lGrc+aa6nB02/T 1hVWfZutfMDc92JNIrwI3FYXKzscmz2b Bf2Sq2ZggVvScbVmheczDw==
+@ 86400 IN RRSIG ZONEMD 15 1 86400 20251230230557 20251216213557 40779 @ uu5UOJjKdMnkK6HYpfFdSMfddfCR1Xlv o/+u2WGe7UWje+VSpFLVLBCd8T0kuZnO J1H3hSfH03XJe8+3rNMVAg==
 @ 86400 IN NSEC3PARAM 1 0 0 -
-@ 86400 IN ZONEMD 2025121524 1 1 5a9cf509892822d0697ac90674b53ed38a32a3a5a0caed5523c06385f16bc422f5d7318d31b7c9f7eb8d046896cdb170
+@ 86400 IN ZONEMD 2025121623 1 1 c0dfea6ae6fc444ba65442f59933d1643e3172c02cba3ab18af0fdc23874930683c5b1920b03b520b1c1ef166192bd59
 @ 86400 IN NS ns1
 @ 86400 IN NS ns2
 @ 86400 IN NS ns3
 @ 86400 IN NS ns4
 @ 86400 IN NS ns5
-@ 86400 IN TXT "Generation Time: 1765840503"
-@ 86400 IN RRSIG NS 15 1 86400 20251229231551 20251215214551 40779 @ N6wIQbPF0TvkvACOfeR0OYtlbA2xruzQ beOVZYheAlC0a3iojfdQMzzxs01zAMLX mRE1tp9BBEVBHvigipBmCA==
-@ 86400 IN RRSIG SOA 15 1 86400 20251229231551 20251215214551 40779 @ oLoDHrr5g8Gv440EtZHuFGVTgHfTakdB X0KtBEELHAF+pEtkIsZSmvdHFr47IRWX 3L/bXc6TnHf9pUpeiFasAg==
-@ 86400 IN RRSIG TXT 15 1 86400 20251229231551 20251215214551 40779 @ X8uXW30azHul2cyVcoPGJv15jW5mildL xYkw7dSvM+8wTVEbv1XAIhmXJzsJCD4H /2cNif3P+T4Dpr9Yr9tcAQ==
-@ 3600 IN RRSIG DNSKEY 15 1 3600 20251229231551 20251215214551 53415 @ +Trycvc1rrIoYpyZauzOL1i7I0VR9UAF TcgAc6lzXJgyEIRVOxyNI5c2ireEdxOQ Q4jl7pkM+NkdjcKHqBtEDg==
+@ 86400 IN TXT "Generation Time: 1765926309"
+@ 86400 IN RRSIG NS 15 1 86400 20251230230557 20251216213557 40779 @ idhgq936qzPH8JlMDWNBy3s6y/yHT3c/ DiHZf3PVhJHjWigBJuDCKpH4uI+LIi/r /Is3faDC9c7Bt/Ugb4sACw==
+@ 86400 IN RRSIG SOA 15 1 86400 20251230230557 20251216213557 40779 @ 3S3yFuarltY0PPfF0cph7HvbucN6/jxb untebaqSvvWDYjtR+vAeSC55vDWwrcgh 6yb2ZdU92WlorK2KGNwbCw==
+@ 86400 IN RRSIG TXT 15 1 86400 20251230230557 20251216213557 40779 @ vIRyhwTSWyQLfJFVNFAQTNE5SRuXcHIY VpFLuTmkmB1kI0skE+e1AVp6ndOy6Zvv ivFr3GdD20Hda/6biGPSAA==
+@ 3600 IN RRSIG DNSKEY 15 1 3600 20251230230557 20251216213557 53415 @ OhrGx2fGbt7BQpeFZAK/qTm1RJBGde7I EWULM8TzEF+Ko8/W2qcN+CXP9AEj/r8R sYhH0aofSHJsjDsrUm2tDg==
 @ 3600 IN DNSKEY 256 3 15 hx8Rk5k1Gk1/tuRb5vCAtmKJEcHNAmVO f/0dNFNP7DA=
 @ 3600 IN DNSKEY 257 3 15 eKYONVzoO6C8c+Plx+9+ldUJpDPG0iWN cw4fYQjfxWg=
-0fieokajhf1dchqt7240e8q7nv031in8 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ S1xMUJKpYueVgVbtG+mDre1TGPrruI0p JKTBALu+HQWHdSgTQuN5zsm6qZFeD4F9 7h6wnADG9s3mcBIjfjzKBQ==
+0fieokajhf1dchqt7240e8q7nv031in8 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ uVT0uaDaN5dE+R06GBIR0DAQz28mF5SC iRVsxQrmu2NgS+sGA5dbROojwUfsDAGi Ap2qrie8OazhMvzDROMFCg==
 0fieokajhf1dchqt7240e8q7nv031in8 86400 IN NSEC3 1 1 0 - 0pgi7au5ve9mta5ub6pa4mc3c31gicc2 TXT RRSIG
-0pgi7au5ve9mta5ub6pa4mc3c31gicc2 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ IggeuJG4q8h2zHGD/QdUv78tIq3VUc3I hAe3MnzfcTY59qxvGQwt9Bp5LpuV20nl lSkplYizDPtErcPGH94JCg==
+0pgi7au5ve9mta5ub6pa4mc3c31gicc2 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ ujxtffjtGQmKwm2O4B53NRd5yMv/ich+ icWREXIBd+CsagAzJiQZRRFYkSOceGns mimaRc/vGiI1ARNFncmzBg==
 0pgi7au5ve9mta5ub6pa4mc3c31gicc2 86400 IN NSEC3 1 1 0 - 1agoj8u3mq15i3q75r16dl6c66fqmjgp TXT RRSIG
-1agoj8u3mq15i3q75r16dl6c66fqmjgp 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ T2gU00GUf+rYgFKekdKb+AONhaTEKISB DID2K050OV0Q7vwRK3as1vbo0GH4FPok hG9cKy/WAIHQUY6F2uKMBQ==
+1agoj8u3mq15i3q75r16dl6c66fqmjgp 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ TvkWyRM3cw+dRnbUFgfb9QRQbMppmvm1 LykkrFiT4lGZiKg0T/XNE9khJgK+5zSb sAWdjzwl8h6iC32IxxlWBA==
 1agoj8u3mq15i3q75r16dl6c66fqmjgp 86400 IN NSEC3 1 1 0 - 1mn0nq3ggeo995l3tm4q4jaiadmtv7fo A RRSIG
-1mn0nq3ggeo995l3tm4q4jaiadmtv7fo 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ F/mKLSLJ51rba9Socw62wW2PGZiqye/3 LmcMs3XKaY0QJ7/3Q7I8fiJS9w9ViXoT i38GAzxPWZXnIgsUlON6DQ==
+1mn0nq3ggeo995l3tm4q4jaiadmtv7fo 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ eNN8FPPmM1+6a+4NNc19ic6Akmx3ueRa Qj3wd6UmbgefiKBG4BbVtJC2jHg+SaOz cSnwz8TkBZmhmzoTopGlCw==
 1mn0nq3ggeo995l3tm4q4jaiadmtv7fo 86400 IN NSEC3 1 1 0 - 3ruc08jo9i34uq1a5la8c5mkdr45e9nn TXT RRSIG
-3ruc08jo9i34uq1a5la8c5mkdr45e9nn 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ TnZ8ppGlsjKGiDFq8cRLiVuesiknajZv wCsFIQOn5p4oX9XLH31iRD7pgblHfpYc 7x/v05PobGnpKoeXKRO7DA==
+3ruc08jo9i34uq1a5la8c5mkdr45e9nn 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ wvhYr7npy6XhL7Yv0iPXZ51V5ksdqPpi EH16DaxE+lMExsUDIvZX30vHeLnyUYVX 4APdjUiLrNU3D3OWnDyrCA==
 3ruc08jo9i34uq1a5la8c5mkdr45e9nn 86400 IN NSEC3 1 1 0 - 4810aebu8rgq31vudkhclaatkn9bhvak
-4810aebu8rgq31vudkhclaatkn9bhvak 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ 6pdUeK2vulyfv+MBt2fHnSGlb1auCOEm ezp1g7Muo9faai1NcFaiOP5sm232G2/u 0icK9eysbuz6x+76Cl3WCg==
+4810aebu8rgq31vudkhclaatkn9bhvak 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ kd1uQGH4wRlPzjty2w1yIoXUFzeg5uqp aObtfJ+u46NslxJ/SAqR/nw5ycauswXv XvZHH4yumY8GUaxzDqBHAQ==
 4810aebu8rgq31vudkhclaatkn9bhvak 86400 IN NSEC3 1 1 0 - 4cvo22cgdmuj60hdh8an47f83u7rsvcp A AAAA RRSIG
-4cvo22cgdmuj60hdh8an47f83u7rsvcp 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ eSCuz/P28+tBFK4cINomen0VnoIsDpSq wxlk5s8GmEqOY/OQmUjoZ6opY6peTNax KKiwZliAFamwx3eB/L9nCw==
+4cvo22cgdmuj60hdh8an47f83u7rsvcp 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ R7cFrj39/8RtoPlTvTnXytRSw8epa5qY esRxw8GWmJVJBCfTDfFcVIY3MaO56Ect ghwrLnRa2uK4D76+kbLCBA==
 4cvo22cgdmuj60hdh8an47f83u7rsvcp 86400 IN NSEC3 1 1 0 - 4h9aqmhs1db9n3e0se4c2b2oqmeenk09 A RRSIG
-4h9aqmhs1db9n3e0se4c2b2oqmeenk09 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ lxq5iJTlui9MLs4WM0C9kXAuRo7M2A90 ote+YKv7sFvzM8cnba9kxfnZBrw4UQAe vIBFhz7FaFusAbJzkN/QBw==
+4h9aqmhs1db9n3e0se4c2b2oqmeenk09 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ KfqMdsk/dPalcbH5og+nWhbqYKFCi9nl g3FQGsWLSE5L33ZWbettH+SJuBLVy1m1 NFajkCDuSq4RqFzVAuYbAQ==
 4h9aqmhs1db9n3e0se4c2b2oqmeenk09 86400 IN NSEC3 1 1 0 - 4lk4pl4uujhavjq0dm5ehs19a40ef97s
-4lk4pl4uujhavjq0dm5ehs19a40ef97s 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ VSBR5Lzn69TbAKDgYAH86VzSmFD5lM+O k6D6qD2qJGmkHru8/lP6bgL0SVqXIt0l wBLH8HcThtwK1XB5+TAqBQ==
+4lk4pl4uujhavjq0dm5ehs19a40ef97s 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ PcIGrWfx+yi3niLiJEpv//IPcMXBWUgh m8uRy8GFRWS1kqOe3Vo20+N3LJfOA2Iy PACHsYNJsx+xiGgBbM7dCA==
 4lk4pl4uujhavjq0dm5ehs19a40ef97s 86400 IN NSEC3 1 1 0 - 53gf64rslr0oj4hftaqoe6m33r4tbbnj A AAAA RRSIG
-53gf64rslr0oj4hftaqoe6m33r4tbbnj 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ fsMrnhjAdqm+Ezg35BpzcOxPeKY5bbjq RFj2YMHcHgbgNlMkO50lb7tJBj6vWeD5 wxMcq7WBkAXWg1+yo+KSAg==
+53gf64rslr0oj4hftaqoe6m33r4tbbnj 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ J8HPV+kGCP70lnFhnJEknCiqkPyHeNjy Ma9tuWh+t4wjzPM/EHyOteG5yheaZEvw X6xUZlbCnVWpt41QndjfCg==
 53gf64rslr0oj4hftaqoe6m33r4tbbnj 86400 IN NSEC3 1 1 0 - 5dlkgd12r59uqa6uc54if96djun8pa0o TXT RRSIG
-5dlkgd12r59uqa6uc54if96djun8pa0o 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ 5abrYXb8XR0EQvVLbBH7tLmbqjAJIQqU BdED/oL7Y4YNBozFnM6hysDXE/SWTf23 COAGkk4GfSIfhYFf+FoqDQ==
+5dlkgd12r59uqa6uc54if96djun8pa0o 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ bic5GGAvqBogSACN68nLTEtbstdYNHGM 8sOhsGJU7Uiz8ZVzETg61al/iCn7z9Qv Q2WaLGv+FK8hntIRgJ/4AQ==
 5dlkgd12r59uqa6uc54if96djun8pa0o 86400 IN NSEC3 1 1 0 - 6apt73tkprcfrq5t7lb5f7cnndsf5tro TXT RRSIG
-6apt73tkprcfrq5t7lb5f7cnndsf5tro 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ tH73qizwYQnK/1QDGo5X6qLkTQOG8skg vJUNn3ncQnxVHVMhhTOD/gwvvUpo4ftr fs4w1nnc8+dgCNG16/GUAQ==
+6apt73tkprcfrq5t7lb5f7cnndsf5tro 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ JxzlOFsGxVgraFNKhzX54Dm996RNJScg f02VckyRwwwf47i4+DMcRtUA9K3nLGgc dHez4IO9MZvJlxDaTQzpDg==
 6apt73tkprcfrq5t7lb5f7cnndsf5tro 86400 IN NSEC3 1 1 0 - 6i9156jvtgjinfiku3dalbd3smjkqbst A RRSIG
-6i9156jvtgjinfiku3dalbd3smjkqbst 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ ktfp7D/rGMsC7Gbx91M5WBBY88wJzfR0 6eJQmM1FzRVBUXTifjkTnAACiFA6/cYm K1OLJ9AwM4ZtxyUStDLZAA==
+6i9156jvtgjinfiku3dalbd3smjkqbst 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ KTZJ1RnoK+IYruhIPkAIgqMBVTQBj6W1 mxBvknZSoWft+m339P2TE0wn4OIzX4y2 xPkcSTpYFac6wK29sp92Bg==
 6i9156jvtgjinfiku3dalbd3smjkqbst 86400 IN NSEC3 1 1 0 - 6tpj1lku8sglf2lorbtkk1k4f18u30q9 A RRSIG
-6tpj1lku8sglf2lorbtkk1k4f18u30q9 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ jhBBEEiIfeKd6VuHS+SJwIpFzKFFe9i9 gKsjtRBB+EUZBzYRZOmzEo5xzeTvsSnQ CiQuiM359h9kY2P+82hyCQ==
+6tpj1lku8sglf2lorbtkk1k4f18u30q9 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ YsK3iyBwiWxDgjHrgZQIBWeko1VD9Gg3 KZAq91jH7S570x8MXH4J6EClCtXEX6kt CFwlGDz7e5vWruQKninXDA==
 6tpj1lku8sglf2lorbtkk1k4f18u30q9 86400 IN NSEC3 1 1 0 - 7e9u836kqnvd5u3lf2bap404mo2s9rgj A AAAA RRSIG
-7e9u836kqnvd5u3lf2bap404mo2s9rgj 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ KzH9sHEgiSABS7OI4mKqqK+CkVO2M8oQ Ttj3/gFHI9w1do2M/3gzqKCfFXiNlexm XuxHMavOWmIlWz/uXpAzBA==
+7e9u836kqnvd5u3lf2bap404mo2s9rgj 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ /aJOKVbNxABHZt9XW9GJ8C2Mjc+FQnvT 7rE9fzh24fhiBfol27PvPaJCdD52H20V M6r1dTc1UzWmBW0FAZtUCA==
 7e9u836kqnvd5u3lf2bap404mo2s9rgj 86400 IN NSEC3 1 1 0 - 7obqr7refm0qovqjanr5abgqau56fpej A RRSIG
-7obqr7refm0qovqjanr5abgqau56fpej 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ IJVyBRrsWuIyKzybK/R5nB+eR403vAT6 QS2R2D476GKp2mRJDPX6ZobSJed43K5V DLZuzphWlubncJa2W3KNAg==
+7obqr7refm0qovqjanr5abgqau56fpej 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ EUE9DlM+XUtcqGc1oIMKGVGdAowG7gdC jOmH2qGyC4eNu3a0ILuFov/5wyj2p0HN J+WlgZOFvd3tQtbsJoOSCQ==
 7obqr7refm0qovqjanr5abgqau56fpej 86400 IN NSEC3 1 1 0 - 7pmuvq2sfaf17tvra0at5v746m5iagvg A RRSIG
-7pmuvq2sfaf17tvra0at5v746m5iagvg 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ kYnT+lVXmZbWF7eGrxUQsjjMkCvOULAl t4/FnWYHEMKRUSGBSpHa7SwcYk8f/eXK l4dGJLTJ5pHCh4hX2ez7AA==
+7pmuvq2sfaf17tvra0at5v746m5iagvg 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ tibpnzVKu5F9CT+vUglfpmig/W+rYtH9 DoaTUUimJ1VGiksOiu0MM2ueNluZG0vQ ulpddWRr58w2bhQGURdNBA==
 7pmuvq2sfaf17tvra0at5v746m5iagvg 86400 IN NSEC3 1 1 0 - 8ka63me9dalbf3v9l1kmvl53g05llk6s
-8ka63me9dalbf3v9l1kmvl53g05llk6s 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ GSjdpAd0VjHeSZrlUOAkb1wW+fkBT+tR fS+z3yND9PYXEMmiEofYUHW/aBXY5SmE xAm7TU8PsIt7CHwMBMiJAQ==
+8ka63me9dalbf3v9l1kmvl53g05llk6s 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ dfha9QZ0T3s2iKLsFnKKy/c7fIL8Tyoj OAFVbN8Ihp8NmcYcbEa1CiBcJjyPIc56 QSvEuLzzn5ewZY0a0GzlBQ==
 8ka63me9dalbf3v9l1kmvl53g05llk6s 86400 IN NSEC3 1 1 0 - 8s3i3p7c202om62t3jllhf4b40fvgv52
-8s3i3p7c202om62t3jllhf4b40fvgv52 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ 5jcosf0RAlH/XdSe7wsDzLeOZO6eE8HD vSpSkPLBEWjmfXg77XuTbT5u8slzDIPZ lMROv3RunRJyN4ajGh1uBA==
+8s3i3p7c202om62t3jllhf4b40fvgv52 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ F9ydFjdymyBgEpefkp3xb1iSVdS3Cl8R tTPR33W8EmjrSvBY/IdRlEP0bITDc8xr jXDi0mOaDF4TvvZMWvnODA==
 8s3i3p7c202om62t3jllhf4b40fvgv52 86400 IN NSEC3 1 1 0 - 94ecbbv44lc5f9nhdgndupffjlq0m7d0 TXT RRSIG
-94ecbbv44lc5f9nhdgndupffjlq0m7d0 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ J4Y0LmVkPqYmxrT76WJNtvu9TVFLc5VA RYqZgMvMGL3tTCRWvNf3V6FBpDvAtW1B mdAlJ/Ej66c0tGMDHWV6Cw==
+94ecbbv44lc5f9nhdgndupffjlq0m7d0 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ Y8UEE3jCLBYAko16ucQM2vsgEBQZqbbu qRTWciUZrvkwxtUKgUAxA0ntJbQzdRBt doESonNdg8DqZppNrL51Dw==
 94ecbbv44lc5f9nhdgndupffjlq0m7d0 86400 IN NSEC3 1 1 0 - 9dgse2l0qjhh2l4erooacadqd9b81306 A RRSIG
-9dgse2l0qjhh2l4erooacadqd9b81306 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ g88KmDKYwth/NgnvYXwCsLsiOjn64LFi kiwhgJuDmCoE/hpHCLpMopRYFsHj/A5B rBtXo00vjc6Heb9QvqYZDg==
+9dgse2l0qjhh2l4erooacadqd9b81306 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ MMmJnOOHfVdPBjNn7ivDk7X8zdEWU4eN dWXWIh4q7Yn4qdT+lGdVf2erxsR/IJwx /2SyP14G2nyeiWvv3gIcCw==
 9dgse2l0qjhh2l4erooacadqd9b81306 86400 IN NSEC3 1 1 0 - 9jbkkj02ukon1kvehm3pamhhhu1cbsh1 A RRSIG
-9jbkkj02ukon1kvehm3pamhhhu1cbsh1 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ vAqjRuIgq7KNvJLU/PW0ej/B4mNl9Rlu hYDYUMEuzVydayAzDNGrGs8QrA8HEVCo b9o2T0/KDM2Igo0sV/G1Aw==
+9jbkkj02ukon1kvehm3pamhhhu1cbsh1 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ ZrVzXHPTM4WSvVraWIqT+j7ur41oywzd 8czOeEv8Ds86vW0MesloAo9O99tI/Ggy waT/17ZBo23L0/sCCpy1DQ==
 9jbkkj02ukon1kvehm3pamhhhu1cbsh1 86400 IN NSEC3 1 1 0 - 9uekq9sps63vu8hhr1mnkdvvh4jih9cv A MX RRSIG
-9uekq9sps63vu8hhr1mnkdvvh4jih9cv 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ lpU1zYw17hRH3uX88BF5xTu5Nkl7fvh8 DiKCAn5oPDd93t+5bYr/YFN/rP9Iokqt Jw3VCjpldIv3s4Q0QnfrCQ==
+9uekq9sps63vu8hhr1mnkdvvh4jih9cv 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ Ue5vEZq6WG6xYK3QH5LcCB5Ecmj+gYqc eVEXuiMz3NSoy84OLESnVrNwqeuSWRq/ NPD3i8jQ+iVAisejflMNDg==
 9uekq9sps63vu8hhr1mnkdvvh4jih9cv 86400 IN NSEC3 1 1 0 - anb9qjp0ginijh9rsgv54dm5irlf3sl9 A RRSIG
-ac 86400 IN TXT "Generation Time: 1765840504"
-ac 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ OOj6GKIoxcI/zavurCdUKRbfM0bkM5PC TGPg2C8uyo0SzpN+naAQ6+CXmMAwIjyy IU5Yn5lCl4kujzEUujz6Bw==
+ac 86400 IN TXT "Generation Time: 1765926310"
+ac 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ TcU6whUUH0CBWegqVoG5EwayyFCXBdE7 6KzIW87N+u3SZ+/jLoZvZjHyP+qQ+DA9 WwHCLjlOcfS3TFUk5QB6DQ==
 adpatelcollege.ac 86400 IN NS aron.ns.cloudflare.com.
 adpatelcollege.ac 86400 IN NS chase.ns.cloudflare.com.
 aresmgmtasia.ac 86400 IN NS ns1.101domain.com.
@@ -114,8 +114,8 @@ metalworks.ac 86400 IN NS caching01.usp.ac
 metalworks.ac 86400 IN NS caching02.usp.ac
 nasinumuslimschools.ac 86400 IN NS ns1.codero.com.
 nasinumuslimschools.ac 86400 IN NS ns2.codero.com.
-oit.ac 86400 IN NS ns1.vodafone.net
-oit.ac 86400 IN NS ns2.vodafone.net
+oit.ac 86400 IN NS ns1.dns-parking.com.
+oit.ac 86400 IN NS ns2.dns-parking.com.
 pacific.ac 86400 IN NS caching01.usp.ac
 pacific.ac 86400 IN NS caching02.usp.ac
 pacificinternationaluniversity.ac 86400 IN NS ns1.mysecurecloudhost.com.
@@ -190,14 +190,14 @@ votualevucollege.ac 86400 IN NS ivan.ns.cloudflare.com.
 votualevucollege.ac 86400 IN NS aryanna.ns.cloudflare.com.
 whi.ac 86400 IN NS drua.tfl.com
 whi.ac 86400 IN NS tabua.tfl.com
-anb9qjp0ginijh9rsgv54dm5irlf3sl9 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ 3x7+Go3DJ4jic7xNZQpv+5RR+srpudNe VrWs+Sivk5MG+wnfLK9aniLBbjnTFdmo utno7heHpGFc22qx6IDkAw==
+anb9qjp0ginijh9rsgv54dm5irlf3sl9 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ +qs7ZosodLwML+XEdKT0PTdf2LCuGiXD vg/ofPp3PUaM/V+tP/LL6TgdLMTKF0Ia oTLEQrELZeTFhfATJ/w/Bg==
 anb9qjp0ginijh9rsgv54dm5irlf3sl9 86400 IN NSEC3 1 1 0 - aoecbc2djiogt3ar9aa4cg0k9stm4d8d A RRSIG
-aoecbc2djiogt3ar9aa4cg0k9stm4d8d 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ lkHpbyDJE/qN321SC8aUnM0mtija/+b+ k2a+N2Gd28WDz2pYQypwfCmHtuOXzJsy 6KD1lvssVKJRR5SW87xbDQ==
+aoecbc2djiogt3ar9aa4cg0k9stm4d8d 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ PlWdR/QsLWqAUQJ++UyNClCj7q4B9V2Q yV9Y/J0GApu6DTJcoP/0EAo7xI+aFZaF fRr8cKsHtZIgMvcUeXG/Cg==
 aoecbc2djiogt3ar9aa4cg0k9stm4d8d 86400 IN NSEC3 1 1 0 - badj1h0fp4phtcslna7jsorg26ujikhd A RRSIG
-badj1h0fp4phtcslna7jsorg26ujikhd 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ axFDREva8eF7bgucXLUkJT/0Qd0GaEfL WritBWOV3H2z6mykso+mjL/cPrevcWH2 EwjLTcgZR5GFumbt7J5ZAg==
+badj1h0fp4phtcslna7jsorg26ujikhd 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ umdgT1NMHeASXkcgvv43Pdz6CVj+v8uv D1pZh8OehmBkMUBW8LrrPmzUAK1KkUVf 5ckvNPyhrwIUPun42ddCAw==
 badj1h0fp4phtcslna7jsorg26ujikhd 86400 IN NSEC3 1 1 0 - d829oifq4gmv9cahopsaehr0pjbv1tn7 A RRSIG
-biz 86400 IN TXT "Generation Time: 1765840504"
-biz 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ lI+jz1ffZi9JkC74pOlvERwwO3bklQth FCy8u/EEzWQeoakV/QxkWZdjzjtp8ZNg 50qITnLRkTkRNU3bDLkBCA==
+biz 86400 IN TXT "Generation Time: 1765926311"
+biz 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ sb47zQlQjB2b6kUJvVoe3/DqAkWCLwEo KHDJrYpIvfItEOtJC+yKgu3lOG3G3Fip +6HxgaMIclGWOrwPiEsEDA==
 altria.biz 86400 IN NS dns1.cscdns.net.
 altria.biz 86400 IN NS dns2.cscdns.net.
 brother.biz 86400 IN NS ns1.ipmirror.com.
@@ -228,8 +228,8 @@ vodafone.biz 86400 IN NS ns1.vodafone.net
 vodafone.biz 86400 IN NS ns2.vodafone.net
 vodaphone.biz 86400 IN NS ns1.vodafone.net
 vodaphone.biz 86400 IN NS ns2.vodafone.net
-com 86400 IN TXT "Generation Time: 1765840546"
-com 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ lFR/4XXUnCtAZnpHlE2k9YpQpioUNjV4 gP+B16hdHV9Zajpla28Fwho6ylJz/UMx G1Wx2EevC+5keiGb3agQCw==
+com 86400 IN TXT "Generation Time: 1765926352"
+com 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ cXyBwAEv0HjVEUoQRrAhYmcQOPeEBXnL URMw1XoYDoXTj/PHYy9VRi4Q8FFb+52V TkGk3vtt9l/HN3TWjbk/DQ==
 101domain.com 86400 IN NS houston.ns.cloudflare.com.
 101domain.com 86400 IN NS anastasia.ns.cloudflare.com.
 101domains.com 86400 IN NS houston.ns.cloudflare.com.
@@ -238,8 +238,8 @@ com 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ lFR/4XXU
 1and1.com 86400 IN NS ns56.1und1.de.
 2dayfm.com 86400 IN NS bayan.ns.cloudflare.com.
 2dayfm.com 86400 IN NS robin.ns.cloudflare.com.
-360energy.com 86400 IN NS ns1.digitalocean.com.
-360energy.com 86400 IN NS ns2.digitalocean.com.
+360energy.com 86400 IN NS bingo.ns.cloudflare.com.
+360energy.com 86400 IN NS damon.ns.cloudflare.com.
 360group.com 86400 IN NS ns1.digitalocean.com.
 360group.com 86400 IN NS ns2.digitalocean.com.
 360services.com 86400 IN NS ns1.digitalocean.com.
@@ -284,10 +284,14 @@ abb.com 86400 IN NS a13-65.akam.net.
 abb.com 86400 IN NS a22-65.akam.net.
 abbus.com 86400 IN NS caching01.usp.ac
 abbus.com 86400 IN NS caching02.usp.ac
+abconstruction.com 86400 IN NS drua.tfl.com
+abconstruction.com 86400 IN NS tabua.tfl.com
 abja.com 86400 IN NS ns1.excelanto.in.
 abja.com 86400 IN NS ns2.excelanto.in.
 abmauri.com 86400 IN NS ns.domainnetwork.se.
 abmauri.com 86400 IN NS ns2.domainnetwork.se.
+accf.com 86400 IN NS ns1.vodafone.net
+accf.com 86400 IN NS ns2.vodafone.net
 accor.com 86400 IN NS ns1.netnames.net.
 accor.com 86400 IN NS ns2.netnames.net.
 accor.com 86400 IN NS ns5.netnames.net.
@@ -468,6 +472,8 @@ americanairlines.com 86400 IN NS dns1.cscdns.net.
 americanairlines.com 86400 IN NS dns2.cscdns.net.
 americanexpress.com 86400 IN NS dns1.cscdns.net.
 americanexpress.com 86400 IN NS dns2.cscdns.net.
+ampacitypower.com 86400 IN NS drua.tfl.com
+ampacitypower.com 86400 IN NS tabua.tfl.com
 amps.com 86400 IN NS ns1.vodafone.net
 amps.com 86400 IN NS ns2.vodafone.net
 amras.com 86400 IN NS ns1.supercp.com.
@@ -522,6 +528,8 @@ aplawyers.com 86400 IN NS ns35.domaincontrol.com.
 aplawyers.com 86400 IN NS ns36.domaincontrol.com.
 apmt.com 86400 IN NS ns1.mysecurecloudhost.com.
 apmt.com 86400 IN NS ns2.mysecurecloudhost.com.
+apnrpartners.com 86400 IN NS ns8357.hostgator.com.
+apnrpartners.com 86400 IN NS ns8358.hostgator.com.
 apple.com 86400 IN NS a.ns.apple.com.
 apple.com 86400 IN NS b.ns.apple.com.
 apple.com 86400 IN NS c.ns.apple.com.
@@ -534,7 +542,7 @@ aptc.com 86400 IN NS ns2.zonomi.com.
 aptedsgroup.com 86400 IN NS caching01.usp.ac
 aptedsgroup.com 86400 IN NS caching02.usp.ac
 aptld80.com 86400 IN A 195.208.25.143
-aptld80.com 86400 IN RRSIG A 15 3 86400 20251229231551 20251215214551 40779 @ QSLe8KPoRyuZLEMjCYdoDxEWv6Rq2hk5 T1LP8yc1Ulx8fVdy9rGk3wSE27w/kjc+ bZECf+/ptYBCclKOo9RkAQ==
+aptld80.com 86400 IN RRSIG A 15 3 86400 20251230230557 20251216213557 40779 @ LnKABQ70wdJsoRfFmORS+8eMS8Ko710X 6WhnTSKBbkSsXy6J/k51z6XvfWC+AWX/ e60dBBJ/E5sO/qR+CFduAw==
 aptvaluations.com 86400 IN NS ns1.md-98.webhostbox.net.
 aptvaluations.com 86400 IN NS ns2.md-98.webhostbox.net.
 aquaheat.com 86400 IN NS ns1.bdm.microsoftonline.com.
@@ -2687,9 +2695,9 @@ gottagofiji.com 86400 IN NS ns2.dns-parking.com.
 goundars.com 86400 IN NS ns1.syrahost.com.
 goundars.com 86400 IN NS ns2.syrahost.com.
 ns1.gov.com 86400 IN A 209.188.87.184
-ns1.gov.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ rQh9p0RsbCZQAve4klMR2A5TLH8IvrVN ZjyZnigCJy62WvGCF7O1nAO5Bu1yA95r 7c0f3TE4IHVVba6i1wI/Dw==
+ns1.gov.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ vK9WDMjsekV0FMnyC8oId/+APFBFmPZ2 pqNuGmBSuE0E8wNiQj6q4RfuWzuxQ5Yy xHoa0lGVTVWHpxEoA/SkCQ==
 ns2.gov.com 86400 IN A 209.188.87.185
-ns2.gov.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ +FGbp3WeJnVlogIjg2gqbT4xD8GuqPvO SZGFeu9hJXQHdo5A1Lo0EBrlq/VMzFlv JHTMYw+XKLsqF7eN27kmCg==
+ns2.gov.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ 8gxArILvvOeacmfBm84YzqFtNor79fVp 1m8ExJhHt4BIkrCzlmU/hgjZHnzRQwYP Z8F1hKVg3Wdygw1XhySyBQ==
 gph.com 86400 IN NS ns1.vodafone.net
 gph.com 86400 IN NS ns2.vodafone.net
 gracegroup.com 86400 IN NS drua.tfl.com
@@ -2711,6 +2719,8 @@ greensight.com 86400 IN NS ns2.dreamhost.com.
 greensight.com 86400 IN NS ns3.dreamhost.com.
 greentech.com 86400 IN NS dns1.stabletransit.com.
 greentech.com 86400 IN NS dns2.stabletransit.com.
+gridsec.com 86400 IN NS drua.tfl.com
+gridsec.com 86400 IN NS tabua.tfl.com
 grills.com 86400 IN NS ns1.bluehost.com.
 grills.com 86400 IN NS ns2.bluehost.com.
 grit.com 86400 IN NS ns1.auserver.com.au.
@@ -3124,9 +3134,9 @@ ip1.com 86400 IN NS rose.ns.cloudflare.com.
 irew.com 86400 IN NS ns1.creative83.agency.
 irew.com 86400 IN NS ns2.creative83.agency.
 homer.is.com 86400 IN A 202.62.124.238
-homer.is.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ 6H1U6xnJz6WukwyA8FBnWRPkzur+PIgM 5m48yVPtLyq0nT7fTK8J+gKDM0IWJHZV dJr4oQr721bqQh+gkzjXBw==
+homer.is.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ qglALadJRJjZnnlCZxRFq297iMa6s0vt CHFEBA0zqDoH6ZnqxJgL0/obmXP3636x +BAfmoQeTWX7J6b1wmhsCA==
 marge.is.com 86400 IN A 202.62.120.4
-marge.is.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ lMuCeL0YRuV65a4TgIgRIezBcSsdxpio uVrtdlRcDYP+KaKUiBptUAk1SBrMAzxG bAh0crLjnkbaAZ9fEFl+Dw==
+marge.is.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ RdVyAEYSQitLP26KNyNoiu6blW2IwMoh 0jHATu5QaIvcvoPRUogTfy/0iRIpHC1D IyPjiXNybpRbIJ2TNkMgBw==
 isc.com 86400 IN NS dns1.supremedns.com.
 isc.com 86400 IN NS dns2.supremedns.com.
 isc.com 86400 IN NS dns3.supremedns.com.
@@ -3153,9 +3163,9 @@ itaukeitrustfund.com 86400 IN NS ns12.dnsmadeeasy.com.
 itconsultant.com 86400 IN NS ns21.fortunex.net.au.
 itconsultant.com 86400 IN NS ns22.fortunex.net.au.
 dns3.ithouse.com 86400 IN A 204.14.104.150
-dns3.ithouse.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ Ez3ytG1C8B6WyJr3NII9xMAY1W8EaMyf XDe2TGcQg2v/mUJz04YinE64M+fu8lqO 9zr+3jmabcNcUsTpFaimCw==
+dns3.ithouse.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ +mQAJCLaEa4JnpF+k47qs3LeNmY/jqP3 nTYuevnwCVY/z7hukmS/0auEkml1F+TZ W3SliJM50U8oo5ffiSl6CA==
 dns4.ithouse.com 86400 IN A 204.10.105.200
-dns4.ithouse.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ /kM2B51GFacLBRqaytDMv77B5yXP98qQ tTnIRXqLS8CvqXLrxUcW3e7VByLo2UyI Dsi3qYQT3xQYhbDAE8blCQ==
+dns4.ithouse.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ SKJNHUOoA9uCMLFM54RshV9jtyP/ldnW fzDKNr40H1NQS5SOqqHrzlIHH7f3r9CZ D+I3fr7CamZtYYIANRBXCg==
 itravel.com 86400 IN NS drua.tfl.com
 itravel.com 86400 IN NS tabua.tfl.com
 itravelfiji.com 86400 IN NS ns1.vodafone.net
@@ -3472,6 +3482,8 @@ lars.com 86400 IN NS ns1.mysecurecloudhost.com.
 lars.com 86400 IN NS ns2.mysecurecloudhost.com.
 laserarts.com 86400 IN NS ns5.itcompany.com.au.
 laserarts.com 86400 IN NS ns6.itcompany.com.au.
+lateeflaw.com 86400 IN NS ns8357.hostgator.com.
+lateeflaw.com 86400 IN NS ns8358.hostgator.com.
 lautokacitycouncil.com 86400 IN NS ns1.bluehost.com.
 lautokacitycouncil.com 86400 IN NS ns2.bluehost.com.
 lautokahotel.com 86400 IN NS ns1.dreamhost.com.
@@ -3564,6 +3576,8 @@ localhost.com 86400 IN NS ns-cloud-d1.googledomains.com.
 localhost.com 86400 IN NS ns-cloud-d2.googledomains.com.
 localhost.com 86400 IN NS ns-cloud-d3.googledomains.com.
 localhost.com 86400 IN NS ns-cloud-d4.googledomains.com.
+lochan.com 86400 IN NS amit.ns.cloudflare.com.
+lochan.com 86400 IN NS dana.ns.cloudflare.com.
 lockheart.com 86400 IN NS manu.usp.ac
 lockheart.com 86400 IN NS teri.usp.ac
 lokia.com 86400 IN NS ns1.bdm.microsoftonline.com.
@@ -3645,13 +3659,13 @@ mahoganyfiji.com 86400 IN NS ns2.vodafone.net
 mahoganyfiji.com 86400 IN NS ns13.ixwebhosting.com.
 mahoganyfiji.com 86400 IN NS ns14.ixwebhosting.com.
 ns1.mai.com 86400 IN A 118.139.178.99
-ns1.mai.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ Lp8olbSr4TTY7Dxd+weXpMzLRNnSGPJc FqEJb09+L+a2oG3MIdkv7G/FcezbOLi5 z1/KusvealruNi9tAHLXDQ==
+ns1.mai.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ XMSVJaW8cGuZE9rSF1Qc85mIpL8V/iXq hu9AfZvyFsEO+jgiN2ZIYE5FsaydCgGa UEs4zkKwJsHWOYLOb01MAg==
 ns2.mai.com 86400 IN A 203.124.123.158
-ns2.mai.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ bR7N71XcccMOK9DMDmktXAXb8UzE8yPs mt6B2iDxkxeWc0J+JfanmGiC88HIfdL5 jVRzICt6+UTWqiaHPOY6Cg==
+ns2.mai.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ NfXJ2jQWAo/5l/PhsFKB5ynvgCk5aj3g Z63IAgVpYXKKks54iG5AgVzHmC4UwUzS AC4sxnh33Ho1XQdxHndSCg==
 ns1.maihost.com 86400 IN A 203.124.105.108
-ns1.maihost.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ 2pqczMQPUnEHeIsdNyUdwWF/ijtd65TP FZYew1k6P8t/oOFno4Et5eLi3xq7qhD6 FFoRbesmDb/Udxz6WRtNCQ==
+ns1.maihost.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ MzJjYqpSxUOD3mMopqkS2eYSldiVHsIn 1/8ptv252qLRStHnvcw2QnGVAh3b3gOB nceKBVZA3saBarDeXqX/CQ==
 ns2.maihost.com 86400 IN A 203.124.105.108
-ns2.maihost.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ Yx/lfUuzuNDD7sCbmUy5H01ppvLKldYj 21g/06iY1CI7teJfn0YcPMnriT2uWV+j NDG4x6fvKiwAjWxAk0iuAQ==
+ns2.maihost.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ 6NaN3qmv8Mw/ecNuMwH+u2+a1l6GGHXt d8uj+FKHzUK/keFwikicp2RcXmr/9xm+ oAvvxmdQNq3Mh0ZOTnfFCQ==
 maiislandride.com 86400 IN NS ns1.hosting-australia.com.
 maiislandride.com 86400 IN NS ns2.hosting-australia.com.
 maiislandride.com 86400 IN NS ns3.hosting-australia.com.
@@ -4180,9 +4194,9 @@ newmont.com 86400 IN NS ns03.trademarkarea.com.
 newnet.com 86400 IN NS dns1.stabletransit.com.
 newnet.com 86400 IN NS dns2.stabletransit.com.
 ns1.neworld.com 86400 IN A 13.229.43.74
-ns1.neworld.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ k2eFCWA1m2zGoXJhPlMI1rtzH05pa2c5 XgT6NpLjjBnhmCO+bOkcrXIMrybHq1bJ xeD8XSk5hOkmEgSiD+32AQ==
+ns1.neworld.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ LixTDhBUSpSzbeENjMLEMyO3yrh1RfDW /I/9BaeApDhn0VaK8Lld+/n1ziGRvJ29 BYhZi9nWqC5nQEPYmDxMAQ==
 ns2.neworld.com 86400 IN A 13.229.43.74
-ns2.neworld.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ 5+x5oWmDmeJljwiWlr7CNHXhmN6fxmo1 PjoEURgttlbvnU/brA4XeCEEpL/8RSvW e4rpU29gHJ41mcQgWl0ICA==
+ns2.neworld.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ EpcuGc6VtpyxWzqSsAFPQX9LLNf4aPRN GZJ781fwebjGMEhVdq22lX8yeJR6cGoB Kcm2Pam1rH88Bp9Wlt+vBg==
 news.com 86400 IN NS ns8307.hostgator.com.
 news.com 86400 IN NS ns8308.hostgator.com.
 newworld.com 86400 IN NS rafe.ns.cloudflare.com.
@@ -4251,9 +4265,9 @@ npdl.com 86400 IN NS ns4.markmonitor.com.
 npt.com 86400 IN NS uma.ns.cloudflare.com.
 npt.com 86400 IN NS donald.ns.cloudflare.com.
 ns1.nr.com 86400 IN A 185.122.58.209
-ns1.nr.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ dvufXiiWXMJmVJ3EdEIb+JjmVsc8Lfg1 jd+Oq96oAoLGId7EFIt2Jxo8Ui0kU+nM 4pTmFBEq3gECYd6KAaNABg==
+ns1.nr.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ YXwqIXNAOxDcYKHzIMqDpf9qSdFXFUMj 8UROwqJPbS4pu6i2SQztkTVZ0cSY6mYo s3N9I/duJNrvffPCEhkrCQ==
 ns2.nr.com 86400 IN A 185.122.58.209
-ns2.nr.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ 1jm9QDL6sq0APY64n4LBpxgYTBYOh9r8 P112H3XL96mJVY1A8bLepggmxlilaA9G FdjSeS5ElKd2WcvxboKeBQ==
+ns2.nr.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ vVORJk7RoPl8eXHQLYEtiPWk8OGRZYNX BYFvG4OLGpR/69c2PqRPSHX48oKlXBMb sGyEQ7A6vb2JbQKo6Ch9Cg==
 nrwmacallan.com 86400 IN NS ns67.domaincontrol.com.
 nrwmacallan.com 86400 IN NS ns68.domaincontrol.com.
 nsscfj.com 86400 IN NS ns1.auserver.com.au.
@@ -4278,6 +4292,8 @@ nxtgen.com 86400 IN NS ns-cloud-a1.googledomains.com.
 nxtgen.com 86400 IN NS ns-cloud-a2.googledomains.com.
 nzotc.com 86400 IN NS ns39.domaincontrol.com.
 nzotc.com 86400 IN NS ns40.domaincontrol.com.
+oazzisfiji.com 86400 IN NS ns1.bluehost.com.
+oazzisfiji.com 86400 IN NS ns2.bluehost.com.
 oceania.com 86400 IN NS dns1.stabletransit.com.
 oceania.com 86400 IN NS dns2.stabletransit.com.
 oceaniaagencies.com 86400 IN NS ns1.auserver.com.au.
@@ -4935,6 +4951,8 @@ rainforestecolodge.com 86400 IN NS becky.ns.cloudflare.com.
 rainforestecolodge.com 86400 IN NS leonard.ns.cloudflare.com.
 raiwaqabakery.com 86400 IN NS ns01.leonate.com.
 raiwaqabakery.com 86400 IN NS ns02.leonate.com.
+raiwaqabuses.com 86400 IN NS ns8357.hostgator.com.
+raiwaqabuses.com 86400 IN NS ns8358.hostgator.com.
 rakavi.com 86400 IN NS ns1.vodafone.net
 rakavi.com 86400 IN NS ns2.vodafone.net
 raki.com 86400 IN NS ns6313.hostgator.com.
@@ -5191,9 +5209,9 @@ sana.com 86400 IN NS ns2.siteground.net.
 sangamfiji.com 86400 IN NS ns8303.hostgator.com.
 sangamfiji.com 86400 IN NS ns8304.hostgator.com.
 ns1.sangamnursing.com 86400 IN A 162.214.77.212
-ns1.sangamnursing.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ rshrkhnrrLO8h9md96268h/cB++CM5/C /t+3MdlzhIlwySKWuEddm4DgXHw0DBwx KfsFN/mYoGFPylYvKG0cCA==
+ns1.sangamnursing.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ sGVuBKYlfPs3w6NGKglFZpzISml4N1Hc YtCtdh7wGQRSCVEMPVk3lpphgWJwNAtu qFoqOaYOhdP0eA9iTvfJCQ==
 ns2.sangamnursing.com 86400 IN A 162.214.68.184
-ns2.sangamnursing.com 86400 IN RRSIG A 15 4 86400 20251229231551 20251215214551 40779 @ 17cnRcER/9GOzBcDSC5P5ruLyVa+L8mQ xcirPqwsKCv1smVjBwyYBmTp0XPVPUuV +3Uv2d/dsVx//BYDgegqBA==
+ns2.sangamnursing.com 86400 IN RRSIG A 15 4 86400 20251230230557 20251216213557 40779 @ yisLr/LHSUWJTpLX2xdIPdPNqYR19wYX o5ul0v1zRvRoCh2rAES40xpvQJo7lftt 2pjRwyoI6YeDlpVJGu5YAg==
 sapphiregroup.com 86400 IN NS ns1.gocheapweb.com.
 sapphiregroup.com 86400 IN NS ns2.gocheapweb.com.
 saravitours.com 86400 IN NS ns1.bluehost.com.
@@ -6416,6 +6434,8 @@ wasteclear.com 86400 IN NS ns1.mysecurecloudhost.com.
 wasteclear.com 86400 IN NS ns2.mysecurecloudhost.com.
 wasteclear.com 86400 IN NS ns3.mysecurecloudhost.com.
 wasteclear.com 86400 IN NS ns4.mysecurecloudhost.com.
+wasterecyclers.com 86400 IN NS ns8357.hostgator.com.
+wasterecyclers.com 86400 IN NS ns8358.hostgator.com.
 water.com 86400 IN NS ns1.codero.com.
 water.com 86400 IN NS ns2.codero.com.
 waterauthority.com 86400 IN NS ns1.vodafone.net
@@ -6614,21 +6634,21 @@ zumba.com 86400 IN NS paul.ns.cloudflare.com.
 zurich.com 86400 IN NS ns1.a0.impervasecuredns.net.
 zurich.com 86400 IN NS ns1.a1.impervasecuredns.net.
 zurich.com 86400 IN NS ns1.a2.impervasecuredns.net.
-d829oifq4gmv9cahopsaehr0pjbv1tn7 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ QJkvc9pQVTKunOWAnZgJjltAmBb0q4f2 rxlJrFzdvGFS5sdSBSxMZXcOOAkNM0aS RKFPIYbqV/GS4VSuAv3ODA==
+d829oifq4gmv9cahopsaehr0pjbv1tn7 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ xU5r4IbnsYBwE5ezWeg7ePal3TE5o4pX SDh00hME3VE/ZEwuXQ7AeyWOEH9AE9oZ exZ/wFfoTJ8TFNN6SDYLBw==
 d829oifq4gmv9cahopsaehr0pjbv1tn7 86400 IN NSEC3 1 1 0 - d9c043n09iudtjkhhdpcochl7sol97b3 A AAAA RRSIG
-d9c043n09iudtjkhhdpcochl7sol97b3 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ Vgn5xPFNxrnLIVmy0LTj4NBOV82fHRJm LDI+85Alnyc8Npm6LwEHyEaFHtSixvo1 00Im90IyjPZUcP1kBz+jAQ==
+d9c043n09iudtjkhhdpcochl7sol97b3 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ YnXcx4aYuV0chyubLAumQh51tf9YZbau JpBwDc4F4xCWCPXaOVeNFLH5BPipywz3 XOjUA3I6CM6jQnkRdXFgBQ==
 d9c043n09iudtjkhhdpcochl7sol97b3 86400 IN NSEC3 1 1 0 - dlsi4rf101mvurojkjtcsasuri1r94md A RRSIG
-dlsi4rf101mvurojkjtcsasuri1r94md 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ o+TZTF36j7rfxZN5keYPDRax5DvQbPBy u+nh2A4bhPN4ZHvHkeeVb867KuFKiSsy MKpjKPy5wLbQNZP+Rf57Dw==
+dlsi4rf101mvurojkjtcsasuri1r94md 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ XDsh7L0ZikBUep/A2q82ULxMFXugdK6m zjQn5/bLnQsFERxS/63/kQzXFCRH/Bfn 51tvAKE+kHwsoBWuKRohDQ==
 dlsi4rf101mvurojkjtcsasuri1r94md 86400 IN NSEC3 1 1 0 - ei859g2iv04sfuf5fivnnouadk2094su
 domains 86400 IN A 144.120.141.12
 domains 86400 IN MX 5 mx0.usp.ac
 domains 86400 IN MX 5 mx1.usp.ac
-domains 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ qOmVtnrC53SXnxgCMEm+8W/LCyUHcGbk TFDEeIwJB4Gv/9X9GY4U2oVQCld0NCXq 1sBLKXaHyEjNyeIgPi+sDQ==
-domains 86400 IN RRSIG MX 15 2 86400 20251229231551 20251215214551 40779 @ e3FZbKNogqGizbO3uvOy7DAivxuwk0Dy VvEmRN9jcZxRWlMlXzoFerUlFc0NjhGA rVWyW5f52Di68ZmcWFHxCA==
+domains 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ eUqRzL2py0gDLf/LjIAD54+VLiDnSSMv K9c9RoZXmt97tWf4QBoMSA1n/fms4nxL RlQGzW/obNre3JwncGdSDg==
+domains 86400 IN RRSIG MX 15 2 86400 20251230230557 20251216213557 40779 @ aK3qNVQo/Q29ZrOa+xxE+Gui+nUcQa6C h25ev0ooUrbfA7NHgi/tkPWOn+YRaCkw AsGxWbbKJIE1UxjJen/sAA==
 www.domains 86400 IN A 144.120.141.12
-www.domains 86400 IN RRSIG A 15 3 86400 20251229231551 20251215214551 40779 @ pjraUq88zj0D8KtdUJZe3WiHo+720j27 +ZiWBUjsqM4dl1U8MHYNL9h6JY6v5L/C Q9Ox1+R81SZY+mVGXL5OBg==
-edu 86400 IN TXT "Generation Time: 1765840546"
-edu 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ 7MZbCMeAJ+bfsc8Vpg4D4yrp30tL286u dmNzFbRG8q4l7IA1T739IkWhTQdG2wrj RgyylyrrX4v8tFZunfVyCg==
+www.domains 86400 IN RRSIG A 15 3 86400 20251230230557 20251216213557 40779 @ Z/g2w8BohGPH5zS5ZMIn63jXZHjX+rSx th0UOF8F9bvmpmjJAYkfw/HhQU2LPf/z FCTnEQodsiP7o4Iq8StACQ==
+edu 86400 IN TXT "Generation Time: 1765926352"
+edu 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ yJFCLkaG1GIGOA5k0B+FZrhQdomFz2Qg XnfYx2GtOYKyKj13u2kXbNCmpga9/yh2 eTvJ03aEZiTfSeIQUmv9CA==
 bula.edu 86400 IN NS ns-348.awsdns-43.com.
 bula.edu 86400 IN NS ns-867.awsdns-44.net.
 bula.edu 86400 IN NS ns-1165.awsdns-17.org.
@@ -6656,27 +6676,27 @@ resume.edu 86400 IN NS ns-155.awsdns-19.com.
 resume.edu 86400 IN NS ns-644.awsdns-16.net.
 resume.edu 86400 IN NS ns-1187.awsdns-20.org.
 resume.edu 86400 IN NS ns-1941.awsdns-50.co.uk.
-ei859g2iv04sfuf5fivnnouadk2094su 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ Txi9FSztqYJmI39tBbExYr5hzN64AJz0 D8z5otsE/tPghDLuNYRP+N72AflW1f2s LBoFsjFVoLMKcsn+EfWNAw==
+ei859g2iv04sfuf5fivnnouadk2094su 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ rbJ4sN79+qIhrjvKuSI6fdGuBceEjqfw y+822FN+xkCudPXtHkOD5d4T10QO8Dm5 OYom8egyL04NVPB+yX1hBg==
 ei859g2iv04sfuf5fivnnouadk2094su 86400 IN NSEC3 1 1 0 - ek2cofoqpc6k2t4ak93rm7vj6o277a5d
-ek2cofoqpc6k2t4ak93rm7vj6o277a5d 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ pPI2Cb2MnQkPt1ai2hHlPeqIgLV1KyHD hONGCEyXhlkEG0qc/eWqwIgKbZNI8+/B l+cUFKiKT5BNx+vW9NElDA==
+ek2cofoqpc6k2t4ak93rm7vj6o277a5d 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ 8UtA7KIi6W71fG6H/MKxVMFiIEgu8HjE jIFfeqedvblbkbSvYHIDhYvOB2/xbGJL NQFlWmWZaZPVsvmE8bmxBQ==
 ek2cofoqpc6k2t4ak93rm7vj6o277a5d 86400 IN NSEC3 1 1 0 - evg1k7fjdjrdopfs6mqrgq0lpqnpmtvr A RRSIG
-evg1k7fjdjrdopfs6mqrgq0lpqnpmtvr 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ xBxBtyy5iW1udBzBN1BwseFUIPSMv0HJ eo0YGfOGeC8nW1UPnw5bsRgalzoI4Xkc cXgt6q7DI3sI2+2ImZkYDA==
+evg1k7fjdjrdopfs6mqrgq0lpqnpmtvr 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ oYEwfuJ4Y2aq6ud/rNB1FpFhNQlXMvEB kP2kO9SLS1Skn74FkFJEqw4xcZTtgbtr YCxsvWkzdH4bOqmeHcxvBA==
 evg1k7fjdjrdopfs6mqrgq0lpqnpmtvr 86400 IN NSEC3 1 1 0 - feug57nu2v96acko8h53du0g0v0p0vuh TXT RRSIG
-feug57nu2v96acko8h53du0g0v0p0vuh 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ LsBt6yNAbhxGxG7+eXN+MYrUXId/XrHh zzsEZ4ccgIaU5eA1TDbg3bhzORZREl7f X0mCAD3m8C7vB55hzOS5Cg==
+feug57nu2v96acko8h53du0g0v0p0vuh 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ PMIqBcSldZXcwXk2sOlOUMYjnpjLZK8E UmQpDEQISCiYKBziF1jEhg6f386X21AL 7+xPHafCa3cAlgFdqUa1BA==
 feug57nu2v96acko8h53du0g0v0p0vuh 86400 IN NSEC3 1 1 0 - ffbok2fqbrb4i0n7qnnnfj8b7s4vbvck A RRSIG
-ffbok2fqbrb4i0n7qnnnfj8b7s4vbvck 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ ffON7rFEsKIDhffshbYCYxw7a//BBjaV KQwCxKeGiEU/s2N+YCLsIrdE2AYWsLGK l2N0ZoGX8S2qG9nOSPrABg==
+ffbok2fqbrb4i0n7qnnnfj8b7s4vbvck 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ xIUPEluXLefIJEPhcjYQv296n06KLIYi vJXUXgwwkYT3PxQgZtU8J9PVSNnzZYxz 8GRdD1BH6LuU6VP2k4LBDA==
 ffbok2fqbrb4i0n7qnnnfj8b7s4vbvck 86400 IN NSEC3 1 1 0 - g2iu9srl86vcnrj14tfri3dvih161b6m A RRSIG
 ns1.sit.ac.fj 86400 IN A 162.241.241.41
-ns1.sit.ac.fj 86400 IN RRSIG A 15 5 86400 20251229231551 20251215214551 40779 @ 7hCcy60FNfqQZe3RcpWkP432M/qjV0gi isvWMPFMNeiZyGLtIolv8p9nNK0KpPF/ Qroo/6KYNtkwXTK1vGs1Cw==
+ns1.sit.ac.fj 86400 IN RRSIG A 15 5 86400 20251230230557 20251216213557 40779 @ wvsidheE+I66HyXDSshl2zMgW/EtvaZp Bwx42oWhfM6RPuTd8gRvT9Gcdak5wHgO eqsVIR62KNWoBm9qUJlJCA==
 ns2.sit.ac.fj 86400 IN A 162.241.241.65
-ns2.sit.ac.fj 86400 IN RRSIG A 15 5 86400 20251229231551 20251215214551 40779 @ NREULajWtpFiuLsLD2nV76JOt12ZgZzR d2fy+xZRqUQEcdwQOPGXji1+NW0VZVl/ tRewdJf47Im3lWLKHrWQBw==
+ns2.sit.ac.fj 86400 IN RRSIG A 15 5 86400 20251230230557 20251216213557 40779 @ MTvKJzLbCYPZwBdlCirmDkUpery/9oTj cE4ym7dHvJI1OuploAg1HqemyI46moM2 HuYjpaJu/NAtDeQ9yM0WBg==
 ns1.harikisun.com.fj 86400 IN A 162.214.16.233
-ns1.harikisun.com.fj 86400 IN RRSIG A 15 5 86400 20251229231551 20251215214551 40779 @ 5Jis6yCIaJ/YUgEaUakKzPrnVFmQJJ5M //KyoSxAQYfPH+v/Z93LPkK4zfjOqd4G 6oKrdQ/EjFzgk7xiABm1Bg==
-g2iu9srl86vcnrj14tfri3dvih161b6m 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ aTf/tId8/BAsB8hAdMOcmDF4cBlEwSQH hPHNXnjtJ+ApnZYycMayKJlL2qr59iaf 6EskI9Aywzr0YzN6LjmzCg==
+ns1.harikisun.com.fj 86400 IN RRSIG A 15 5 86400 20251230230557 20251216213557 40779 @ 4q9orjN27LKcFJOr3iKWdKwMfabrflRZ Orr8NsAPyv+xowodLfSlkMwCBMJy0+8U P7PGWUeTXAofTgWz6NDBDg==
+g2iu9srl86vcnrj14tfri3dvih161b6m 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ ekHerKiQ5W0DjRo0NvkkYt07WDvJXYV5 zAc9R/Ni/JA2oSOpQ8DR87LD6dMtoYyA 39A1wy9N9fUENi1EmlJgBg==
 g2iu9srl86vcnrj14tfri3dvih161b6m 86400 IN NSEC3 1 1 0 - giu0epnq10uv2jj3f0ssiqdm74ad53fj TXT RRSIG
-giu0epnq10uv2jj3f0ssiqdm74ad53fj 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ +jEOuo+Uj47tA+0Ay3m2SpAnVh41R1Tv +EFU8XF/fDTMfTH9OiQMTu3kUup2jwi3 5zEG5cFFDxWO0UD3hyxBBg==
+giu0epnq10uv2jj3f0ssiqdm74ad53fj 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ pqZcMbTlVO/2R5/1TE3AintBf8h2NiZz Ip6hu30lRYZP3QnIMWfBm0P6t1mYsPny rKMG2CEKZ3TMCm/BMJiRAw==
 giu0epnq10uv2jj3f0ssiqdm74ad53fj 86400 IN NSEC3 1 1 0 - gn7u82jtqe820u1llttkc14p3qnr0b09 TXT RRSIG
-gn7u82jtqe820u1llttkc14p3qnr0b09 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ Y9yhM+HoXoLvLQRrwaJHXjrO13RasaFE DPY6OwBXzTqKGu5ShvAqxyImY7MjTOOj q7pYITwShIECz0qXb8WlAw==
+gn7u82jtqe820u1llttkc14p3qnr0b09 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ 0k9G3na8kbzi4s2f6HKuz1w2eZGlk9qw 7s452ItQsxRwxQ0qZNR7srxbyAwWrv00 QodXlnsVskMX9dVATXuWAA==
 gn7u82jtqe820u1llttkc14p3qnr0b09 86400 IN NSEC3 1 1 0 - hgk92ff3h67si4dcu8opqrg103hac6hr
 gov 86400 IN NS itcns1.gov
 gov 86400 IN NS itcns2.gov
@@ -6686,16 +6706,16 @@ govt 86400 IN NS itcns1.gov
 govt 86400 IN NS itcns2.gov
 gransy-anycast1 86400 IN A 185.28.194.194
 gransy-anycast1 86400 IN AAAA 2a00:fea0:dead::beef
-gransy-anycast1 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ ko8PYy17gpcAgCZgQNCSm0FXtPdnCG6a BPf1RWydSS6o3rrHWjx4D13NNQLeML4S k35C2Hd7ziw6XpsfxttnCQ==
-gransy-anycast1 86400 IN RRSIG AAAA 15 2 86400 20251229231551 20251215214551 40779 @ bhZ4UgqSQxm0muzkUwA7MK13xFQNWEGy cNCmZklK7KhYgOHpGEn0zz079Sc5UG8y CG0jOBm7uzF2W5ZjkXG3Bw==
+gransy-anycast1 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ DC/Z4j+dyWEv5esCC4nWcXOamqbgb6jb hi/c779GMki4Ly9Zs096AjxYh9GgzH0L 2F02xW0Pz8ehTN+tJiSxAg==
+gransy-anycast1 86400 IN RRSIG AAAA 15 2 86400 20251230230557 20251216213557 40779 @ 5RSKTjXqOO6dGFAaWrNF/fDB9NhKL0bb UABvV4y/tZlwQ/UwJ9IlX4J9iWUShz5e MrQV72rko9P6rNIeLOq/DA==
 gransy-anycast2 86400 IN A 185.38.108.108
-gransy-anycast2 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ xCjClxZyEzuk72ggqn71jeqG9VdgaJg4 LBV590LIeq7HA99z6akTm7pcw0eNGyJD YpzD/Dh86maFObSImmF3Aw==
-hgk92ff3h67si4dcu8opqrg103hac6hr 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ PRRmFxN7YTCk98teaRNCNYx6mta8BOOM kSrrlPbX7ofZuQ1qH88mYEC5B2Sv5XU2 W9+34zZeUCdyYeQadUDGAg==
+gransy-anycast2 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ yuI0iIwrLiba9K8u5Pa1dV3Pg9VbK6+i ACpaWzyk+gDcuN3Pp+EvzYXo4NC8VQDA gaD20fON0yvjurp39BS3Dg==
+hgk92ff3h67si4dcu8opqrg103hac6hr 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ IqmDn65/bLQlpYq/9qgPdfnA1rlxcjPw X9E8lzvcJOlFjHRHCKCRlaSZ5zoXQwQA wZbiUv8/7bhGJBfIGIWFBg==
 hgk92ff3h67si4dcu8opqrg103hac6hr 86400 IN NSEC3 1 1 0 - kqqt0n1rele71f8l02ss6an3o19cvmcg A RRSIG
-id 86400 IN TXT "Generation Time: 1765840504"
-id 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ 0iRC0wgyVYyB3rKvlaQySAOziPW+N6/p 9aig9xv8Tq7YE5YKTM2jOOQBl3/Qcxvw Nu5ZDZ5KaCz9/dTSaGNHBg==
-info 86400 IN TXT "Generation Time: 1765840550"
-info 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ kjacVSLMTViSJQ/qMF4Hl0KEpVzzSQ8P jO3e/bhlldgJK1tmD6V4znLHcLxg3dbz U7NH4QaZ7K7j9MI+Jv1/Dg==
+id 86400 IN TXT "Generation Time: 1765926310"
+id 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ FKAlUTqgEB7V+gJmIXgMF94Szo1ZVhDq 8hTn219OcdDwrwbd88yjrb7cDH9FhtFj gkXwP8r8s9QV7vd8JtZrDg==
+info 86400 IN TXT "Generation Time: 1765926356"
+info 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ 0PbAIW5YsncA5GRUxoLyX/bi6ITluPjU Uic0kYurCTche02aGWA8jXGAxa2TWy8p +5qPAyTZy6ytTb9m8cMZDA==
 altria.info 86400 IN NS dns1.cscdns.net.
 altria.info 86400 IN NS dns2.cscdns.net.
 brother.info 86400 IN NS ns1.ipmirror.com.
@@ -6728,24 +6748,24 @@ vodafone.info 86400 IN NS ns1.vodafone.net
 vodafone.info 86400 IN NS ns2.vodafone.net
 vodaphone.info 86400 IN NS ns1.vodafone.net
 vodaphone.info 86400 IN NS ns2.vodafone.net
-kqqt0n1rele71f8l02ss6an3o19cvmcg 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ LHCGnF/rCNDT3jKq+4QJsFyNUNw/jCg/ 0sQL4TLUNERzzd7h1FNwxJ4150nuRATI NUnoibtD/PpXOfXkLvRiCg==
+kqqt0n1rele71f8l02ss6an3o19cvmcg 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ hw/qST3dMecbUpp+KkyzpRttIOhjs6VG h2lHgsWE56MOIhCUdeMA463l/eGCZbBi ypIO5QQJLRVpfFplsqx4Dw==
 kqqt0n1rele71f8l02ss6an3o19cvmcg 86400 IN NSEC3 1 1 0 - krdr1elcir9tn3si72ftsaackgne2gem
-krdr1elcir9tn3si72ftsaackgne2gem 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ fyEJ0qmg783IZDo00QUgOUnZ61/kcGPA mkXhyT0onox01/lUf1iU5GN/ZjcF0lNm QN0yW8lExG7aGtWOMT5TAQ==
+krdr1elcir9tn3si72ftsaackgne2gem 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ ME/vW0yUOQqZTRBJMg8wRL4huBifoF66 PtNvazyqwUSO6U2UsE8tfOUDarTe3ILx Wq13PyUaYCktN7yJqJVfBQ==
 krdr1elcir9tn3si72ftsaackgne2gem 86400 IN NSEC3 1 1 0 - ldtg3vdp522kv7rkht8o0r0dtd0nkhun A RRSIG
-ldtg3vdp522kv7rkht8o0r0dtd0nkhun 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ yOA6W4DPHYXR1b0K9jNDT+bTaP/YxF3p gGGmvYVM7xBVvd2W6Yb8eOjLHjLbx2oD rjF+ulaijkY+Fgv8ijgqBg==
+ldtg3vdp522kv7rkht8o0r0dtd0nkhun 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ OFFML63jJxlE4BmajJzKMhzmJ7KecJ/i DzbrJ6ZBtO5dPEF2aDZ3UgjgRQEXWYn8 zDpupIyb0wWxQDiAoKAHDQ==
 ldtg3vdp522kv7rkht8o0r0dtd0nkhun 86400 IN NSEC3 1 1 0 - lfujoog2al2bph4m4of42brk0do75je8 A RRSIG
-lfujoog2al2bph4m4of42brk0do75je8 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ fHHlxxqtnx921HZNthOYUbaDb8sQ+j7d AaleJLt1cgvZPYQUQPqIdJ0+s5YrnOUw WLXuWVDpmqNV97LADRsDBQ==
+lfujoog2al2bph4m4of42brk0do75je8 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ rcYNtGm6WL1mNss2HqUOE4O7P5cOLdUM ZEEBK6HVLeCEjg5MMg0ZBlHDc4mvfaO5 Q6FvyIbkjR/DVVo3b7YcAA==
 lfujoog2al2bph4m4of42brk0do75je8 86400 IN NSEC3 1 1 0 - mh84ni0805o2er0t9e09qs8lheh4v43n A RRSIG
 master 86400 IN A 144.120.141.11
-master 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ 6Qd2CyJ4Fy7MT3sTb8RHKuooOmPyO5VB NiMmM5azdwU7+7tL5VuH4WHEnvhdbXzZ x+WkhfCWs3e1jkA3Oz2kAQ==
+master 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ HUBiXaN3ZgTtdY2e+zO7G4/A7w0DiAh/ aoYueWW8Xr6SEwMhHKubpzxtu/AMkFPg 9j4CZJvmJMSwTwYJ9xe1Cg==
 www.master 86400 IN A 144.120.141.11
-www.master 86400 IN RRSIG A 15 3 86400 20251229231551 20251215214551 40779 @ vzHKY78WVIKOCA5LeR3Rr2AeWAf/Yq+U 0uGv/rNLyJi+ko69x/S/3l3vspOlHYz8 hnvhxnh2tROk8Y1pj/oQCQ==
-mh84ni0805o2er0t9e09qs8lheh4v43n 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ AYiGCYuOlRJXUed4qFDD9zkeUsRBXKbj 5xkIieFAb6CMC2JN82m9fYOPyUttFjw7 7bV5u9c/yR/2OKbKZt0eCA==
+www.master 86400 IN RRSIG A 15 3 86400 20251230230557 20251216213557 40779 @ NByl29ft8Dnf0lE3u1+DOm0HETzeZQM8 D3708C5jYZbBsG+Zy1DTc6oEHM+8OWER IfMDRraaqJRUQ0expoUzDA==
+mh84ni0805o2er0t9e09qs8lheh4v43n 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ uZzlmaTPvrgCcXj4SSnnEKnwE3DNzbKJ So4UKw2e/k6mqfAXCsl6i+DwqxSYyPxd cZWy/heV9KKP+yrdae7HCA==
 mh84ni0805o2er0t9e09qs8lheh4v43n 86400 IN NSEC3 1 1 0 - mhm06c34sgmchh83jhhf6umt4j6m79ef A MX RRSIG
-mhm06c34sgmchh83jhhf6umt4j6m79ef 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ giPH1c87DTbxDk/NNyQTqw/o5eMBhi0Y wk7UIPUXiM8FErqjSN5jdy4xpyzxZ5iY HOKjYwmbHfZI/D/7U5C5BA==
+mhm06c34sgmchh83jhhf6umt4j6m79ef 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ SR7ZqstxS6w3kryIJq/pClMVds1XSHBV CboSRO0D4YXNLNpZRTSkAKdggd0ENMQa U6Be0wukXEF8Lv9r99gMBQ==
 mhm06c34sgmchh83jhhf6umt4j6m79ef 86400 IN NSEC3 1 1 0 - nlkfi22hiisa7u09rkvgvgj01oklfssn NS SOA TXT RRSIG DNSKEY NSEC3PARAM ZONEMD
-mil 86400 IN TXT "Generation Time: 1765840546"
-mil 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ cyQpb8VgbIsFSLUe47JmR43GB4nIyT1e 2LIkML0veo4zNWhJmdSyX7p1H3tQZlND AdTJ+Xlajv1zSwQFLvzXBw==
+mil 86400 IN TXT "Generation Time: 1765926352"
+mil 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ Ee2k2RZ07aJ7Vn7mHkzfksjNtK/ugO91 b3pZAEEreMKol3mmQald5V+QTuB+ELRr 0nilPa3IGI8KdUbYiQQfCw==
 fijinavy.mil 86400 IN NS drua.tfl.com
 fijinavy.mil 86400 IN NS tabua.tfl.com
 navneet.mil 86400 IN NS ns1.usp.ac
@@ -6760,8 +6780,8 @@ rfmfdefense.mil 86400 IN NS ns11.dnsmadeeasy.com.
 rfmfdefense.mil 86400 IN NS ns12.dnsmadeeasy.com.
 rfmfdefense.mil 86400 IN NS ns13.dnsmadeeasy.com.
 rfmfdefense.mil 86400 IN NS ns14.dnsmadeeasy.com.
-name 86400 IN TXT "Generation Time: 1765840551"
-name 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ s8hp3MMU4i39xjOVtj1RiRLjTP/T4hjb Z7HfzgTVcVXy0fCZS6KPmVbp9SKx6OUF 8Gb0krpAsDNbpKhk5tAFDQ==
+name 86400 IN TXT "Generation Time: 1765926356"
+name 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ iJDszq1cziWgCsDB5BP6aggqtxIxOq3i ldIbDSgfqt8lFeYVFKKQRN6mzIHbOp13 Ah+sU+PHF5BtLDudP8V6Cw==
 altria.name 86400 IN NS dns1.cscdns.net.
 altria.name 86400 IN NS dns2.cscdns.net.
 brother.name 86400 IN NS ns1.ipmirror.com.
@@ -6782,12 +6802,12 @@ vodafone.name 86400 IN NS ns1.vodafone.net
 vodafone.name 86400 IN NS ns2.vodafone.net
 vodaphone.name 86400 IN NS ns1.vodafone.net
 vodaphone.name 86400 IN NS ns2.vodafone.net
-narcotics 86400 IN TXT "Generation Time: 1765840551"
-narcotics 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ muUJ+DeKuX2HzmUHSnSNq1nuDfOCtDbz +Bpd5jV4Fi7oKNW4Oz30fy3qKvVRLhTI hF21a7JJxKSTYuTZKELMDw==
+narcotics 86400 IN TXT "Generation Time: 1765926356"
+narcotics 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ 5Z0GAJT139t8Rmi6fAgGDlNq8n5+Yi0b NAxEVtY0A50NBeC8OdsJ8lzkJJLkqhm3 Kvm4gOw243Xaxr01M6rzBA==
 navneet.narcotics 86400 IN NS caching01.usp.ac
 navneet.narcotics 86400 IN NS caching02.usp.ac
-net 86400 IN TXT "Generation Time: 1765840547"
-net 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ zauAmNMfrfmjq29MbCBdJrUPViHSTefJ LLVDJPexT8P+DoSTXnjeZwaFWpm6YlmF vxOad25ILWfm68/cD+26Ag==
+net 86400 IN TXT "Generation Time: 1765926353"
+net 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ 30Oqan6K4weOjdiny8LdoKW+Wg08jdOV ASS2yIp67tVIGaMHJG4Y8KU7OGRfb4y/ Q1cunmATSSvsDTDDNc92CA==
 3m.net 86400 IN NS a.ns.3m.com.
 3m.net 86400 IN NS b.ns.3m.com.
 aa.net 86400 IN NS dns1.cscdns.net.
@@ -6947,36 +6967,36 @@ windows.net 86400 IN NS ns1-06.azure-dns.com.
 windows.net 86400 IN NS ns2-06.azure-dns.net.
 windows.net 86400 IN NS ns3-06.azure-dns.org.
 windows.net 86400 IN NS ns4-06.azure-dns.info.
-nlkfi22hiisa7u09rkvgvgj01oklfssn 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ SkSn6HMd+j5RpUjXQJ0dHahjFlKl9G9u zk+8sFgqua90pDHZnFp/2F2V+2+fP5oj 8g2JhRfGSqzeAcvzeMTQDw==
+nlkfi22hiisa7u09rkvgvgj01oklfssn 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ hPuzVSfB0jep2iqYE95pIH3AQJuToW9f ZzSK24zTYxGvKxOB+D0DVjkONZFT20j5 Z/HDDRl3sbZrokT6Vvb7BA==
 nlkfi22hiisa7u09rkvgvgj01oklfssn 86400 IN NSEC3 1 1 0 - nnkpbbup4bvg5ut80mqn9pjgcsn1qjho A RRSIG
-nnkpbbup4bvg5ut80mqn9pjgcsn1qjho 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ 5ljBjdAwNgqXelI5jbFLE148YOcGtTh1 mryqyU7BThRrRYAPrJ1YzjW9bK+zzUr7 +XngUn+qYuFcJPLMDhxJAQ==
+nnkpbbup4bvg5ut80mqn9pjgcsn1qjho 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ 4Lyh6z80Yhl71UEPc3NtHz/1reNvrJXL UiofqhQIk8H4dkG3yG8lH4P45ySlR/xJ ub7EUXRVJ/BtGggUASAvDA==
 nnkpbbup4bvg5ut80mqn9pjgcsn1qjho 86400 IN NSEC3 1 1 0 - ocvdorjotinmkut2r47kcnvblphiq351 A RRSIG
 ns1 86400 IN A 144.120.146.1
 ns1 86400 IN AAAA 2402:2940:100:100c::1
-ns1 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ UuF1e/l9ZJX0IwJp+ZwRhu9xFTO9KB6B l3AD+LQzPWa96LuyEGfsqnQ74UTuT+JF yqOHBKvA+iGscuL5AwKOBw==
-ns1 86400 IN RRSIG AAAA 15 2 86400 20251229231551 20251215214551 40779 @ h/1pNStqiFob6VjhUslphkm/ATMsYaVp U+ttEMUxY0LMJ3AfE17V8zbdo6lVIPwk bmzEiwe2oSlk2mXvz1c1Aw==
+ns1 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ ktR5OQEsVDpttN54mtfsBFnNlcFJlaEh OJxkMqi3O3lYYVwgHF3lpkvjHxiebcKc RE/LnqDUoGVROtAPUSrkDA==
+ns1 86400 IN RRSIG AAAA 15 2 86400 20251230230557 20251216213557 40779 @ t0mpslKBjOjZRSyHAEt/CM17h621fpBP 9KY/MFXrG4gnbDCSLCTOgcV3AuZ+Gqv7 ZAWxvPZYphnG4yn/0sCBDQ==
 ns2 86400 IN A 144.120.146.65
 ns2 86400 IN AAAA 2402:2940:100:100d::1
-ns2 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ cmwX3vskj6053PNT6UpVHsnTI0UBw8/P OpSFBLMZNtYlYE/Iw1QhOwC/nfjqdmnD 151v6T0DWkVEnvzIu70gAg==
-ns2 86400 IN RRSIG AAAA 15 2 86400 20251229231551 20251215214551 40779 @ /Ln966BHgUHL5MN69PJUMUFCDPNjJicV m9pIdxn+vO+ToNhfpBJL2ouWKvqQqET5 PBiM5/GZPqMspWAiybYrCg==
+ns2 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ hkZv/U0eiyFYQRxK7eSw9ATVvmphXkMs yyloNxAHgsAO0nMz2Vj49b3UXFNiGwJF SjS+pN61z4Smi53Uhr+jBg==
+ns2 86400 IN RRSIG AAAA 15 2 86400 20251230230557 20251216213557 40779 @ 7A7BEqDFKlBCWjUWRbxXXtY8h7ujV5AE gtIGi10UpFvpmZbWCSJr4LimpB/Gbkz2 2WC1c+2yi6LfeYKB/BpKCw==
 ns3 86400 IN A 185.38.108.108
-ns3 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ X0AQk8a/7lSszN4mlrQ4lBndV9WBGHsX 2k6oW+fn2EcmXo2kdO14tLhYPJE2/OHf FXv8pY7V3QcH4SxflEJuAw==
+ns3 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ NsDJivIl9NQjm6qnHqrEh0nLSIGo4FR2 jAhf0rg858AeZ+haCZf8AGIHFmvetEiQ Pyj9W/BFSq8TBH2gdkqRAQ==
 ns4 86400 IN A 185.28.194.194
-ns4 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ njANmOLDtKgclQFp0TRLwtgoamn0svSm 0YbNdQvNDhkGGYVmFh6TiUvYj3eH0uDV 61g36QcC//E/XHlPrno4AA==
+ns4 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ r/QGvt8yuOXuDeasuxScK4McKFsO3EId BTM7yQfdlZSc0URQk799ejzFgs5wBV5b Lvjf3xqYZshz0vOGawgnDQ==
 ns5 86400 IN A 204.61.216.138
 ns5 86400 IN AAAA 2001:500:14:6138:ad::1
-ns5 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ iSfyN2FOK+Q4bL3pgxeYj1CZi1/4YerU UgUQOX63X/XBzNTetNgI1akOvR/eis6K luL/11H2s+fRBO3QKuQxBg==
-ns5 86400 IN RRSIG AAAA 15 2 86400 20251229231551 20251215214551 40779 @ f9U2Q20lfjwTg03NIplZXVfy1OSrbjyb rdCn52nODLWiC9/MO3TxxCjyudNGZGZR J5SdA30ZnqBcxTr2PRmCDg==
-ocvdorjotinmkut2r47kcnvblphiq351 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ hYMd5AvDP3KYzQPQZUeq/4EGRIn3NPGI P1hShO8qS64FujZDEzASAAnTXOuDATOO TvhjK6G/9bRAImDUIMxxCQ==
+ns5 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ Enh0tRUmX7odcLIul5/YhdBDcYFlIGTg ZAJfN/FXEQDCRpJ97b1gnpMcsRgfP3vU RbWvlyZwOEYSpGiurZuFBA==
+ns5 86400 IN RRSIG AAAA 15 2 86400 20251230230557 20251216213557 40779 @ A+WF8XR11rorWcVc0avUy1SEydXhnwvl HtlDZii+C7HkKtPpubJoaq09QW5lJOS6 e0VqFCwqQEgAsT5gZVIEBA==
+ocvdorjotinmkut2r47kcnvblphiq351 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ gfaL4sqe24bGFHxEq/6WGPsgS15tUpir nIzn4uzn4ZqInHOSlskIVJYwHiY3ZgCa zsQE7reSQMy41vUKONMlBA==
 ocvdorjotinmkut2r47kcnvblphiq351 86400 IN NSEC3 1 1 0 - oj9mqbrhs7hb3mb5sp9ri1oqnqnnmag7 A RRSIG
-oj9mqbrhs7hb3mb5sp9ri1oqnqnnmag7 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ lVpgfOFUmvNlN6kKFgA+gSD29W2cvWkh UHlL/+1lF0Movumrfz+k35VcK+4vZd6c 1wErDzwRCHqzfYFm8jmBBQ==
+oj9mqbrhs7hb3mb5sp9ri1oqnqnnmag7 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ 4vGJ3H4yOOXsMjMHBfb+PVGVg/9DhhvL mVmvpJYH4Yam018cF49xTqsZ09CEjhFu CHe4KO3XYnq/BCgq+hBvAA==
 oj9mqbrhs7hb3mb5sp9ri1oqnqnnmag7 86400 IN NSEC3 1 1 0 - on9duklldpmjdvu7hpgsps2u0a0u0srn A RRSIG
-on9duklldpmjdvu7hpgsps2u0a0u0srn 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ dK8bnnyLyhIE4ERikbBc6g7AOvTjnNvS Ck6iUoOe8dl8eJrzxHMQ3UvKau3KuuDM KEvkEdALAQ0lU3k3OyRCCg==
+on9duklldpmjdvu7hpgsps2u0a0u0srn 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ RHYYhUy84/g5uuw1fmf6KmNtCj/Vz1D+ 9XTsDivBMI/raxiVoVq9+0EBIDxGb8vn AusSrqz4gzI5TgN8GuxNDQ==
 on9duklldpmjdvu7hpgsps2u0a0u0srn 86400 IN NSEC3 1 1 0 - oqfacbbplbi5631pmu78mdhi0q7jnm3k A RRSIG
-oqfacbbplbi5631pmu78mdhi0q7jnm3k 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ 8HncJae4jqcIL2uDHKyB1BtX3uZeoQxZ 4ptqNQVt0okw+Ov/ARQ4za51OSAD3T9X EnADo/fWqKShfW8YDdkSCA==
+oqfacbbplbi5631pmu78mdhi0q7jnm3k 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ kOvrkZROuNAZNyxWP2JUdcosuo7wGpFi 3IRSgl1zkVlmuxJDoifIvp7oIAbB1jlS QxgvQWajUYrKM1wvjef/Dg==
 oqfacbbplbi5631pmu78mdhi0q7jnm3k 86400 IN NSEC3 1 1 0 - piq4t2f5m7sa5ith521l07m64k417h6m A RRSIG
-org 86400 IN TXT "Generation Time: 1765840550"
-org 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ /hGoDvkgBofWQjMjDRQZK2WehlpA6EGb 70DS8U3z8nGZ/tWRIiz8F/E6lr1ZiYwb 2g/ypzvxOuwm/WszfXLoCg==
+org 86400 IN TXT "Generation Time: 1765926355"
+org 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ Dz0Dq1eGvNzpnLQrGEewSaEa3nQASSB5 cGuKqmM/OfWB8NCIGJTz7bPzIFuGY7Sk Gh8Qm40PCpaYg2ncFjU2BA==
 3m.org 86400 IN NS a.ns.3m.com.
 3m.org 86400 IN NS b.ns.3m.com.
 aa.org 86400 IN NS idns1.netsol.com.
@@ -7342,10 +7362,10 @@ womensfund.org 86400 IN NS ns1-06.azure-dns.com.
 womensfund.org 86400 IN NS ns2-06.azure-dns.net.
 womensfund.org 86400 IN NS ns3-06.azure-dns.org.
 womensfund.org 86400 IN NS ns4-06.azure-dns.info.
-piq4t2f5m7sa5ith521l07m64k417h6m 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ s4Y46rkiXGWIbBaVJHKs7/pu8pWwYNX/ 2MLAeu5oLlxB+uXGv6hWMW6VdcrHEOLp bgkbnFT6kcLmrf4692cCDA==
+piq4t2f5m7sa5ith521l07m64k417h6m 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ 8JaA/CmV8DcS4zgqFfVMahYY8qdx2bip K1n8DaGjFb3DH4JkXHaHDMlPCEJMHE8c SqLPsu+tZI1WYxDFuCcSBg==
 piq4t2f5m7sa5ith521l07m64k417h6m 86400 IN NSEC3 1 1 0 - prru1jeoqil8hhh1mf22nrkhcqbh2cs5
-pro 86400 IN TXT "Generation Time: 1765840550"
-pro 86400 IN RRSIG TXT 15 2 86400 20251229231551 20251215214551 40779 @ N9IB5/UMTfjkUTu5bMaop3GSjes2cptE /uHGdk4cURfQLSOmetI6aZeviJMMRuvF c/QLIL1yQTc2911acbeRAg==
+pro 86400 IN TXT "Generation Time: 1765926356"
+pro 86400 IN RRSIG TXT 15 2 86400 20251230230557 20251216213557 40779 @ 0xHnG339uipc7NDVYUCoLXSwd49ft8oy O5HDjp/Rln3wHcwIYbm3q2KKInfNcJul Qnxa/bBz9uqyp5pMURQADQ==
 altria.pro 86400 IN NS dns1.cscdns.net.
 altria.pro 86400 IN NS dns2.cscdns.net.
 brother.pro 86400 IN NS ns1.ipmirror.com.
@@ -7368,53 +7388,53 @@ vodafone.pro 86400 IN NS ns1.vodafone.net
 vodafone.pro 86400 IN NS ns2.vodafone.net
 vodaphone.pro 86400 IN NS ns1.vodafone.net
 vodaphone.pro 86400 IN NS ns2.vodafone.net
-prru1jeoqil8hhh1mf22nrkhcqbh2cs5 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ BtovvCkzkkxxoYQ0zwhW2YNvwwpdIMN4 sCyHM/Pw/SVeA/v0QhOn+/LM1WTz6EoL OTnCIEQwOTXSDqexBDWMCg==
+prru1jeoqil8hhh1mf22nrkhcqbh2cs5 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ DDDEZZOkFZxfGvAOf3pHHZudGPGgWA7V wJVjTguhCkFV7jKOGnGBt/EguhFwrCSe 4N2dxz7Lpn5KJl2p6KCwCQ==
 prru1jeoqil8hhh1mf22nrkhcqbh2cs5 86400 IN NSEC3 1 1 0 - r4ueoorqrviaqveoi8o9eg9ef644rcqm A RRSIG
-r4ueoorqrviaqveoi8o9eg9ef644rcqm 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ nnlqGJ96A09OXzZYIcCx9iPEW2ue7R4L rbUIRL7GZVTAVCEfGB7jDtiYgQffRlem 12a/KhKdql05MPaE/0VGDw==
+r4ueoorqrviaqveoi8o9eg9ef644rcqm 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ OG2Reh1d7qVvKDajh/xnt1WPueavS1u3 ik3jgHWPRYqqATQNnl0gu+g+hgOXBSEO 0WQ8VPmEXyO3GIdsCnKFDg==
 r4ueoorqrviaqveoi8o9eg9ef644rcqm 86400 IN NSEC3 1 1 0 - rrp18o1ebrc0eevfpqgcforrcmb57eb4
 rdap 86400 IN A 144.120.141.13
-rdap 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ 4cLwiKWrrF/gOw85FICdqF0Ipc5dxQuS UNEzFpYIn+THM8qFdzXv3tfJ9JawXkDc FaOYqPOM4czfZx/LshqdDQ==
+rdap 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ r4r7/jZWLN+2CB1CQQiNwaNu8m31jdTq hBsL3S420kxNqXfh5dW6IHhzNJx7Ww73 n0m+z01vnBeDFt1gfubJAg==
 www.rdap 86400 IN A 144.120.141.13
-www.rdap 86400 IN RRSIG A 15 3 86400 20251229231551 20251215214551 40779 @ UFOc0hnKD1cUefD7XasT9Nu9zn8yMufW by802DzygjfVPf3iIYnPHPxZYvTxg5kD CTNmR/EB60BAx1SbuENtCg==
+www.rdap 86400 IN RRSIG A 15 3 86400 20251230230557 20251216213557 40779 @ noFmbDYZv4/6/v9RqsrDRmOpuQX5tfk2 PKtPQx0Ho9FIioms0Xar6tl5q3Aa3nau n22xgygtRCeVq35o3iZ0AQ==
 registration 86400 IN A 144.120.141.12
-registration 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ Vdt8HXYt4fByfakGZLmJIjFa48bLAQiz EqyZ4FLmtSlRIePCQb5ByoAW3tPOXY76 p5gwzuzq7id4EXgw+kgyAg==
+registration 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ rCBLay0C4Td/zvim1Fdkjud8qPBnoxen ea6sizgtcGN+QpgP19D3+mHiwH5ovnxz 50WIxjd2De9ydTpP826cAQ==
 www.registration 86400 IN A 144.120.141.12
-www.registration 86400 IN RRSIG A 15 3 86400 20251229231551 20251215214551 40779 @ g0gahWeMc9gsjpy/VQjR5a1lBtr2Sp7l NTMAfqKb2J3bsATHemjbyXt4gkfGlS9X IAHXKCo1BUc+Ok8mMExOAg==
+www.registration 86400 IN RRSIG A 15 3 86400 20251230230557 20251216213557 40779 @ WLT1lzJQ5+JO5RgJRm1U1aSr/8GWK7o6 JdLiF5v7sw/6dOlnxVMVvz7t7YD6O2l2 zNBxQiXsht76u5VeukH0AA==
 registry 86400 IN A 144.120.141.11
 registry 86400 IN MX 5 mx0.usp.ac
 registry 86400 IN MX 5 mx1.usp.ac
-registry 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ vDt1NHov/SwxArD7MkzdOLKsfVJdAGHE jmBc8zO++YGB0x1U+r3MHmucSdnTcNQ+ VMMB7PMWnobXLFGl0AziAA==
-registry 86400 IN RRSIG MX 15 2 86400 20251229231551 20251215214551 40779 @ OK4creG/ZMTc7MymuuC9hHLpnjQ+8Fpl PcAuyV70FFa8a5V/WcaXF/u2hOOqdQRL tb+hS+AzmuOY+W5oJFi/AA==
+registry 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ K/Fr4eet8spPm5cZDDn8V1iznff1MQf8 zjyGLFouTv4KJTf16LuneANDOcJiRUH9 5Kpn435jtCGlQH7ZyapNBA==
+registry 86400 IN RRSIG MX 15 2 86400 20251230230557 20251216213557 40779 @ im8OkUwumIhR6p0KzYTFAIkTh78oLkXH 35rdB7oiOz/zTGeNvCu94f63SaA25cdT epYrfK/JzfHuuFEjh60JBg==
 www.registry 86400 IN A 144.120.141.11
-www.registry 86400 IN RRSIG A 15 3 86400 20251229231551 20251215214551 40779 @ JgYmWgI6x6pz6r3nZZdv46/rLBDc39L+ aHjJ8Ob0MVkIJOWd6rdU6wzoSZgUDSa7 vMbcBzi73oNwjrO4k3QHAA==
-rrp18o1ebrc0eevfpqgcforrcmb57eb4 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ g9ESoQFoqhbHJ8nI2wYCuOeGnkbff+PV OG0fqi/i7tIBmK8WmfY+NGen2SENg1wR qWJn8SjGrnrW7AShkfaBDA==
+www.registry 86400 IN RRSIG A 15 3 86400 20251230230557 20251216213557 40779 @ yhmzBfmDciC2Jmy1z5gAWq6Z5x8gJfo5 G2Z518c8P5miHmkHxk0FdvW/pZ8hZmEk T2Vv6amFcP2yPJ9BaEKgCg==
+rrp18o1ebrc0eevfpqgcforrcmb57eb4 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ TgQO4ZdhKT23D5rSHFfKCN0MCrm4J0GD Mk6YDNJznl+FsvneHs+mlMXCCeVTfsjW LtdWMjGRy5rMWEI3ONcmAQ==
 rrp18o1ebrc0eevfpqgcforrcmb57eb4 86400 IN NSEC3 1 1 0 - s0d5me85f2fh8v89fnltl5p934jmblur TXT RRSIG
-s0d5me85f2fh8v89fnltl5p934jmblur 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ 3CHT/jr49KNZYytfF9YZWFnQ11IGrRaz e0nnR0VsFzHRRNMUI33wASDPByRD0C7x p6OLtGcZER1aDC/eVqcADA==
+s0d5me85f2fh8v89fnltl5p934jmblur 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ Loyb3HYvLJBtOh+0OCTv+qTq0TgAvXFg aqqCKuDzt/kpLy483z/AN1Vc5YXcN/bN BnfZOT0YVVP2MqUUOgt5Aw==
 s0d5me85f2fh8v89fnltl5p934jmblur 86400 IN NSEC3 1 1 0 - s3cfgfic6htv5pshuqqimq73f98qqgvs A RRSIG
-s3cfgfic6htv5pshuqqimq73f98qqgvs 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ 49lH9Lk5u3RbCX0NIF/NshAezfl7mbcJ Bv1+EuTE9iH9dmKHlO48c2bST8+yapBc 1vnVVD4M+cv8hfk6cIffCg==
+s3cfgfic6htv5pshuqqimq73f98qqgvs 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ 8UHN+UvPtWciHkBQSBsjeXKjfHvYHZTC rVnrJ88/jeN2DoBQL1LCIURywBJH6TMb 3Jm//jTA/oUa+Yawo1DHDA==
 s3cfgfic6htv5pshuqqimq73f98qqgvs 86400 IN NSEC3 1 1 0 - stijq1i62pbbell4b40vobh4eqp7f6k8
 school 86400 IN NS drua.tfl.com
 school 86400 IN NS tabua.tfl.com
 school 86400 IN NS ns-ext.isc.org.
-stijq1i62pbbell4b40vobh4eqp7f6k8 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ qg6qrNc87kZlaxp5N93kmNullFuiC3N2 jzrFi4DFOBtR0+YzKEi/S17dwY9+WqUT 8wYcL8psiprpQaNiDfFiBw==
+stijq1i62pbbell4b40vobh4eqp7f6k8 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ A2HD99WyPoL446QcOyqSvJ9EJ0EmqNvH iNsFAUQG91Ip4TFJ2sMRqv3otRuMIdzl pLPupIYzussfIJZV3HB4DA==
 stijq1i62pbbell4b40vobh4eqp7f6k8 86400 IN NSEC3 1 1 0 - sudem62589bigs41dhvdfhasqgdau9pt A RRSIG
-sudem62589bigs41dhvdfhasqgdau9pt 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ iF6ehI+Zfk2ENz7ag3NNftn7LyaW+wOR 3UL+i6AzE9EFq2dPEOQn4S9WVMGilqzC 5TagTAgmqNGAQizP+G4NAg==
+sudem62589bigs41dhvdfhasqgdau9pt 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ mg38++ced0hlWV8F1XlPia51vhW8B8Rz I3yf9RovT78IIpRIsZVw3WN2RwyPyU3+ TuNe5W/M4WjXBpQgmAW0Bw==
 sudem62589bigs41dhvdfhasqgdau9pt 86400 IN NSEC3 1 1 0 - th4h6tbd8e8revmuqnoafrdlc5vmbi6t
-th4h6tbd8e8revmuqnoafrdlc5vmbi6t 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ SXtsXoSBWXwVVGZG4V0skuKz06hVIm6p A+ORS5MVcLCYseExn/1wbG3nByjmjgJX icpCD0limvne9OOHDugKBw==
+th4h6tbd8e8revmuqnoafrdlc5vmbi6t 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ 59FdDKuzQAdY5Lm4ukPVVXHsXcLoSpoX 9BXZm4jkH3az9dtA93vxSM0Dp7aJgsrb yQclrviUtGvCrNJxs3JeAg==
 th4h6tbd8e8revmuqnoafrdlc5vmbi6t 86400 IN NSEC3 1 1 0 - tr4pksrjseutv5m3k3n5c7vc45afvk4s A RRSIG
-tr4pksrjseutv5m3k3n5c7vc45afvk4s 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ xJKYUPLlQXZMSowF6P1LRiwWV7wMgBeS VlxUSIdp7v34NxWA8fko+NpU2sHRlw3a dtVI2kzA5j7NGhtaf+V6Bg==
+tr4pksrjseutv5m3k3n5c7vc45afvk4s 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ J7hqd3chM3r+wsIkzipUzFDVxo3HAVkY WrizWYzhVoYkpBjWPdRAXsmFuw480i9o JK76URE9cqdtBdMkwIBUDg==
 tr4pksrjseutv5m3k3n5c7vc45afvk4s 86400 IN NSEC3 1 1 0 - u4175h0alpf2p1lbo0d83vv8ijhne5en A RRSIG
-u4175h0alpf2p1lbo0d83vv8ijhne5en 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ DX/i3mXbNXVONElKtbmZqlRP767oAaAe mULHsHcH8uWulHGdKH6Dmx94M43CwMRm 3zsAt7sxiAoiewq8gsk9BQ==
+u4175h0alpf2p1lbo0d83vv8ijhne5en 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ kpFrPa0QBfKrmWZMTHYWEu20vzAr/+zX I4WZlh+9QAOzMYjyyRaGJfL6JTWEid89 HYUgNx88AO/thomcPVgzAA==
 u4175h0alpf2p1lbo0d83vv8ijhne5en 86400 IN NSEC3 1 1 0 - ueit74f2mj7qsp9i949gftvp4koqp4vj A RRSIG
-ueit74f2mj7qsp9i949gftvp4koqp4vj 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ Grh/jUqv3JLTt5+OhIOUAAECrH9Uvn+h XGkQBfsClXnHdJxroelfMqiYS5B4TCT+ gAViFmNZmdx6tAC+b42LDA==
+ueit74f2mj7qsp9i949gftvp4koqp4vj 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ dvXvYUkNuRfPHXyDQUqqKd0pXJTqtdds TUCIx2uvFuVbzAY8Rv9ukM5Dq2k4nT4A uz5OGn65NhDOdKcMrK1TAQ==
 ueit74f2mj7qsp9i949gftvp4koqp4vj 86400 IN NSEC3 1 1 0 - usuu1ja21p2krpm87sgps4aj96u15aij A RRSIG
-usuu1ja21p2krpm87sgps4aj96u15aij 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ cOCVZ5xFXqzSiN9ZfNypRnFwHe4Ihu8O erVEumOKLBAzspdNYca2GHyXaZfr5R45 NhMIBNxFa6+CpUwyjq+GCg==
+usuu1ja21p2krpm87sgps4aj96u15aij 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ N20ldXTZzfnpmwPD1TunLVoNJWRKmTas 9XvDMmUJ9qelZ74taEs4M/Q+l6WuEIe3 gos8vC/xI6Mhtqhe19EODw==
 usuu1ja21p2krpm87sgps4aj96u15aij 86400 IN NSEC3 1 1 0 - v5ucq6de69acmb33481k84vip58j4ijn TXT RRSIG
-v5ucq6de69acmb33481k84vip58j4ijn 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ SgLhcXn2DqLxdxqQFPcazrATQtMvEpfw /H+QpBHPa0Yf54QQhU3AWFbFrus2tsOJ Kd2bNVesaKEcko00Lpy8Bg==
+v5ucq6de69acmb33481k84vip58j4ijn 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ Vbe35cL+x5VT7nxJluvl3PFwShMmYXHF exRihU2pl6rM6btHrzwdnv3T7XAj6Sq0 EqBVBsyCIJwLnHNHKz8bCg==
 v5ucq6de69acmb33481k84vip58j4ijn 86400 IN NSEC3 1 1 0 - vpbbelvp0g0qgo6jecs68qf29pl83bb0 TXT RRSIG
-vpbbelvp0g0qgo6jecs68qf29pl83bb0 86400 IN RRSIG NSEC3 15 2 86400 20251229231551 20251215214551 40779 @ Fb/TsF64N7Dl4KIQMT86/oMMFQVRrHu1 nJ++a4iSdZfSLGJOP3m39imNLn6pgAc1 telZqIEIkbp4rNj+EiXSBQ==
+vpbbelvp0g0qgo6jecs68qf29pl83bb0 86400 IN RRSIG NSEC3 15 2 86400 20251230230557 20251216213557 40779 @ XY6iK3xDSIL74C7+4tOI1TxqyvqbdkBP j/Np8Va8+S1VgybT/7VFqGFno+bwaJl2 h3avsHJVTv2dgxqnU/BSDQ==
 vpbbelvp0g0qgo6jecs68qf29pl83bb0 86400 IN NSEC3 1 1 0 - 0fieokajhf1dchqt7240e8q7nv031in8
 whois 86400 IN A 144.120.141.13
-whois 86400 IN RRSIG A 15 2 86400 20251229231551 20251215214551 40779 @ XxYu+E1Wi1nOEaohLaOld75TaAVnRy92 QiZbJycIgnn2ABIR5rl1MMJbGSOsFXSF 1rsdDS++1T0RH68S+M+vBA==
+whois 86400 IN RRSIG A 15 2 86400 20251230230557 20251216213557 40779 @ HDoRrQQJLkquF8IJTElxH5fgUy7qBTYd PHSMLeIHo+S+KRf6nWgbLbfAmtaDuRH8 dvbiRWJLZPA2hqWu38i4Aw==
 www.whois 86400 IN A 144.120.141.13
-www.whois 86400 IN RRSIG A 15 3 86400 20251229231551 20251215214551 40779 @ QcYPdaFiiFAvTvI9Cz94VpPDGzcu1VXY TmBw+Kzvx/AOMHkGGnC4OEqwohVbr2D0 dm7at5Vr5VdP8CDHb4AGCA==
+www.whois 86400 IN RRSIG A 15 3 86400 20251230230557 20251216213557 40779 @ 6Tb10Z5duvI+yQvI64WUF1xJMvrMuwbp Bej/uTRDcdo3da1ksajIRMbSSiTP8b+D ulzJOBLwYo/HUdCD1UyhBw==
