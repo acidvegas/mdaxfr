@@ -1,0 +1,131 @@
+#!/bin/sh
+# Mass DNS AXFR (MDAXFR) - Developed by acidvegas (https://github.com/acidvegas/mdaxfr)
+# mdaxfr/extras/ozones
+
+# Non-zone file formatted zones:
+#wget -O sk.txt https://sk-nic.sk/subory/domains.txt # not rfc compliant
+#wget -O gov.txt https://raw.githubusercontent.com/cisagov/dotgov-data/main/gov.txt # czds available also
+#wget -O nc.txt https://www.domaine.nc/whos?who=A* # Need to crawl the http maybe for this one...
+# https://www.afnic.fr/produits-services/services-associes/donnees-partagees/
+#curl -s -H 'Accept: application/json' 'https://odata.domain.fi/OpenDomainData.svc/Domains?$inlinecount=allpages' # not sure about this one....
+#wget -O dn42.txt http://ix.ucis.nl/dn42/dnszone2.php? # Darknet
+
+# No longer working zone AXFRs:
+#dig +noall +answer @ns-root-22.scpt-network.net. cd. AXFR      > output/cd.txt
+#dig +noall +answer @cv01.dns.pt. cv. AXFR                      > output/cv.txt
+#dig +noall +answer @zaranew.noc.net.er. mil.er. AXFR           > output/mil.er.txt
+#dig +noall +answer @zaranew.noc.net.er. ind.er. AXFR           > output/ind.er.txt
+#dig +noall +answer @domwe.sdn.mw. museum.mw. AXFR              > output/museum.mw.txt
+#dig +noall +answer @ns.ideay.net.ni. ni. AXFR                  > output/ni.txt
+#dig +noall +answer @ns.ideay.net.ni. biz.ni. AXFR              > output/biz.ni.txt
+#dig +noall +answer @ns.ideay.net.ni. co.ni. AXFR               > output/co.ni.txt
+#dig +noall +answer @ns.ideay.net.ni. com.ni. AXFR              > output/com.ni.txt
+#dig +noall +answer @ns.ideay.net.ni. edu.ni. AXFR              > output/edu.ni.txt
+#dig +noall +answer @ns.ideay.net.ni. gob.ni. AXFR              > output/gob.ni.txt
+#dig +noall +answer @ns.ideay.net.ni. info.ni. AXFR             > output/info.ni.txt
+#dig +noall +answer @ns.ideay.net.ni. int.ni. AXFR              > output/int.ni.txt
+#dig +noall +answer @ns.ideay.net.ni. mil.ni. AXFR              > output/mil.ni.txt
+#dig +noall +answer @ns.ideay.net.ni. net.ni. AXFR              > output/net.ni.txt
+#dig +noall +answer @ns.ideay.net.ni. nom.ni. AXFR              > output/nom.ni.txt
+#dig +noall +answer @ns.ideay.net.ni. org.ni. AXFR              > output/org.ni.txt
+#dig +noall +answer @ns2.neoip.com sl. AXFR                     > output/sl.txt
+#dig +noall +answer @ns2.neoip.com com.sl. AXFR                 > output/com.sl.txt
+#dig +noall +answer @ns2.neoip.com edu.sl. AXFR                 > output/edu.sl.txt
+#dig +noall +answer @ns2.neoip.com gov.sl. AXFR                 > output/gov.sl.txt
+#dig +noall +answer @ns2.neoip.com net.sl. AXFR                 > output/net.sl.txt
+#dig +noall +answer @ns2.neoip.com org.sl. AXFR                 > output/org.sl.txt
+#dig +noall +answer @ns1.gov.ps xn--ygbi2ammx. AXFR             > output/xn--ygbi2ammx.txt
+
+
+axfr_zones() {
+    mkdir -p output
+
+    dig +noall +answer @f.root-servers.net . AXFR                  > output/root.txt
+    dig +noall +answer @zaranew.noc.net.er. com.er. AXFR           > output/com.er.txt
+    dig +noall +answer @zaranew.noc.net.er. edu.er. AXFR           > output/edu.er.txt
+    dig +noall +answer @zaranew.noc.net.er. gov.er. AXFR           > output/gov.er.txt
+    dig +noall +answer @zaranew.noc.net.er. net.er. AXFR           > output/net.er.txt
+    dig +noall +answer @zaranew.noc.net.er. org.er. AXFR           > output/org.er.txt
+    dig +noall +answer @zone.internet.ee ee. AXFR                  > output/ee.txt
+    dig +noall +answer @domwe.sdn.mw. ac.mw. AXFR                  > output/ac.mw.txt
+    dig +noall +answer @domwe.sdn.mw. co.mw. AXFR                  > output/co.mw.txt
+    dig +noall +answer @domwe.sdn.mw. com.mw. AXFR                 > output/com.mw.txt
+    dig +noall +answer @domwe.sdn.mw. coop.mw. AXFR                > output/coop.mw.txt
+    dig +noall +answer @domwe.sdn.mw. edu.mw. AXFR                 > output/edu.mw.txt
+    dig +noall +answer @domwe.sdn.mw. gov.mw. AXFR                 > output/gov.mw.txt
+    dig +noall +answer @domwe.sdn.mw. int.mw. AXFR                 > output/int.mw.txt
+    dig +noall +answer @domwe.sdn.mw. net.mw. AXFR                 > output/net.mw.txt
+    dig +noall +answer @domwe.sdn.mw. org.mw. AXFR                 > output/org.mw.txt
+    dig +noall +answer @zonedata.iis.se nu. AXFR                   > output/nu.txt
+    dig +noall +answer @zonedata.iis.se se. AXFR                   > output/se.txt
+    dig @zonedata.switch.ch ch. AXFR -y hmac-sha512:tsig-zonedata-ch-public-21-01:stZwEGApYumtXkh73qMLPqfbIDozWKZLkqRvcjKSpRnsor6A6MxixRL6C2HeSVBQNfMW4wer+qjS0ZSfiWiJ3Q== > output/ch.txt
+    dig @zonedata.switch.ch li. AXFR -y hmac-sha512:tsig-zonedata-li-public-21-01:t8GgeCn+fhPaj+cRy1epox2Vj4hZ45ax6v3rQCkkfIQNg5fsxuU23QM5mzz+BxJ4kgF/jiQyBDBvL+XWPE6oCQ== > output/li.txt
+}
+
+
+axfr_icann() {
+    nameservers="lax.xfr.dns.icann.org iad.xfr.dns.icann.org"
+    zones_served=". in-addr.arpa. arpa. root-servers.net. ipv4only.arpa. ip6.arpa. ip6-servers.arpa. mcast.net."
+
+    output_dir="output/icann_axfr"
+    mkdir -p $output_dir
+
+    for zone in $zones_served; do
+        for ns in $nameservers; do
+            ips=$(host $ns | awk '/has (IPv6 )?address/ { print $NF }')
+            for ip in $ips; do
+                echo "Attempting AXFR for $zone from $ns ($ip)"
+                dig @$ip $zone AXFR > $output_dir/$zone.$ns.$ip.txt
+            done
+        done
+    done
+
+    for i in $(seq 224 239); do
+        for ns in $nameservers; do
+            ips=$(host $ns | awk '/has (IPv6 )?address/ { print $NF }')
+            for ip in $ips; do
+                echo "Attempting AXFR for $i.in-addr.arpa from $ns ($ip)"
+                dig @$ip $i.in-addr.arpa. AXFR > $output_dir/$i.in-addr.arpa.$ns.$ip.txt
+            done
+        done
+    done
+}
+
+
+axfr_opennic() {
+    # Todo: Find a better way to retrieve the TLDs so we don't have to hardcode them
+    servers=$(curl -s 'https://api.opennicproject.org/geoip/?list&ipv=all&res=100' | grep -oE '([0-9]{1,3}(\.[0-9]{1,3}){3}|[0-9a-fA-F:]+:[0-9a-fA-F:]+)')
+    tlds=("bbs" "chan" "cyb" "dyn" "epic" "geek" "gopher" "indy" "libre" "neo" "null" "o" "oss" "oz" "parody" "pirate" "opennic.glue" "dns.opennic.glue")
+    ptlds=("bazar" "bit" "coin" "emc" "lib" "fur" "ku" "te" "ti" "uu" "ko" "rm")
+    all_tlds=("${tlds[@]}" "${ptlds[@]}")
+
+    mkdir -p output/opennic
+
+    for tld in "${all_tlds[@]}"; do
+        echo "Attempting zone transfer for $tld..."
+        success=0
+        for server in $servers; do
+            if ! output=$(dig AXFR "$tld." @"$server" 2>&1); then
+                echo "Error running dig for $tld at $server."
+                continue
+            fi
+
+            if echo "$output" | grep -q '; Transfer failed.'; then
+                echo "Zone transfer failed for $tld at $server."
+            else
+                echo "$output" > "output/opennic/${tld}.txt"
+                echo "Zone transfer successful for $tld at $server"
+                success=1
+                break
+            fi
+        done
+        if [ $success -eq 0 ]; then
+            echo "Zone transfer failed for $tld at all servers."
+        fi
+    done
+}
+
+
+axfr_zones
+axfr_icann
+axfr_opennic

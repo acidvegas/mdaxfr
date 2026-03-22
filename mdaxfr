@@ -1,0 +1,116 @@
+#!/bin/sh
+# Mass DNS AXFR (MDAXFR)- Developed by acidvegas (https://github.com/acidvegas/mdaxfr)
+# mdaxfr/mdaxfr
+
+# Usage:
+#     AXFR on a single domain:
+#         ./mdaxfr <domain>
+#     AXFR on a list of domains:
+#         cat domain_list.txt | ./mdaxfr
+#     AXFR on a list of domains using parallel:
+#         parallel -a domain_list.txt -j 10 ./mdaxfr
+#     AXFR on all domains in an AXFR output file:
+#         domain="in-addr.arpa" cat axfrout/in-addr.arpa.txt | grep -aE "\s+IN\s+NS\s+" | grep -avE "^${domain}\.\s+" | awk '{print $1}' | sort -u | sed 's/\.$//' | ./mdaxfr
+#     AXFR on all TLDs:
+#         curl -s 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt' | tail -n +2 | tr '[:upper:]' '[:lower:]' | ./mdaxfr
+#     AXFR on all PSL TLDs:
+#         curl -s https://publicsuffix.org/list/public_suffix_list.dat | grep -vE '^(//|.*[*!])' | grep '\.' | awk '{print $1}' | ./mdaxfr
+#     AXFR one-liner to rule them all:
+#         curl -s https://www.internic.net/domain/root.zone | awk '$4=="A" || $4=="AAAA" {print substr($1, 3) " " $5}' | sed 's/\.$//' | xargs -n2 sh -c 'dig AXFR "$0" "@$1"'
+
+# Colors
+BLUE="\033[1;34m"
+CYAN="\033[1;36m"
+GREEN="\033[1;32m"
+GREY="\033[1;90m"
+PINK="\033[1;95m"
+PURPLE="\033[0;35m"
+RED="\033[1;31m"
+YELLOW="\033[1;33m"
+RESET="\033[0m"
+
+output_dir="axfrout"
+log_file="${output_dir}/axfr_log.json"
+mkdir -p "$output_dir"
+
+axfr() {
+    domain="$1"
+    ns="$2"
+    ip="$3"
+
+    printf "                ${YELLOW}Attempting AXFR for ${CYAN}%s${YELLOW} from ${PURPLE}%s ${GREY}(%s)${RESET}\n" "$domain" "$ns" "$ip"
+
+    axfr_output=$(dig +retry=3 +time=10 @"$ip" AXFR "$domain" 2>/dev/null)
+    axfr_status=$?
+
+    if [ "$axfr_status" -eq 0 ] && printf '%s\n' "$axfr_output" | grep -q "XFR size: "; then
+        size=$(printf '%s\n' "$axfr_output" | awk '/XFR size:/ {print $4}')
+
+        duplicate=0
+        for existing in "${output_dir}"/axfr-"${domain}"_*.txt; do
+            [ -f "$existing" ] || continue
+            existing_size=$(awk '/XFR size:/ {print $4}' "$existing")
+            if [ "$existing_size" = "$size" ]; then
+                duplicate=1
+                break
+            fi
+        done
+
+        if [ "$duplicate" -eq 0 ]; then
+            printf '%s\n' "$axfr_output" > "${output_dir}/axfr-${domain}_${ns}_${ip}.txt"
+            printf "                ${GREEN}Successful AXFR for ${CYAN}%s${GREEN} from ${PURPLE}%s ${GREY}(%s) ${GREEN}found %s records ${YELLOW}(saved)${RESET}\n" "$domain" "$ns" "$ip" "$size"
+        else
+            printf "                ${GREEN}Successful AXFR for ${CYAN}%s${GREEN} from ${PURPLE}%s ${GREY}(%s) ${GREEN}found %s records ${GREY}(duplicate)${RESET}\n" "$domain" "$ns" "$ip" "$size"
+        fi
+
+        printf '{"domain":"%s","nameserver":"%s","ip":"%s","records":%s}\n' "$domain" "$ns" "$ip" "$size" >> "$log_file"
+    else
+        printf "                ${RED}    Failed AXFR for ${CYAN}%s${RED} from ${PURPLE}%s ${GREY}(%s)${RESET}\n" "$domain" "$ns" "$ip"
+    fi
+}
+
+process_domain() {
+    domain="$1"
+
+    domain=$(printf '%s' "$domain" | sed -e 's|^\(https\?://\)\?||' -e 's|^www\.||' -e 's|/.*||')
+
+    printf "${PINK}Looking up nameservers for ${CYAN}%s${RESET}\n" "$domain"
+
+    nameservers=$(dig +short +retry=3 +time=10 "$domain" NS 2>/dev/null | sed 's/\.$//')
+
+    if [ -z "$nameservers" ]; then
+        printf "    ${GREY}No nameservers found for ${CYAN}%s${RESET}\n" "$domain"
+        return
+    fi
+
+    total_nameservers=$(printf '%s\n' "$nameservers" | wc -l)
+    printf "    ${BLUE}Found %s nameservers for ${CYAN}%s${RESET}\n" "$total_nameservers" "$domain"
+
+    for ns in $nameservers; do
+        printf "        ${PINK}Looking up IP addresses for ${PURPLE}%s${RESET}\n" "$ns"
+
+        ns_ip=$(dig +short +retry=3 +time=10 "$ns" A 2>/dev/null && dig +short +retry=3 +time=10 "$ns" AAAA 2>/dev/null)
+        ns_ip=$(printf '%s\n' "$ns_ip" | grep -E '^([0-9]+\.){3}[0-9]+$|^[0-9a-fA-F:]+$')
+
+        if [ -z "$ns_ip" ]; then
+            printf "            ${GREY}No IP addresses found on ${PURPLE}%s${GREY} for ${CYAN}%s${RESET}\n" "$ns" "$domain"
+            continue
+        fi
+
+        total_ip=$(printf '%s\n' "$ns_ip" | wc -l)
+        printf "            ${BLUE}Found %s IP addresses on ${PURPLE}%s${BLUE} for ${CYAN}%s${RESET}\n" "$total_ip" "$ns" "$domain"
+
+        for ip in $ns_ip; do
+            axfr "$domain" "$ns" "$ip"
+        done
+    done
+}
+
+if [ -t 0 ]; then
+    [ "$#" -ne 1 ] && printf "Usage: %s <domain> or cat domain_list.txt | %s\n" "$0" "$0" && exit 1
+    process_domain "$1"
+else
+    while IFS= read -r line; do
+        process_domain "$line"
+    done
+fi

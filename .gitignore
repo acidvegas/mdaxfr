@@ -1,0 +1,4 @@
+# Mass DNS AXFR (MDAXFR)- Developed by acidvegas (https://github.com/acidvegas/mdaxfr)
+# mdaxfr/.gitignore
+
+axfrout/
