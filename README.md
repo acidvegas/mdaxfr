@@ -77,7 +77,7 @@ For laughs, here is a one-liner mass zone axfr:
 ```bash
 curl -s https://www.internic.net/domain/root.zone | awk '$4=="A" || $4=="AAAA" {print substr($1, 3) " " $5}' | sed 's/\.$//' | xargs -n2 sh -c 'dig AXFR "$0" "@$1"'
 ```
-**Note:** Don't actually use this lol...
+**Note:** Don't actually use this LOL...
 
 It is interesting to have seen this has worked on some *"darknet"* DNS servers...would maybe look into exploring collecting more zones for alterntive DNS routing. I am also intruiged at how much you can explore [ARPANET](https://en.wikipedia.org/wiki/ARPANET) with AXFRs. Nested zones under `arpa` *(such as `in-addr.arpa`, `ip6.arpa`, `ip6-servers.arpa`, etc)* can also be AXFR'd.
 
