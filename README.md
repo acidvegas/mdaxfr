@@ -1,12 +1,14 @@
-# Mass DNS AXFR (Zone Transfer)
+# Mass DNS AXFR (MDAXFR)
 
 ![](./.screens/preview.gif)
 
 ## Information
-MDAXFR allows you to perform a DNS [Zone Transfer](https://en.wikipedia.org/wiki/DNS_zone_transfer) against a target domain by resolving all of the domains nameservers to their respective A/AAAA records and making an AXFR attempt against each of the IP addresses. You can also use this tool against the [Root Nameservers](https://en.wikipedia.org/wiki/Root_name_server) and [Top-level Domains](https://en.wikipedia.org/wiki/Top-level_domain) *(TLD)*, including those in the [Public Suffix List](https://en.wikipedia.org/wiki/Public_Suffix_List) *(PSL)* aswell.
+MDAXFR allows you to perform a DNS [Zone Transfer](https://en.wikipedia.org/wiki/DNS_zone_transfer) against a target domain by resolving all of the domains nameservers to their respective A/AAAA records and making an AXFR attempt against every single nameserver IP address. You can also use this tool against the [Root Nameservers](https://en.wikipedia.org/wiki/Root_name_server) and [Top-level Domains](https://en.wikipedia.org/wiki/Top-level_domain) *(TLD)*, including those in the [Public Suffix List](https://en.wikipedia.org/wiki/Public_Suffix_List) *(PSL)* aswell.
 
 ## Expectations & Legalities
 It is expected to set *realistic* expectations when using this tool. In contemporary network configurations, AXFR requests are typically restricted, reflecting best practices in DNS security. While many nameservers now disallow AXFR requests, there may still be occasional instances where configurations permit them. Always exercise due diligence and ensure ethical use.
+
+Testing every IP is critical because it only takes one misconfigured nameserver to expose a zone. It is common to find that only one or two nameservers out of several have AXFR left open while the rest properly block it. If you only test one nameserver or dont resolve the all of the nameserver, you risk missing the one that is misconfigured.
 
 ## Usage:
 - AXFR a single domain
